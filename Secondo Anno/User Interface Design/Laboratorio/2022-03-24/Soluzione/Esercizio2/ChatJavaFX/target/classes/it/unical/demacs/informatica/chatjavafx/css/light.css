@@ -1,0 +1,12 @@
+* {
+  primaryBackgroundColor: rgb(192, 215, 235);
+  secondaryBackgroundColor: rgb(52, 149, 235);
+  primarySelectionColor: white;
+  secondarySelectionColor: #45a1ed;
+  tertiarySelectionColor: black;
+  imagesColor: black;
+  textColor: black;
+  lineColor: black;
+  separatorColor: rgb(52, 149, 220);
+}
+

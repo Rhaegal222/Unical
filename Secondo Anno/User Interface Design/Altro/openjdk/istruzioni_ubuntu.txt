@@ -1,0 +1,21 @@
+**** Linux ****
+
+Aprite un terminale e digitate:
+
+---> sudo apt-get install openjdk-17-jdk
+---> echo "export JAVA_HOME=/usr/lib/jvm/openjdk-17" >> ~/.bashrc
+
+riavviate il terminale e digitate:
+---> java -version
+
+Se l'output è:
+
+openjdk version "17.0.2" 2022-01-18
+OpenJDK Runtime Environment (build 17.0.2+8-86)
+OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
+
+l'installazione è andata a buon fine.
+
+Se non funziona la procedura precedente scaricate la versione per linux sul sito: http://jdk.java.net/17/
+
+e seguite le istruzioni che trovate qui: https://java.tutorials24x7.com/blog/how-to-install-openjdk-17-on-ubuntu-20-04-lts

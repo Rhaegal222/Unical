@@ -1,0 +1,24 @@
+[submodule "ingsw-private"]
+	path = ingsw-private
+	url = https://github.com/Rhaegal222/ingsw-private
+[submodule "esercizi-pattern-di-creazione-Rhaegal222"]
+	path = esercizi-pattern-di-creazione-Rhaegal222
+	url = https://github.com/Didattica-IngSw/esercizi-pattern-di-creazione-Rhaegal222.git
+[submodule "Esempio-IngSw-2023"]
+	path = Esempio-IngSw-2023
+	url = https://github.com/maborroto/Esempio-IngSw-2023.git
+[submodule "IngSwTestMock"]
+	path = IngSwTestMock
+	url = https://github.com/Didattica-IngSw/IngSwTestMock.git
+[submodule "PhoneBook"]
+	path = PhoneBook
+	url = https://github.com/Rhaegal222/PhoneBook
+[submodule "esercizi-pattern-strutturali-Rhaegal222"]
+	path = esercizi-pattern-strutturali-Rhaegal222
+	url = https://github.com/Didattica-IngSw/esercizi-pattern-strutturali-Rhaegal222
+[submodule "esercizi-pattern-comportamentali-Rhaegal222"]
+	path = esercizi-pattern-comportamentali-Rhaegal222
+	url = https://github.com/Didattica-IngSw/esercizi-pattern-comportamentali-Rhaegal222
+[submodule "consegna-mini-progetti-Rhaegal222"]
+	path = consegna-mini-progetti-Rhaegal222
+	url = https://github.com/Didattica-IngSw/consegna-mini-progetti-Rhaegal222

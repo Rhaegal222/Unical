@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Classi e oggetti/Classi e oggetti.iml" filepath="$PROJECT_DIR$/Classi e oggetti/Classi e oggetti.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Edutecnica.iml" filepath="$PROJECT_DIR$/Edutecnica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Elementi/Elementi.iml" filepath="$PROJECT_DIR$/Elementi/Elementi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Metodi/Metodi.iml" filepath="$PROJECT_DIR$/Metodi/Metodi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stringhe/Stringhe.iml" filepath="$PROJECT_DIR$/Stringhe/Stringhe.iml" />
+    </modules>
+  </component>
+</project>

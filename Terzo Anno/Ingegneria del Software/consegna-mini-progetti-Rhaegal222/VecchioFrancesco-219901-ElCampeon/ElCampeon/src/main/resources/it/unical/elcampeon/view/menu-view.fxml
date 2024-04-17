@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" styleClass="global-color" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unical.elcampeon.controller.MenuController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox fx:id="infoHBox" alignment="CENTER" fillHeight="false" maxHeight="50.0" prefHeight="30.0" styleClass="hbox-info" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="profileButton" alignment="CENTER_RIGHT" maxWidth="295.0" onMouseClicked="#onAccountClick" styleClass="hbox-info-button">
+                     <children>
+                        <Label fx:id="userIcon" alignment="CENTER" contentDisplay="CENTER" minHeight="30.0" minWidth="30.0" styleClass="icon" text="A" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label fx:id="userLabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="200.0" text="First Name Second Name Last Name" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="label-class" />
+                              <String fx:value="label-dsa" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox fx:id="homeButton" alignment="CENTER_RIGHT" maxWidth="295.0" onMouseClicked="#onHomeClick" styleClass="hbox-info-button">
+                     <children>
+                        <Label fx:id="homeIcon" alignment="CENTER" contentDisplay="CENTER" minHeight="30.0" minWidth="30.0" styleClass="icon" text="A" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="homeLabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="200.0" text="Home" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="label-class" />
+                              <String fx:value="label-dsa" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox fx:id="settingsButton" alignment="CENTER" onMouseClicked="#onSettingsClick" styleClass="hbox-info-button">
+                     <children>
+                        <Label fx:id="settingIcon" alignment="CENTER" contentDisplay="CENTER" minHeight="30.0" minWidth="30.0" styleClass="icon" text="A" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label fx:id="settingsLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" text="Settings" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="label-class" />
+                              <String fx:value="label-dsa" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox fx:id="logoutButton" alignment="CENTER" onMouseClicked="#onLogoutClick" styleClass="hbox-info-button">
+                     <children>
+                        <Label fx:id="logoutIcon" alignment="CENTER" contentDisplay="CENTER" minHeight="30.0" minWidth="30.0" styleClass="icon" text="A" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="logoutLabel" alignment="CENTER" contentDisplay="CENTER" maxHeight="50.0" text="Logout" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="label-class" />
+                              <String fx:value="label-dsa" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane fx:id="anchorPane" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

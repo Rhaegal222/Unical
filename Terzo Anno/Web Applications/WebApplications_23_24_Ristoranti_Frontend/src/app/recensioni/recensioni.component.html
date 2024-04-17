@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <th>Titolo</th>
+        <th>Testo</th>
+        <th>Numero Mi Piace</th>
+        <th>Numero Non Mi Piace</th>
+        <th>Ristorante</th>
+        <th>Scritta da</th>
+    </tr>
+    <tr *ngFor="let rec of recensioni">
+        <td>{{rec.titolo}}</td>
+        <td>{{rec.testo}}</td>
+        <td>{{rec.numeroMiPiace}}</td>
+        <td>{{rec.numeroNonMiPiace}}</td>
+        <td>{{rec.ristorante.nome}}</td>
+        <td>{{rec.scrittaDa.username}}</td>
+    </tr>
+</table>

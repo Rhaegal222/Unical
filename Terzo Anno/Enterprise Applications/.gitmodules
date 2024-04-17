@@ -1,0 +1,3 @@
+[submodule "ea"]
+	path = ea
+	url = https://github.com/dodaro/ea.git

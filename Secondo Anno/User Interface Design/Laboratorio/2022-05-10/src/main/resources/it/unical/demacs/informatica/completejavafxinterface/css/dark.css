@@ -1,0 +1,25 @@
+* {
+  primaryBackgroundColor: #1e1e1e;
+  secondaryBackgroundColor: #202428;
+  primarySelectionColor: #616161;
+  secondarySelectionColor: #006ebd;
+  tertiarySelectionColor: #006ebd;
+  imagesColor: white;
+  textColor: white;
+  lineColor: black;
+  separatorColor: gray;
+}
+
+/*
+{
+  primaryBackgroundColor: #566842;
+  secondaryBackgroundColor: #3d7400;
+  primarySelectionColor: #81ee0a;
+  secondarySelectionColor: #76ad3b;
+  tertiarySelectionColor: #395e12;
+  imagesColor: white;
+  textColor: white;
+  lineColor: black;
+  separatorColor: gray;
+}
+*/

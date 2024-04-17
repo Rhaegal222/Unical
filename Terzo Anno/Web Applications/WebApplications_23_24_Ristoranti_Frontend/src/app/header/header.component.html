@@ -1,0 +1,37 @@
+<header>
+    <div id="unDiv">
+        <img id="logo" class="round" 
+        [src]="getRandomPhotoUrl()" width="25%" />
+    </div>
+    <h1>Sito gestione recensioni ristorante</h1>
+    <h2>Qui gestiamo le recensioni dei ristoranti</h2>
+    <nav>
+        <ul>
+            <li>
+                <a routerLink="/">Home</a>
+            </li>
+            <li>
+                <a routerLink="/chi_siamo">
+                    Chi siamo
+                </a>
+            </li>
+            <li><a href="http://localhost:8080/ristoranti/dammiRistoranti">Ristoranti</a></li>
+            <li *ngIf="isAuthenticated()">
+                <a routerLink="/recensioni">
+                    Recensioni
+                </a>
+            </li>
+            
+            <!-- if -->
+
+            <li *ngIf="!isAuthenticated()">
+                <a routerLink="/login">Login</a>
+            </li>            
+            <li *ngIf="isAuthenticated()">
+                <a href="#" (click)="doLogout()">Logout</a>
+            </li>
+
+            <li>Registrati</li>
+        </ul>
+    </nav>
+</header>

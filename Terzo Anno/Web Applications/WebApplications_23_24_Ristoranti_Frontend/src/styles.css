@@ -1,0 +1,126 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+header {
+    text-align: center;
+}
+
+footer {
+    text-align: right;
+}
+
+/*
+img {
+#logo{
+.round{
+header>img{
+#unDiv>img{
+ */
+header>div>img{
+    border-style: solid;
+    border-radius: 20%;
+}
+
+body{
+    background-color: lightgray;
+}
+
+h1{
+    text-shadow: 2px 2px blue;
+}
+
+nav li{
+    display: inline;
+    padding: 20px;
+}
+
+article{
+    width: 50%;
+    float: left;
+    overflow: hidden;
+}
+
+nav li>a:link, nav li>a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+nav li:hover{
+    background-color: green;
+}
+
+footer{
+    clear:left;
+}
+
+.row{
+    margin-top: 10px !important
+}
+
+
+
+header {
+    text-align: center;
+}
+
+footer {
+    text-align: right;
+}
+
+/*
+img {
+#logo{
+.round{
+header>img{
+#unDiv>img{
+ */
+header>div>img{
+    border-style: solid;
+    border-radius: 20%;
+}
+
+body{
+    background-color: lightgray;
+}
+
+h1{
+    text-shadow: 2px 2px blue;
+}
+
+nav li{
+    display: inline;
+    padding: 20px;
+}
+
+article{
+    width: 50%;
+    float: left;
+    overflow: hidden;
+}
+
+nav li>a:link, nav li>a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+nav li:hover{
+    background-color: green;
+}
+
+footer{
+    clear:left;
+}
+
+.row{
+    margin-top: 10px !important;
+}
+
+@media screen and (max-width: 300px) {
+    nav li{
+        display: block;
+    }
+    article{
+        width: 100%;
+        float: none;
+    }
+}

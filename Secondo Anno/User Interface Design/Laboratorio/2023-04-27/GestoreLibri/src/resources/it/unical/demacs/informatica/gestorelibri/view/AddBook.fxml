@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unical.demacs.informatica.bookshandler.controller.AddBookController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="70.0" text="ISBN" />
+                  <TextField fx:id="isbn" prefHeight="20.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="70.0" text="Title" />
+                  <TextField fx:id="title" prefHeight="20.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="30.0" layoutY="80.0" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="70.0" text="Author" />
+                  <TextField fx:id="author" prefHeight="20.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="30.0" layoutY="80.0" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="70.0" text="Publisher" />
+                  <TextField fx:id="publisher" prefHeight="20.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="30.0" layoutY="68.0" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="70.0" text="Year" />
+                  <TextField fx:id="year" prefHeight="20.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#addBook" text="Add book" />
+         </children>
+         <padding>
+            <Insets left="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

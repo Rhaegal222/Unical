@@ -1,0 +1,4 @@
+application/
+application/module
+application/resources
+application/view

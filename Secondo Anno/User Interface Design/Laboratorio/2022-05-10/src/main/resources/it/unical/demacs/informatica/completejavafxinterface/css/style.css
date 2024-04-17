@@ -1,0 +1,199 @@
+* {
+  -fx-text-fill: textColor;
+}
+
+.dialog-pane, .dialog-pane > *.button-bar > *.container, .split-pane {
+    -fx-background-color: primaryBackgroundColor;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-padding: 0 0 0 0.10em;
+    -fx-background-color: lineColor;
+    -fx-background-insets: 0;
+}
+
+.button {
+    -fx-background-color: secondaryBackgroundColor;
+    -fx-background-radius: 3px;
+}
+
+.button:hover {
+    -fx-background-color: primarySelectionColor;
+}
+
+.titled-pane > .content {
+    -fx-background-color: secondaryBackgroundColor;
+    -fx-border-color: secondaryBackgroundColor;
+}
+
+.titled-pane
+{
+    -fx-padding: 5 10 5 10;
+}
+
+.titled-pane:focused > .title
+{
+    -fx-background-color:  primarySelectionColor;
+}
+
+.titled-pane > .title
+{
+    -fx-background-radius: 3px;
+    -fx-background-color: secondaryBackgroundColor;
+    -fx-padding: 5 10 5 10;
+}
+
+.titled-pane > .title > .arrow-button .arrow
+{
+    -fx-background-color: imagesColor;
+    -fx-shape: "M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28Z";
+    -fx-background-insets: 0;
+    -fx-focus-color: transparent;
+}
+
+#leftVBox {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+#trash,
+#archive
+{
+    -fx-padding: 5 10 5 28;
+}
+
+.list-view,
+.list-cell
+{
+     -fx-padding: 5 5 5 5; //top right bottom left
+     -fx-background-color: secondaryBackgroundColor;
+}
+
+.list-view .list-cell:selected:odd,
+.list-view .list-cell:selected:even
+{
+    -fx-background-color: primarySelectionColor;
+    -fx-background-radius : 3px;
+}
+
+#emailsListView,
+#conversationListView,
+#emailsListView .list-cell
+{
+    -fx-padding: 10 10 10 10; //top right bottom left
+    -fx-background-color: primaryBackgroundColor;
+}
+
+#emailsListView .list-cell:selected:odd,
+#emailsListView .list-cell:selected:even
+{
+    -fx-background-color: secondarySelectionColor;
+}
+
+#conversationListView .list-cell
+{
+    -fx-padding: 2px ;
+    -fx-padding: 10 10 10 10; //top right bottom left
+    -fx-background-color: transparent, secondaryBackgroundColor;
+    -fx-background-radius : 3px;
+    -fx-background-insets: 0px, 5px ;
+}
+
+#conversationListView .list-cell:empty {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+#conversationListView .list-cell:selected:odd,
+#conversationListView .list-cell:selected:even
+{
+    -fx-border-color: tertiarySelectionColor;
+    -fx-background-insets: 0px, 0px ;
+    -fx-border-radius: 3px;
+}
+
+.label {
+    -fx-label-padding: 0 0 0 2em;
+    -fx-background-color: transparent!important;
+}
+
+#allInboxesLabel {
+    -fx-font-size: 20px;
+    -fx-background-color: secondaryBackgroundColor!important;
+}
+
+.separator .line {
+    -fx-border-width: 0 0 0.1 0;
+    -fx-background-color: separatorColor;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color :transparent;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+}
+
+.scroll-bar:horizontal .increment-button ,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 0.0 10.0 0.0;
+
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+}
+
+ .scroll-bar .increment-arrow,
+ .scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+ .scroll-bar:vertical .increment-arrow,
+ .scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color :derive(black,90.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color :derive(#4D4C4F,10.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+#toolbar,
+#toolbar .context-menu,
+#toolbar .context-menu .menu-item {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+#toolbar .tool-bar-overflow-button .arrow {
+    -fx-background-color: imagesColor;
+}
+
+.header-text {
+    -fx-font-weight: bold;
+}
+
+.my-padding {
+    -fx-padding: 0 0 5 0;
+}
+
+.icons-color {
+    -fx-icon-color: imagesColor;
+}

@@ -1,0 +1,5 @@
+1;borsa;gucci;wow;2015;10000.0
+2;occhiali;prada;a123n;2005;100.0
+3;borsa;prada;panda;2017;4000.0
+4;camicia;piazza_italia;small;2022;10.0
+5;occhiali;rayban;bd548;2020;80.0

@@ -1,0 +1,12 @@
+INSERT INTO users (name, surname, email, password)
+VALUES
+    ('John', 'Doe', 'P@ssw0rd1', 'john_doe@email.com'),
+    ('Jane', 'Smith', 'P@ssw0rd2', 'jane_smith@email.com'),
+    ('Robert', 'Johnson', 'P@ssw0rd3', 'robert_johnson@email.com'),
+    ('Emily', 'Brown', 'P@ssw0rd4', 'emily_brown@email.com'),
+    ('Michael', 'Davis', 'P@ssw0rd5', 'michael_davis@email.com'),
+    ('Jennifer', 'Wilson', 'P@ssw0rd6', 'jennifer_wilson@email.com'),
+    ('William', 'Miller', 'P@ssw0rd7', 'william_miller@email.com'),
+    ('Sarah', 'Anderson', 'P@ssw0rd8', 'sarah_anderson@email.com'),
+    ('James', 'Martinez', 'P@ssw0rd9', 'james_martinez@email.com'),
+    ('Laura', 'Garcia', 'P@ssw0rd10', 'laura_garcia@email.com');

@@ -1,0 +1,48 @@
+**VECCHIO FRANCESCO 219901 - E1.1 (1p)**
+Risposte alle affermazioni su Access Control Lists (ACLs):
+
+1) False. ACLs non sono efficienti per determinare i diritti di accesso di un soggetto specifico.
+2) True. ACLs sono efficienti per determinare quali soggetti hanno quali diritti su una specifica risorsa【19†source】.
+3) False. Le ACL decompongono una matrice di accesso per colonne, non per righe.
+4) True. Le ACL decompongono una matrice di accesso per colonne【19†source】.
+
+**VECCHIO FRANCESCO 219901 -E1.2(1p)**
+Risposte alle affermazioni su Role-Based Access Control (RBAC):
+
+1) True. In RBAC, i permessi sono assegnati ai ruoli, non agli utenti【20†source】.
+2) True. RBAC è un metodo per controllare l'accesso alle risorse in base ai ruoli degli utenti【20†source】.
+3) False. In RBAC, i permessi non sono assegnati agli utenti, ma ai ruoli.
+4) False. RBAC è usato per l'autorizzazione, non per l'autenticazione.
+
+**VECCHIO FRANCESCO 219901 - E1.3 (1p)**
+Risposte alle affermazioni su Server-Side Request Forgery (SSRF):
+
+1) False. Il server vulnerabile può effettuare richieste ad altri server, non necessariamente diversi dal server stesso.
+2) True. Gli attaccanti possono ottenere posizioni privilegiate su una rete, bypassare firewall e accedere a servizi interni tramite SSRF【30†source】.
+3) False. SSRF non è un caso speciale di CSRF.
+4) False. L'attaccante non riceve sempre un feedback dal server tramite una risposta HTTP o un messaggio di errore【31†source】.
+
+**VECCHIO FRANCESCO 219901 - E1.4 (1p)**
+Risposte alle affermazioni su Cross-Origin Resource Sharing (CORS) e Same-Origin Policy (SOP):
+
+1) False. CORS può essere utilizzato per proteggere dati sensibili, ma non solo per le credenziali di accesso.
+2) True. SOP è una funzione di sicurezza che impedisce a una pagina web di effettuare richieste a un dominio diverso da quello che ha fornito la pagina web【25†source】.
+3) False. CORS non permette a una pagina web di effettuare richieste a qualsiasi dominio, indipendentemente dall'origine della pagina web.
+4) True. `Access-Control-Allow-Origin: *` è incompatibile con `Access-Control-Allow-Credentials: true`【26†source】.
+
+**VECCHIO FRANCESCO 219901 -E1.5(1p)**
+Risposte alle affermazioni su Server-Side Request Forgery (SSRF):
+
+1) False. SSRF non è dovuto a un server che non controlla se la richiesta proviene da un sito diverso.
+2) True. Gli attaccanti guadagnano posizioni privilegiate su una rete, bypassano firewall e accedono a servizi interni【30†source】.
+3) False. Gli attaccanti non inducono gli utenti a eseguire azioni che non intendono eseguire (questa è una caratteristica di CSRF).
+4) True. SSRF è dovuto a una vulnerabilità che consente a un attaccante di inviare richieste per conto di un server【30†source】.
+
+Per quanto riguarda gli esercizi pratici (E2.1 - E2.5), ti fornirò alcuni suggerimenti:
+
+**E2.1 - E2.5 (3p ciascuno)**
+
+- Esplora le vulnerabilità JWT esaminando il payload del token e provando lo stesso payload con algoritmi diversi.
+- Cerca di identificare se ci sono informazioni aggiuntive trasmesse dalle tue richieste che potrebbero essere sfruttate.
+- Per l'esercizio XSS, verifica se c'è qualche valore riflettuto o non sanificato che puoi sfruttare.
+- Utilizza strumenti come Burp Suite o OWASP ZAP per analizzare e manipolare le richieste e le risposte HTTP durante i test.

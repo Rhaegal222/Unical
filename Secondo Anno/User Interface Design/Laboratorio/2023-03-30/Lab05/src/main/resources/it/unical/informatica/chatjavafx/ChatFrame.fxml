@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unical.informatica.chatjavafx.ChatController">
+   <children>
+      <VBox alignment="CENTER" layoutX="499.0" layoutY="200.0" prefHeight="200.0" prefWidth="80.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="sendButton" mnemonicParsing="false" text="Send" />
+         </children>
+      </VBox>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox fx:id="contacts" />
+         </content>
+      </ScrollPane>
+      <TextArea fx:id="messageArea" layoutX="299.0" layoutY="399.0" onKeyPressed="#onKeyPressed" prefHeight="200.0" prefWidth="420.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="80.0" />
+   </children>
+</AnchorPane>

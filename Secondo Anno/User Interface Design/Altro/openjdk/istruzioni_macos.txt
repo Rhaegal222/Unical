@@ -1,0 +1,40 @@
+**** Mac OS ****
+
+Andate sul sito http://jdk.java.net/17/
+- se avete un processore intel scaricate la versione per mac x64
+- se avete un processore arm scaricate la versione per mac AArch64
+
+
+Aprite un terminale nella cartella dove avete decompresso il file e digitate:
+---> sudo cp -r jdk-17.0.2.jdk/ /Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk
+
+Usate il comando
+
+---> echo $0
+
+per conoscere quale shell state usando.
+
+Se state usando bash:
+---> echo "export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home/" >> ~/.bash_profile
+
+Se state usando zsh:
+---> echo "export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home/" >> ~/.zprofile
+
+riavviate il terminale e digitate:
+
+---> java -version
+
+Se l'output è:
+
+openjdk version "17.0.2" 2022-01-18
+OpenJDK Runtime Environment (build 17.0.2+8-86)
+OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
+
+l'installazione è andata a buon fine.
+
+
+Se vi restituisce come errore che il file java è danneggiato e non può essere aperto, digitate:
+---> sudo xattr -d com.apple.quarantine /Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/
+
+Se non funziona provate con
+---> sudo xattr -rc /Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/

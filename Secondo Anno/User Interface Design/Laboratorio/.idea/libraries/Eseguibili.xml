@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Eseguibili">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/2022-03-31/Eseguibili/ImageViewer.jar!/" />
+      <root url="jar://$PROJECT_DIR$/2022-03-31/Eseguibili/Snake.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

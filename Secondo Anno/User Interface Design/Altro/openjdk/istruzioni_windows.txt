@@ -1,0 +1,2 @@
+Scaricate la versione per windows sul sito: http://jdk.java.net/17/
+Seguite le istruzioni che si trovano qui: https://java.tutorials24x7.com/blog/how-to-install-openjdk-17-on-windows

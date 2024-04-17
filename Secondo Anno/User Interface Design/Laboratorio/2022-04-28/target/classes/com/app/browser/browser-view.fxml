@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.app.browser.controller.BrowserController">
+   <children>
+      <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="fileNewTab" mnemonicParsing="false" onAction="#addTab" text="New Tab" />
+                  <MenuItem fx:id="fileNewWindow" mnemonicParsing="false" text="New Window" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#refreshPage" text="Refresh" />
+                  <MenuItem fx:id="fileClose" mnemonicParsing="false" onAction="#closeBrowser" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="596.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#returnHome">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="15" />
+               </graphic>
+            </Button>
+            <Button fx:id="forwardButton" layoutX="19.0" layoutY="15.0" mnemonicParsing="false">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView glyphName="BACKWARD" size="15" />
+               </graphic>
+            </Button>
+            <Button fx:id="homeButton" layoutX="23.0" layoutY="15.0" mnemonicParsing="false" onAction="#returnHome">
+               <HBox.margin>
+                  <Insets left="5.0" right="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView glyphName="FORWARD" size="15" />
+               </graphic>
+            </Button>
+            <TextField fx:id="textField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" promptText="Search on Google or type an url" HBox.hgrow="ALWAYS" />
+            <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshPage">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView glyphName="REFRESH" size="15" />
+               </graphic>
+            </Button>
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchPage">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView glyphName="SEARCH" size="15" />
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="2.0" />
+         </padding>
+      </HBox>
+      <TabPane fx:id="tabBar" layoutY="30.0" prefHeight="333.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0" />
+   </children>
+</AnchorPane>

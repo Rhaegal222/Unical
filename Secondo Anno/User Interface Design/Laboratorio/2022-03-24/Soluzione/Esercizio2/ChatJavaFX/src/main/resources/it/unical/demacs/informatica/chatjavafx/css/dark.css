@@ -1,0 +1,11 @@
+* {
+  primaryBackgroundColor: #1e1e1e;
+  secondaryBackgroundColor: #202428;
+  primarySelectionColor: #616161;
+  secondarySelectionColor: #006ebd;
+  tertiarySelectionColor: #006ebd;
+  imagesColor: white;
+  textColor: white;
+  lineColor: black;
+  separatorColor: gray;
+}

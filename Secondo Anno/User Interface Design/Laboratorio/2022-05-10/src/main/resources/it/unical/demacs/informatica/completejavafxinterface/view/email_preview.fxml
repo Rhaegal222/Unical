@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vBox" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unical.demacs.informatica.completejavafxinterface.controller.EmailPreviewController">
+   <children>
+      <HBox>
+         <children>
+            <Label fx:id="senderLabel" maxWidth="1.7976931348623157E308" styleClass="header-text" text="Sender" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding></Label>
+            <Label fx:id="dateLabel" minWidth="50.0" styleClass="header-text" text="Date">
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="secondLine" text="Second line">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="thirdLine" maxHeight="40.0" text="Third line">
+         <padding>
+            <Insets bottom="5.0" />
+         </padding></Label>
+      <Separator prefWidth="200.0" style="-fx-border-height: 0.5px;">
+         <padding>
+            <Insets bottom="10.0" />
+         </padding></Separator>
+   </children>
+</VBox>

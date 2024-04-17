@@ -1,0 +1,69 @@
+Istruzioni:
+
+1) Avvia eclipse
+2) Clicca con il tasto destro nella parte sinistra dove sono i vostri progetti
+3) Seleziona new -> new project (non java project) (vedi immagine 1.png)
+4) Scegli maven -> Maven project (vedi immagine 2.png) e clicca su Next
+5) Seleziona esattamente gli stessi elementi di immagine 3.png e clicca su Next
+6) Inserite gli altri valori per come riportato qui in basso (vedi immagine 4.png):
+
+Group Id: l'identificativo univoco dell'organizzazione o del gruppo che ha creato il progetto. In genere è il nome di dominio dell'organizzazione, ad esempio it.unical.mat o it.unical.demacs.informatica
+
+Artifact Id: Indica il nome che vuoi dare al programma che verrà generato (in genere è il nome principale dell'applicazione).
+
+Version: è la versione del progetto, al momento si può lasciare quella che trovi.
+
+Name: Indica il nome mostrato per il progetto, è spesso usato per la documentazione.
+
+
+7) Il progetto è stato creato e dovresti vedere una schermata come quella mostrata nell'immagine 5.png
+
+8) Fai doppio click sul file pom.xml e inserisci prima di </project> questi elementi:
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-base</artifactId>
+			<version>17.0.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>17.0.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-graphics -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-graphics</artifactId>
+			<version>17.0.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>17.0.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-web -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-web</artifactId>
+			<version>17.0.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-media -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-media</artifactId>
+			<version>17.0.1</version>
+		</dependency>
+	</dependencies>
