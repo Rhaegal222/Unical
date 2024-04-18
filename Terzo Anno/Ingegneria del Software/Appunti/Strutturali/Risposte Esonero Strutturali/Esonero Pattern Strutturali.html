@@ -1,0 +1,288 @@
+<!DOCTYPE html><html><head>
+      <title>Esonero Pattern Strutturali</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\theri\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.10\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="esonero-pattern-strutturali">Esonero Pattern Strutturali </h1>
+<br>
+<h4 id="1">1) </h4>
+<p><img src="1.png" alt="Foto"></p>
+<ul>
+<li>
+<h6>a) <strong>Proxy</strong>:</h6>
+<ul>
+<li>Il Proxy è un design pattern strutturale che fornisce un sostituto o rappresentante di un altro oggetto per controllare l'accesso ad esso. Questo è utile per operazioni come il lazy loading, il controllo dell'accesso, il logging, ecc.</li>
+</ul>
+</li>
+<li>
+<h6>b) <strong>Singleton</strong>:</h6>
+<ul>
+<li>Il Singleton è un design pattern creazionale che assicura che una classe abbia una sola istanza, fornendo un punto di accesso globale a questa istanza.</li>
+</ul>
+</li>
+<li>
+<h6>c) <strong>Adapter</strong>:</h6>
+<ul>
+<li>L'Adapter è un design pattern strutturale che consente a oggetti con interfacce incompatibili di collaborare. "Traduce" l'interfaccia di un oggetto in un'altra interfaccia che il cliente si aspetta.</li>
+</ul>
+</li>
+</ul>
+<h5 id="risposta-corretta">Risposta corretta: </h5>
+<pre class="language-text">Proxy - Adapter
+</pre>
+<p><br><br></p>
+<h4 id="2">2) </h4>
+<p><img src="2.png" alt="Foto"></p>
+<ul>
+<li>
+<h6>a) <strong>Proxy</strong>:</h6>
+<ul>
+<li>Serve come interfaccia per un altro oggetto, controllandone l'accesso, gestendone il ciclo di vita, o implementandone il caricamento pigro (lazy loading). Il Proxy può anche essere utilizzato per aggiungere ulteriori responsabilità in modo dinamico.</li>
+</ul>
+</li>
+<li>
+<h6>b) <strong>Builder</strong>:</h6>
+<ul>
+<li>Separa la costruzione di un oggetto complesso dalla sua rappresentazione, consentendo lo stesso processo di costruzione di produrre diverse rappresentazioni. È particolarmente utile quando un oggetto deve essere creato con molte possibili configurazioni e non si vuole avere un costruttore con un elenco enorme di parametri.</li>
+</ul>
+</li>
+<li>
+<h6>c) <strong>Composite</strong>:</h6>
+<ul>
+<li>Consente di comporre oggetti in strutture ad albero per rappresentare gerarchie parte-tutto. Questo pattern permette ai client di trattare oggetti individuali e composizioni di oggetti in modo uniforme.</li>
+</ul>
+</li>
+</ul>
+<h5 id="risposta-corretta-1">Risposta corretta: </h5>
+<pre class="language-text">Proxy - Composite
+</pre>
+<p><br><br></p>
+<h4 id="3">3) </h4>
+<p><img src="3.png" alt="Foto"></p>
+<ul>
+<li>
+<h6>a) <strong>Composite</strong>:</h6>
+<ul>
+<li>Permette di costruire una gerarchia di oggetti inclusi oggetti composti e singoli oggetti foglia in modo che possano essere trattati allo stesso modo. Questo modello permette di costruire strutture complesse e di estendere funzionalità tramite composizione piuttosto che ereditarietà.</li>
+</ul>
+</li>
+<li>
+<h6>b) <strong>Decorator</strong>:</h6>
+<ul>
+<li>Fornisce un modo per aggiungere responsabilità a un oggetto dinamicamente, senza alterare il codice degli oggetti esistenti. È un'alternativa all'uso dell'ereditarietà per estendere le funzionalità di una classe perché consente l'aggiunta di nuove funzionalità a un oggetto in fase di esecuzione.</li>
+</ul>
+</li>
+<li>
+<h6>c) <strong>Factory Method</strong>:</h6>
+<ul>
+<li>Definisce un'interfaccia per creare un oggetto, ma lascia che le sottoclassi decidano quale classe istanziare. Questo pattern non fornisce un'alternativa alla sottoclasse per estendere le funzionalità di una classe, ma piuttosto un modo per delegare il processo di istanziazione a sottoclassi.</li>
+</ul>
+</li>
+<li>
+<h6>d) <strong>Template Method</strong>:</h6>
+<ul>
+<li>Definisce lo scheletro di un algoritmo in un metodo, posticipando alcuni passaggi all'ereditarietà da parte delle sottoclassi. Non fornisce un'alternativa alla sottoclasse per l'estensione delle funzionalità, ma piuttosto un framework in cui le sottoclassi possono sovrascrivere determinate parti di un algoritmo senza cambiare la sua struttura.</li>
+</ul>
+</li>
+</ul>
+<h5 id="risposta-corretta-2">Risposta corretta: </h5>
+<h6 id="decorator-e-composite-sono-i-pattern-che-forniscono-unalternativa-allereditarietà-per-estendere-le-funzionalità-di-una-classe-il-decorator-aggiunge-funzionalità-dinamicamente-mentre-il-composite-consente-di-costruire-strutture-ad-albero-di-oggetti-che-estendono-le-funzionalità-attraverso-la-composizione"><strong>Decorator</strong> e <strong>Composite</strong> sono i pattern che forniscono un'alternativa all'ereditarietà per estendere le funzionalità di una classe. Il Decorator aggiunge funzionalità dinamicamente, mentre il Composite consente di costruire strutture ad albero di oggetti che estendono le funzionalità attraverso la composizione. </h6>
+<p><br><br></p>
+<h4 id="4">4) </h4>
+<p><img src="4.png" alt="Foto"></p>
+<p>Tra i design pattern elencati, il <strong>Flyweight</strong> è quello specificamente progettato per utilizzare la condivisione dei dati per gestire in modo efficiente un gran numero di oggetti. Vediamo in dettaglio:</p>
+<ul>
+<li>
+<h6>a) <strong>Decorator</strong>:</h6>
+<ul>
+<li>Aggiunge dinamicamente responsabilità aggiuntive agli oggetti. Non è progettato per la condivisione di dati o stati, ma piuttosto per aggiungere funzionalità attraverso una composizione di oggetti.</li>
+</ul>
+</li>
+<li>
+<h6>b) <strong>Flyweight</strong>:</h6>
+<ul>
+<li>Questo pattern è usato per ridurre la quantità di memoria utilizzata quando si gestisce un grande numero di oggetti simili. Memorizza gli stati esterni condivisi in oggetti separati e li passa agli oggetti flyweight quando necessario. L'obiettivo è minimizzare l'uso della memoria condividendo il più possibile tra oggetti simili.</li>
+</ul>
+</li>
+<li>
+<h6>c-d) <strong>Multiple-Object-Adapter</strong> e <strong>Two-Way Adapter</strong>:</h6>
+<ul>
+<li>Questi Adapter sono varianti del pattern Adapter standard che permettono ad un oggetto di interfacciarsi o di adattarsi a più classi o interfacce. Non sono pensati specificatamente per la condivisione di informazioni per l'efficienza, ma per risolvere problemi di incompatibilità di interfacce.</li>
+</ul>
+</li>
+<li>
+<h6>e) <strong>Prototype</strong>:</h6>
+<ul>
+<li>Viene utilizzato per creare nuovi oggetti copiando un oggetto esistente, evitando così la costosa operazione di creazione. Mentre questo pattern può ridurre il costo della creazione di nuovi oggetti quando sono molto simili, non è specificamente progettato per la condivisione di dati al fine di gestire la memoria in modo efficiente come il Flyweight.</li>
+</ul>
+</li>
+</ul>
+<h5 id="risposta-corretta-3">Risposta corretta: </h5>
+<pre class="language-text">Flyweight 
+</pre>
+<p><br><br></p>
+<h4 id="5">5) </h4>
+<p><img src="5.png" alt="Foto"></p>
+<p>Tra i design pattern elencati, . Ecco una breve spiegazione di ciascun pattern in relazione alla creazione di strutture ricorsive:</p>
+<p>Gli altri pattern menzionati non sono primariamente pensati per strutture ricorsive:</p>
+<ul>
+<li>
+<h6>a) <strong>Singleton</strong>:</h6>
+<ul>
+<li>Assicura che una classe abbia una sola istanza e fornisce un punto di accesso globale a quella istanza. Non è correlato alla modellazione di strutture ricorsive.</li>
+</ul>
+</li>
+<li>
+<h6>b) <strong>Recursive Adapter</strong>:</h6>
+<ul>
+<li>Un "Recursive Adapter" potrebbe essere un termine non standard, ma in generale, il pattern Adapter è usato per convertire l'interfaccia di una classe in un'altra interfaccia che i client si aspettano. Non è pensato per creare strutture ricorsive.</li>
+</ul>
+</li>
+<li>
+<h6>c) <strong>Composite</strong>:</h6>
+<ul>
+<li>Consente di comporre oggetti in strutture ad albero per rappresentare gerarchie parte-tutto. Questo pattern permette di trattare singoli oggetti e composizioni di oggetti in modo uniforme, essendo quindi ideale per creare strutture ricorsive.</li>
+</ul>
+</li>
+<li>
+<h6>d) <strong>Component</strong>:</h6>
+<ul>
+<li>Il termine "Component" in questo contesto è presumibilmente un riferimento agli oggetti utilizzati nel pattern Composite. I "componenti" nel Composite possono essere sia oggetti foglia che contenitori, e il pattern li tratta in modo ricorsivo.</li>
+</ul>
+</li>
+<li>
+<h6>e) <strong>Bridge</strong>:</h6>
+<ul>
+<li>Disaccoppia un'astrazione dall'implementazione in modo che le due possano variare indipendentemente. Anche questo pattern non è progettato per la creazione di strutture ricorsive.</li>
+</ul>
+</li>
+<li>
+<h6>f) <strong>Abstract Factory</strong>:</h6>
+<ul>
+<li>Fornisce un'interfaccia per creare famiglie di oggetti correlati o dipendenti senza specificare le loro classi concrete. Anche questo pattern non è inteso per la modellazione di strutture ricorsive.</li>
+</ul>
+</li>
+</ul>
+<h5 id="risposta-corretta-4">Risposta corretta: </h5>
+<h6 id="il-pattern-composite-e-il-concetto-di-component-associato-sono-quelli-che-permettono-di-modellare-strutture-ricorsive-di-componenti">il pattern <strong>Composite</strong> e il concetto di "Component" associato sono quelli che permettono di modellare strutture ricorsive di componenti </h6>
+<p><br><br></p>
+<h4 id="6">6) </h4>
+<p><img src="6.png" alt="Foto"></p>
+<h5 id="risposta-corretta-5">Risposta corretta: </h5>
+<h6 id="il-design-pattern-che-consente-di-separare-lastrazione-dalla-sua-implementazione-è-il-bridge">Il design pattern che consente di separare l'astrazione dalla sua implementazione è il <strong>Bridge</strong>. </h6>
+<h6 id="questo-pattern-strutturale-prevede-di-dividere-una-grande-classe-o-un-insieme-di-classi-strettamente-correlate-in-due-gerarchie-separate---astrazione-e-implementazione---che-possono-essere-sviluppate-in-modo-indipendente-luna-dallaltra-ciò-consente-di-cambiare-le-implementazioni-di-unastrazione-senza-che-questo-influenzi-i-clienti-che-usano-quellastrazione-e-viceversa-questo-è-particolarmente-utile-quando-si-vogliono-estendere-le-classi-in-più-dimensioni-indipendenti">Questo pattern strutturale prevede di dividere una grande classe o un insieme di classi strettamente correlate in due gerarchie separate - astrazione e implementazione - che possono essere sviluppate in modo indipendente l'una dall'altra. Ciò consente di cambiare le implementazioni di un'astrazione senza che questo influenzi i clienti che usano quell'astrazione, e viceversa. Questo è particolarmente utile quando si vogliono estendere le classi in più dimensioni indipendenti. </h6>
+<p><br><br></p>
+<h4 id="7">7) </h4>
+<p><img src="7.png" alt="Foto"></p>
+<ul>
+<li>
+<h6>a) <strong>Proxy</strong>:</h6>
+<ul>
+<li><strong>Descrizione</strong>: Fornisce un sostituto o un segnaposto per un altro oggetto per controllarne l'accesso. Un proxy può essere utilizzato per gestire l'accesso, proteggere l'oggetto da accessi non autorizzati e implementare la sicurezza.</li>
+</ul>
+</li>
+<li>
+<h6>a) <strong>Facade</strong>:</h6>
+<ul>
+<li><strong>Descrizione</strong>: Offre un'interfaccia unificata a un set di interfacce in un sottosistema, rendendo il sottosistema più facile da usare. Il Facade può semplificare e limitare l'accesso alla complessità sottostante, proteggendo i clienti da dettagli che non necessitano di conoscere.</li>
+</ul>
+</li>
+</ul>
+<p>Il <strong>Chain of Responsibility</strong>, il <strong>Bridge</strong> e il <strong>Decorator</strong> non sono specificamente progettati per proteggere l'accesso a strutture dati complesse:</p>
+<p>Il <strong>Singleton</strong> non è direttamente collegato alla protezione dell'accesso alle strutture dati complesse; il suo scopo principale è garantire che una classe abbia una sola istanza.</p>
+<p>Quindi, basandosi sull'intenzione del documento, i pattern che possono essere utilizzati per proteggere l'accesso a una struttura dati complessa includono il <strong>Proxy</strong> e il <strong>Facade</strong>, e possibilmente un concetto indicato come <strong>Protection Wrapper</strong>, che potrebbe essere una variante del pattern Proxy con un focus sulla sicurezza.</p>
+<h5 id="risposta-corretta-6">Risposta corretta: </h5>
+<h6 id="proxy-e-il-facade"><strong>Proxy</strong> e il <strong>Facade</strong> </h6>
+<p><br><br></p>
+<h4 id="8">8) </h4>
+<p><img src="8.png" alt="Foto"></p>
+<h5 id="risposta-corretta-7">Risposta corretta: </h5>
+<h6 id="il-design-pattern-che-consente-di-fornire-un-punto-di-accesso-semplificato-a-un-sottosistema-complesso-è-il-facade-questo-pattern-offre-uninterfaccia-unificata-a-un-insieme-di-interfacce-in-un-sottosistema-rendendo-il-sottosistema-più-facile-da-utilizzare-facade-aiuta-a-ridurre-la-complessità-di-un-sistema-fornendo-uninterfaccia-semplice-che-può-essere-usata-dai-client-per-accedere-al-sistema-nascondendo-la-complessità-sottostante">Il design pattern che consente di fornire un punto di accesso semplificato a un sottosistema complesso è il <strong>Facade</strong>. Questo pattern offre un'interfaccia unificata a un insieme di interfacce in un sottosistema, rendendo il sottosistema più facile da utilizzare. Facade aiuta a ridurre la complessità di un sistema fornendo un'interfaccia semplice, che può essere usata dai client per accedere al sistema, nascondendo la complessità sottostante. </h6>
+<p><br><br></p>
+<h4 id="9">9) </h4>
+<p><img src="9.png" alt="Foto"></p>
+<ul>
+<li>
+<h6>a) <strong>Factory Method</strong>:</h6>
+<ul>
+<li>Questo pattern definisce un'interfaccia per la creazione di un oggetto, ma lascia che le sottoclassi decidano quale classe istanziare. La creazione di oggetti viene delegata a sottoclassi che estendono una classe astratta o implementano un'interfaccia.</li>
+</ul>
+</li>
+<li>
+<h6>b) <strong>Template Method</strong>:</h6>
+<ul>
+<li>Questo pattern definisce lo scheletro di un algoritmo in un metodo, ritardando alcuni passaggi all'ereditarietà da parte delle sottoclassi. Le sottoclassi possono ridefinire certi passi di questo algoritmo senza cambiare la sua struttura.</li>
+</ul>
+</li>
+</ul>
+<p>Gli altri pattern non si basano principalmente sull'ereditarietà:</p>
+<ul>
+<li>Il <strong>Chain of Responsibility</strong> passa la richiesta lungo una catena di handler fino a quando non viene gestita, non è incentrato sull'ereditarietà ma piuttosto su una catena di oggetti collegati tra loro.</li>
+<li>Il <strong>Proxy</strong> controlla l'accesso a un altro oggetto, non richiede ereditarietà per la sua implementazione primaria.</li>
+<li>Il <strong>Prototype</strong> si basa sulla copia di un oggetto esistente piuttosto che sulla creazione di sottoclassi.</li>
+<li>Il <strong>Two-Way Adapter</strong> permette a due interfacce incompatibili di lavorare insieme e può utilizzare l'ereditarietà, ma è più centrato sulla compatibilità tra interfacce diverse.</li>
+</ul>
+<h5 id="risposta-corretta-8">Risposta corretta: </h5>
+<h6 id="factory-method-e-il-template-method"><strong>Factory Method</strong> e il <strong>Template Method</strong>. </h6>
+<p><br><br></p>
+<h4 id="10">10) </h4>
+<p><img src="10.png" alt="Foto"></p>
+<h5 id="risposta-corretta-9">Risposta corretta: </h5>
+<h6 id="il-pattern-che-ha-una-variante-classica-di-oggetto-è-il-prototype-il-pattern-prototype-consente-di-copiare-oggetti-esistenti-senza-rendere-il-codice-dipendente-dalle-loro-classi-ogni-oggetto-che-serve-come-prototipo-per-la-copia-è-chiamato-prototype-questo-pattern-è-spesso-utilizzato-quando-la-creazione-di-unistanza-è-più-costosa-rispetto-alla-clonazione-di-un-oggetto-esistente-o-quando-gli-oggetti-hanno-un-numero-di-configurazioni-che-non-permette-unefficiente-implementazione-tramite-costruttori-tradizionali">Il pattern che ha una variante classica di oggetto è il <strong>Prototype</strong>. Il pattern Prototype consente di copiare oggetti esistenti senza rendere il codice dipendente dalle loro classi. Ogni oggetto che serve come prototipo per la copia è chiamato "prototype". Questo pattern è spesso utilizzato quando la creazione di un'istanza è più costosa rispetto alla clonazione di un oggetto esistente, o quando gli oggetti hanno un numero di configurazioni che non permette un'efficiente implementazione tramite costruttori tradizionali. </h6>
+<p><br><br></p>
+<h4 id="11">11) </h4>
+<p><img src="11.png" alt="Foto"></p>
+<p>Tra i design pattern menzionati, Decorator, Proxy e Adapter hanno una struttura concettualmente simile nel senso che tutti e tre estendono o modificano il comportamento degli oggetti senza cambiarne la struttura interna. Tuttavia, ciascuno ha un obiettivo diverso:</p>
+<ul>
+<li><strong>Decorator</strong> aggiunge nuove funzionalità a un oggetto in modo dinamico e trasparente per il resto del sistema.</li>
+<li><strong>Proxy</strong> controlla l'accesso a un altro oggetto, agendo da intermediario.</li>
+<li><strong>Adapter</strong> consente a interfacce incompatibili di collaborare.</li>
+</ul>
+<p>Anche se i tre pattern condividono il concetto di "wrapping" di un oggetto con un altro, differiscono nel loro intento e nell'uso:</p>
+<ul>
+<li>Il <strong>Decorator</strong> è usato principalmente per aggiungere responsabilità aggiuntive a un oggetto in modo dinamico.</li>
+<li>Il <strong>Proxy</strong> è spesso usato per controllare l'accesso, per fare lazy loading o per implementare meccanismi di sicurezza.</li>
+<li>L'<strong>Adapter</strong> è usato per fare in modo che due interfacce incompatibili possano lavorare insieme.</li>
+</ul>
+<p><strong>Factory Method</strong>, <strong>Prototype</strong> e <strong>Composite</strong> hanno strutture e intenti diversi:</p>
+<ul>
+<li><strong>Factory Method</strong> si occupa della creazione di oggetti senza specificarne la classe esatta.</li>
+<li><strong>Prototype</strong> consente di creare nuovi oggetti clonandone uno esistente.</li>
+<li><strong>Composite</strong> permette di comporre oggetti in strutture ad albero per rappresentare gerarchie parte-tutto.</li>
+</ul>
+<p><br><br></p>
+<h4 id="12">12) </h4>
+<p><img src="12.png" alt="Foto"></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
