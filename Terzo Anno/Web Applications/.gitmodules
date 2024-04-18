@@ -1,9 +1,3 @@
-[submodule "WebApplications_23_24"]
-	path = WebApplications_23_24
-	url = https://github.com/KristianReale/WebApplications_23_24.git
-[submodule "WebApplications_23_24_Ristoranti_Frontend"]
-	path = WebApplications_23_24_Ristoranti_Frontend
-	url = https://github.com/KristianReale/WebApplications_23_24_Ristoranti_Frontend.git
 [submodule "Progetto-Web-Application"]
 	path = Progetto-Web-Application
 	url = https://github.com/Rhaegal222/Progetto-Web-Application.git
