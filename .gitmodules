@@ -1,3 +1,6 @@
 [submodule "Terzo Anno/Web Applications/Progetto-Web-Application"]
 	path = Terzo Anno/Web Applications/Progetto-Web-Application
 	url = https://github.com/Rhaegal222/Progetto-Web-Application.git
+[submodule "Terzo Anno/Enterprise Applications/Progetto-Enterprise-Application"]
+	path = Terzo Anno/Enterprise Applications/Progetto-Enterprise-Application
+	url = https://github.com/Rhaegal222/Progetto-Enterprise-Application.git
