@@ -622,3 +622,15 @@ Predicate<String> notBlank = s -> s != null && s.length() > 0;
 
 ### java.util.function
 
+Il package `java.util.function` contiene una serie di interfacce funzionali predefinite che possono essere utilizzate con le espressioni lambda. Queste interfacce definiscono metodi che possono essere utilizzati per eseguire operazioni comuni come trasformazioni, filtraggi, aggregazioni, ecc.
+
+- `FUNCTION<T, R>`: definisce una funzione che accetta un argomento di tipo T e restituisce un risultato di tipo R; il suo metodo astratto è apply, che applica la funzione definita all’oggetto t passato come argomento.
+- `BIFUNCTION<T,U,R>`: specializzazione di Function, definisce una funzione che accetta 2 argomenti, di tipo T e U, e restituisce un risultato di tipo R, il suo metodo astratto è apply.
+- `SUPPLIER<T>`: definisce un’operazione che non riceve input e restituisce un risultato di tipo T, il suo metodo astratto è get, che restituisce il risultato calcolato dall’operazione.
+- `CONSUMER<T>`: Definisce un’operazione che accetta un solo input di tipo T e non restituisce risultati, il suo metodo astratto è accept, che esegue l’operazione sull’input.
+- `BICONSUMER<T,U>`: Specializzazione di Consumer, definisce un’operazione che accetta due argomenti di tipo T e U e non restituisce risultati, il suo metodo astratto è accept;
+- `PREDICATE<T>`: Rappresenta un predicato, cioè una funzione booleana, che riceve un solo argomento; il suo metodo astratto è test, che valuta il predicato definito sull’argomento passato.
+- `BIPREDICATE<T,U>`: Specializzazione di Predicate, rappresenta un predicato, cioè una funzione booleana, che riceve due argomenti; il suo metodo astratto è test, che valuta il predicato definito sui due argomenti passati
+- Vengono inoltre definite interfacce funzionali per i tipi primitivi int, long e double.
+
+### Method references (slide 40)
