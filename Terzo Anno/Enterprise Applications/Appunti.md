@@ -634,3 +634,31 @@ Il package `java.util.function` contiene una serie di interfacce funzionali pred
 - Vengono inoltre definite interfacce funzionali per i tipi primitivi int, long e double.
 
 ### Method references (slide 40)
+
+I riferimenti ai metodi sono un'alternativa più concisa alle espressioni lambda per chiamare un metodo esistente. Possono essere utilizzati per riferirsi a metodi statici, metodi di istanza e costruttori.
+
+```java
+// Lambda che consiste solamente in un'invoazione di metodo già esistente
+Consumer<String> c = System.out.println(s);
+BiPredicate<String, String> eqstr = (s1, s2) -> s1.equals(s2);
+```
+
+In casi come quello sopra, in cui il corpo della lambda consiste solo in una chiamata a un metodo esistente, è possibile utilizzare un riferimento al metodo per riferirsi direttamente al metodo stesso.
+
+```java
+Consumer<String> c = System.out::println;
+BiPredicate<String, String> eqstr = String::equals;
+```
+
+Nella chiamata al metodo si sostituisce `.`, `::` e non vengono passati i parametri. Il compilatore si occupa di fare il binding dei parametri; inferisce che il primo parametro è l'oggetto su cui si chiama il metodo, il secondo parametro è il parametro del metodo. In generale la sintassi di un riferimento a un metodo può essere una della seguenti:
+
+- object::instanceMethod (es. System.out::println)
+- Class::staticMethod (es. Integer::parseInt)
+- Class::instanceMethod (es. String::length)
+- Object::new (es. ArrayList::new)
+
+## Stream API
+
+### Iterazioni sulle collection - metodo forEach()
+
+Introdotto come metodo di default in Java 8
