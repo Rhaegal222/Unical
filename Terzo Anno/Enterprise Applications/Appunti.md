@@ -841,4 +841,3 @@ Per creare uno stream parallelo, è possibile utilizzare il metodo `parallelStre
 ```java
 products.parallelStream().filter(p -> p.getName().length() < 10).collect(Collectors.toList());
 ```
-
