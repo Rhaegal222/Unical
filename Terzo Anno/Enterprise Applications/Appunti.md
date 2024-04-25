@@ -661,4 +661,184 @@ Nella chiamata al metodo si sostituisce `.`, `::` e non vengono passati i parame
 
 ### Iterazioni sulle collection - metodo forEach()
 
-Introdotto come metodo di default in Java 8
+Introdotto come metodo di default in Java 8; prende in input un oggetto di tipo Consumer (esegue operazioni su oggetti di solito per modificare lo stato o per effettuare operazioni di output).
+
+Ogni collezione può iterare sui suoi elementi tramite il metodo forEach() e passando in input un'espressione lambda per fare operazioni sugli elementi.
+
+```java
+list.forEach(s -> System.out.println(s));
+```
+
+### Stream API
+
+Lo Stream API è una nuova libreria di alto livello che semplifica l'uso delle collezioni e offre supporto alla programmazione parallela; porta Java alla pari di altri linguaggi che puntano su nuove architetture basate su multi-core e cluster di computer che gestiscono grandi quantità di dati.
+
+Un concetto fondamentale è lo Stream inteso come un flusso di dati che nasce da una collection e sul quale è possibile eseguire operazioni complicate con codice semplice basato su espressioni lambda e reference method.
+
+#### Come ottenere oggetti Stream
+
+**Stream finiti:**
+
+```java
+Stream<String> stream = Stream.of("a", "b", "c");
+Stream<String> stream = Arrays.stream(new String[] {"a", "b", "c"});
+Stream<String> stream = list.stream();
+```
+
+**Stream infiniti:**
+
+```java
+Stream<Integer> stream = Stream.iterate(2, n -> n * 2);
+Stream<Double> stream = Stream.generate(() -> Math.random());
+Stream.iterate(1, element -> element + 1).filter(element -> element % 5 == 0).limit(5).forEach(System.out::println);
+```
+
+Utilizzando i metodi dei sottotipi `IntStream`, `LongStream` e `DoubleStream` è possibile creare stream di interi, long e double.
+
+```java
+IntStream intStream = IntStream.range(1, 10);
+LongStream longStream = LongStream.rangeClosed(1, 10);
+DoubleStream doubleStream = DoubleStream.of(1.0, 2.0, 3.0);
+```
+
+A partire dalle collezioni è possibile ottenere uno stream tramite il metodo `stream()`.
+
+```java
+list.stream();
+set.stream();
+map.entrySet().stream();
+```
+
+### Definizione di Stream e Pipeline
+
+Uno stream è una sequenza di elementi che si può iterare una sola volta (una volta terminato, lo stream non può essere riutilizzato). Uno stream non immagazzina i dati, ma permette di concatenare una serie di operazioni sugli elementi dello stream tramite un'operazione di pipeline.
+
+Una pipeline è una sequenza di operazioni di aggregazione costituita da tre parti:
+
+- Sorgente: origine degli elementi dello stream (es. una collezione, un array, un generatore, ecc.). Una sorgente mette a disposizione un metodo per ottenere un oggetto Stream.
+
+- Zero o più operazioni aggregazione (o intermedie): trasformano uno stream in un altro stream. Queste operazioni sono lazy, cioè non vengono eseguite fino a quando non viene chiamata un'operazione terminale. Es.: `filter()`, `map()`, `sorted()`, `distinct()`, `limit()`, `skip()`.
+
+- Operazione terminale: è un metodo che restituisce un risultato non di tipo Stream. Quando viene chiamata un'operazione terminale, tutte le operazioni intermedie vengono eseguite. Es.: `forEach()`, `collect()`, `reduce()`, `count()`, `min()`, `max()`.
+
+```java
+double average = product.stream().filter(p -> p.getName().length() < 10).mapToDouble(Product::getPrice).average().getAsDouble();
+```
+
+## Operazioni intermedie
+
+### Filtering
+
+Lo Stream API di Java 8 fornisce vari metodi che possono essere utilizzati per interrogare gli Stream (come si fa con una SELECT per interrogare un database).
+
+- `filter()`: restituisce un nuovo stream contenente solo gli elementi che soddisfano il predicato specificato.
+
+```java
+products.stream().filter(p -> p.getName().length() < 10).collect(Collectors.toList());
+```
+
+- `distinct()`: restituisce un nuovo stream contenente solo gli elementi unici. Utilizza il metodo `equals()` per confrontare gli elementi.
+
+```java
+products.stream().map(Product::getName).distinct().collect(Collectors.toList());
+```
+
+- `limit()`: restituisce un nuovo stream contenente solo i primi n elementi dello stream originale. Prende in input un long che rappresenta il numero massimo di elementi da restituire.
+
+```java
+products.stream().filter(p -> p.getName().length() < 10).map(Product::getName).limit(3).collect(Collectors.toList());
+```
+
+### Mapping
+
+Il mapping è un'operazione che trasforma gli elementi di uno stream in un altro tipo di dato. La funzione `map()` è un'operazione che prende in input un'altra funzione come argomento e applica questa funzione a ciascun elemento dello stream, restituendo un nuovo stream contenente i risultati della funzione. È utile per trasformare gli elementi di uno stream in un altro tipo di dato.
+
+```java
+products.stream().map(Product::getName).collect(Collectors.toList());
+IntStream mapToInt = products.stream().mapToInt(value -> value.getId());
+```
+
+Lo stream iniziale estratto dalla Collection è uno stream di oggetti Product. La funzione `map()` viene utilizzata per trasformare ogni oggetto Product in una stringa contenente il nome del prodotto. Il risultato è uno stream di stringhe.
+
+### Sorting
+
+L'operazione `sorted()` viene utilizzata per ordinare gli elementi di uno stream in base a un criterio specificato. Può essere utilizzata con o senza un comparatore personalizzato.
+
+```java
+products.stream().map(Product::getName).sorted().collect(Collectors.toList());
+
+products.stream().sorted(Comparator.comparing(Product::getName))
+                 .collect(Collectors.toList());
+
+products.stream().sorted(Comparator.comparing(Product::getName).reversed())
+                 .collect(Collectors.toList());
+
+products.stream().sorted(Comparator.comparing(Product::getName)
+                 .thenComparing(Product::getPrice)).collect(Collectors.toList());
+```
+
+## Operazioni terminali
+
+### Match condizionali e ricerche
+
+Le operazioni terminali di match sono utilizzate per verificare se uno stream soddisfa una determinata condizione. Queste operazioni restituiscono un valore booleano.
+
+```java
+// Verifica se almeno un elemento soddisfa il predicato specificato
+boolean match = products.stream().anyMatch(p -> p.getName().length() < 10);
+// Verifica se tutti gli elementi soddisfano il predicato specificato
+boolean match = products.stream().allMatch(p -> p.getName().length() < 10);
+// Verifica se nessun elemento soddisfa il predicato specificato
+boolean match = products.stream().noneMatch(p -> p.getName().length() < 10);
+```
+
+Lo Stream API fornisce due metodi per le ricerche negli stream:
+
+- `findFirst()`: restituisce il primo elemento dello stream. Se lo stream è vuoto, restituisce un Optional vuoto.
+
+```java
+Optional<Product> res = products.stream().filter(p -> p.getName().length() < 10).findFirst();
+```
+
+- `findAny()`: restituisce un qualsiasi elemento dello stream. È utile per ottenere un elemento qualsiasi da uno stream parallelo.
+
+```java
+Optional<Product> res = products.stream().filter(p -> p.getName().length() < 10).findAny();
+```
+
+### Reduction
+
+L'operazione di riduzione è un'operazione terminale che combina gli elementi di uno stream in un singolo risultato. È utile per eseguire operazioni di aggregazione come somma, media, conteggio, ecc.
+
+Esistono operazioni di riduzione che ritornano collezioni, come `collect()`, e operazioni di riduzione che ritornano un singolo valore, come `reduce()`.
+
+- `reduce()`: combina gli elementi di uno stream in un singolo risultato. Prende in input un'operazione binaria (funzione che prende due argomenti e restituisce un risultato) e un valore iniziale.
+
+```java
+// Somma dei prezzi dei prodotti con nome più corto di 10 caratteri
+products.stream().filter(p -> p.getName().length() < 10).mapToDouble(p -> p.getPrice()).reduce(0, (p1, p2) -> p1 + p2);
+```
+
+- `collect()`: combina gli elementi di uno stream in una collezione. Prende in input un `Collector` che specifica come combinare gli elementi. Collectors è una classe di utilità che fornisce metodi statici per creare vari tipi di collector come `toList()`, `toCollection()`, `reducing()`, `joining()`, `groupingBy()`, `partitioningBy()`.
+
+```java
+// Restituisce una lista di nomi dei prodotti
+TreeSet<String> s = products.stream().map(p -> p.getName()).collect(Collectors.toCollection(TreeSet::new));
+
+String c = products.stream().map(p -> p.getName()).collect(Collectors.joining("; "));
+
+Map<Float, List<Product>> m = products.stream().collect(Collectors.groupingBy(p -> p.getPrice()));
+
+DoubleSummaryStatistics stat = products.stream().collect(Collectors.summarizingDouble(Product::getPrice));
+```
+
+### Parallel Stream
+
+Lo Stream API di Java 8 supporta l'esecuzione parallela di operazioni sugli stream. Gli stream paralleli sono utili per eseguire operazioni su grandi quantità di dati in modo più efficiente, sfruttando i multi-core e i cluster di computer.
+
+Per creare uno stream parallelo, è possibile utilizzare il metodo `parallelStream()` invece di `stream()`.
+
+```java
+products.parallelStream().filter(p -> p.getName().length() < 10).collect(Collectors.toList());
+```
+
