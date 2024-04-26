@@ -34,4 +34,3 @@ Oggi, è sempre più comune che le persone accedano alle stesse informazioni uti
 Nel contesto delle applicazioni enterprise, è raro che un sistema operi in isolamento. È comune che debba comunicare con altre applicazioni, le quali potrebbero essere sviluppate utilizzando linguaggi di programmazione diversi o tecnologie completamente differenti. Anche all'interno di un'organizzazione che adotti una singola tecnologia per tutte le sue applicazioni, possono sorgere problemi dovuti a interpretazioni varie di concetti comuni. Ad esempio, mentre una divisione universitaria potrebbe definire gli studenti come coloro attualmente iscritti a corsi triennali o magistrali, un'altra divisione potrebbe considerare studenti anche coloro che si sono laureati. Inoltre, la complessità intrinseca della logica aziendale rende la progettazione dell'applicazione un'attività complessa e soggetta a sfide.
 
 ### Tipi di applicazioni enterprise
-
