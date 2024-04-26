@@ -4,7 +4,7 @@
 
 1. Docker
 2. Annotation, reflection, lombok
-3. ORM, JPA
+3. ORM-JPA
 4. Spring Repository
 5. Service, paging sorting, coaching, scheduler, auditing
 6. DTO e Controller
