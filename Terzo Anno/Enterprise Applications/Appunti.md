@@ -331,6 +331,96 @@ Le annotazioni possono essere lette tramite reflection consentendo al programma 
 
 Questo permette di scrivere codice più flessibile e dinamico, in quanto le annotazioni possono essere lette a runtime per modificare il comportamento dell'applicazione.
 
+### Formato delle annotazioni
+
+Nella sua forma piú semplice l'annotazione è del tipo:
+
+```java
+@Override
+public void myMethod() { }
+```
+
+Ma può anche avere dei parametri:
+
+```java
+@SuppressWarning(value = "unchecked")
+public void myMethod() { }
+```
+
+nel caso non ci sia ambiguitá (es. perché c'è un solo parametro) si può omettere il nome del parametro:
+
+```java
+@SuppressWarning("unchecked")
+public void myMethod() { }
+```
+
+È possibile anche aggiungere diverse annotazioni alla stessa dichiarazione:
+
+```java
+@Overrride
+@SuppressWarning("unchecked")
+public void myMethod() { }
+```
+
+Ed è anche possibile aggiungere annotazioni dello stesso tipo piú volte:
+
+```java
+@Test (returnValue = "even")
+@Test (returnValue = ">10")
+public void myMethod() { }
+```
+
+### Cosa si può annotare?
+
+Le annotazioni possono essere utilizzate su qualisiasi dichiarazione (non è importante la visibilitá):
+
+- di classe: @annotation public class MyClass { }
+- di attributo: @annotation private int myField;
+- di metodo: @annotation public void myMethod() { }
+
+Esistono anche le `type annotation` che possono essere utilizzate in altri contesti (ovunque si possa usare un tipo):
+
+- creazione di un oggetto: new @annotation MyObject();
+- cast: myObj = (@Nonnull String) obj;
+- gestione eccezioni: public void myMethod() throws @Critical MyException { }
+- implement: public UnmodifiableList<T>() implements @ReadOnly List<@Readonly T> { }
+
+### Definizione di un'annotazione
+
+Per definire una nuova annotazione in Java, si crea una nuova interfaccia annotata con `@interface`. L'interfaccia può contenere metodi che definiscono i parametri dell'annotazione.
+
+```java
+public @interface MyAnnotation {
+    String someString();
+    String otherString();
+    String optionalString() default "N/A";
+    int value();
+    int optionalValue() default 1;
+    String[] parameters();
+}
+```
+
+In questo esempio, `MyAnnotation` è una nuova annotazione con i seguenti parametri:
+
+- `someString()`: un parametro di tipo `String` senza valore di default.
+- `otherString()`: un parametro di tipo `String` senza valore di default.
+- `optionalString()`: un parametro di tipo `String` con valore di default "N/A".
+- `value()`: un parametro di tipo `int` senza valore di default.
+- `optionalValue()`: un parametro di tipo `int` con valore di default 1.
+- `parameters()`: un parametro di tipo `String[]` senza valore di default.
+
+L'utilizzo di un'annotazione personalizzata è simile all'utilizzo di un'annotazione predefinita:
+
+```java
+@MyAnnotation(
+    someString = "test",
+    otherString = "test1",
+    value = 1,
+    parameters = { "I", "like", "annotations" }
+)
+public class MyClass {}
+```
+
 #### Annotazioni di Marker
 
 Le annotazioni di marker sono annotazioni che non richiedono alcuna informazione aggiuntiva e sono utilizzate solo per marcare un elemento del codice, per indicare la presenza di una determinata caratteristica. Ad esempio, `@Override`, `@Deprecated`, `@SuppressWarnings`.
@@ -394,6 +484,116 @@ L'annotazione `@Inherited` è utilizzata per indicare che un'annotazione persona
 #### @Repeatable
 
 L'annotazione `@Repeatable` consente di annotare più volte lo stesso elemento con la stessa annotazione. Consente di definire un contenitore di annotazioni (chiamato "container annotation") che consente di specificare più volte la stessa annotazione. Questo rende il codice più leggibile in situazioni in cui è necessario applicare più volte la stessa annotazione a un singolo elemento. Ad esempio, se definiamo un'annotazione `@MiaAnnotazione` contrassegnata con `@Repeatable`, possiamo applicare `@MiaAnnotazione` più volte allo stesso elemento senza dover creare un contenitore esterno per raggruppare le annotazioni.
+
+## Reflection
+
+### Cos'è la reflection?
+
+La `Reflection` è una funzionalità offerta da Java che consente di eseguire un programma Java per esaminare o modificare il comportamento di un'applicazione in fase di esecuzione. Per esempio è possibile che una classe mostri il nome di tutti i suoi attributi e metodi e possa stamparli a video, oppure eseguire.
+
+### Come funziona?
+
+Le classi, gli attributi, gli oggetti e i metodi sono visti come Object:
+
+- La classe `Class` si trova nel package `java.lang` e offre accesso alle informazioni sulla classe.
+- Alcune delle classi che si trovano nel package `java.lang.reflect` sono `Constructor`, `Field`, `Method`, `Modifier`, `Parameter`, `Array`.
+
+### Metodi di base
+
+Alcuni metodi di base della classe `Class` sono:
+
+- `Class getClass()`: si trova in `Object` e restituisce l'oggetto `Class` associato all'oggetto.
+- `String Class.getName()`: restituisce il nome della classe.
+- `Class.forName(String className)`: crea l'oggetto `Class` partendo dal nome della classe.
+- `Contructor.newInstance(Object[] args)`: crea una nuova istanza della classe.
+- `Field[] Class.getFields()` restituisce i campi visibili della classe;
+- `Field[] Class.getDeclaredFields()` restituisce i campi della classe;
+- `Method[] Class.getMethods()` restituisce i metodi visibili della classe e delle superclassi;
+- `Method[] Class.getDeclaredMethods()` restituisce i metodi dichiarati dalla classe (indipendentemente dalla visibilità), tranne quelli ereditati;
+- `int getModifiers()` si può applicare su `Class`, `Method`, `Field` e restituisce il modificatore, e si possono usare i metodi della classe `Modifier`, come `Modifier.isPublic(int m)`, per controllare la visibilità;
+- `Annotation[] getAnnotations()` restituisce le annotazioni.
+
+### Esempio di Reflection
+
+```java
+public class Test {
+  private int a;
+  protected double b;
+  public String c;
+  public Test() {
+    a = 0;
+    b = 0.0;
+    c = "";
+  }
+  public Test(int a, double b, String c) {
+    this.a = a;
+    this.b = b;
+    this.c = c;
+  }
+  protected int getA() { return a; }    
+  private double getB() { return b; }
+  public final void print() {
+    System.out.println(getB());
+  }
+}
+```
+
+```java
+public void test() throws Exception {
+  Test t = new Test();
+  System.out.println(t.getClass().getName());
+  System.out.println(Test.class.getName());
+  System.out.println(Class.forName("reflection.Test").getName());
+  Test t1 = Test.class.getConstructor().newInstance();
+  Test t2 = Test.class.getConstructor(int.class, double.class, String.class).newInstance(1, 10.0, "ciao");
+  for (Field field : Test.class.getFields())
+    System.out.println(field.getName()); //Stampa solo c
+  for (Field field : Test.class.getDeclaredFields())
+    System.out.println(field.getName()); //Stampa a, b, c
+  //Field f = Test.class.getField("a"); //eccezione: a è privato
+  Field f = Test.class.getField("c"); //ok
+  Field declaredF = Test.class.getDeclaredField("a"); //ok
+  for(Method m : Test.class.getMethods())
+    System.out.println(m); //Stampa print e i metodi di Object
+  for(Method m : Test.class.getDeclaredMethods())
+    System.out.println(m); //Stampa getA, getB, print
+  for(Method m : Test.class.getDeclaredMethods()) {
+    int mod = m.getModifiers();
+    if(Modifier.isPublic(mod) && Modifier.isFinal(mod))
+      System.out.println(m.getName()); //Stampa print
+  }
+}
+```
+
+### Convertire un oggetto semplice in JSON
+
+Esempio completo su [GitHub](https://github.com/dodaro/ea/tree/main/Annotations-Reflection/Object2JSONWithReflection)
+
+```java
+public static JSONObject toJSON(Object o) throws Exception {
+    Objects.requireNonNull(o, "Object cannot be null");
+    var fields = o.getClass().getDeclaredFields(); // Prende i campi della classe
+    StringBuilder parameters = new StringBuilder("{");
+    boolean record = o.getClass().isRecord(); // Controlla se è un Record o una classe
+    for (var field : fields) { // Per ogni campo della classe
+        if (!field.isAnnotationPresent(Ignore.class)) { // Controlla se è annotato come Ignore (definita da noi)
+            try {
+                String name = field.getName(); // Prende il nome del campo
+                // Se è un record esiste un metodo name() altrimenti prendiamo il metodo getName()
+                var method = record ? o.getClass().getDeclaredMethod(name) : o.getClass().getDeclaredMethod("get" + Character.toUpperCase(name.charAt(0)) + name.substring(1));
+                // Inserisce "name: value" nel JSON, dove name è il nome del campo e value è il valore restituito
+                // invocando il corrispondente getter
+                parameters.append(name).append(":").append(toJSONString(method.invoke(o))).append(",");
+            } catch (NoSuchMethodException e) {
+                // Lancia un’eccezione se il metodo get non è presente
+                throw new Exception(o.getClass() + " must be a record or must have a getter for all fields!");
+            }
+        }
+    }
+    parameters.replace(parameters.length()-1, parameters.length(), "}"); // Sostituisce l'ultima virgola
+    return new JSONObject(parameters.toString()); // Crea e restituisce un JSONObject
+}
+```
 
 ## Lombok
 
