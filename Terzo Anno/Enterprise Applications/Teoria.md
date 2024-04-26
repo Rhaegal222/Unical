@@ -28,3 +28,10 @@ Le applicazioni enterprise, indipendentemente dalle dimensioni dell'azienda, dev
 ### Diverse interfacce grafiche
 
 Oggi, è sempre più comune che le persone accedano alle stesse informazioni utilizzando una varietà di dispositivi con caratteristiche differenti. Questi dispositivi possono variare nelle dimensioni dello schermo, come tablet, smartphone e computer, e nelle capacità dei sensori integrati, come microfono, fotocamera e GPS. Inoltre, presentano differenti capacità computazionali. Di conseguenza, le applicazioni devono essere progettate per adattarsi il più possibile a questi dispositivi, prevedendo interfacce diverse per soddisfare le esigenze di ciascuno e offrire un'esperienza utente ottimale indipendentemente dal dispositivo utilizzato.
+
+### Integrazione con altre applicazioni enterprise
+
+Nel contesto delle applicazioni enterprise, è raro che un sistema operi in isolamento. È comune che debba comunicare con altre applicazioni, le quali potrebbero essere sviluppate utilizzando linguaggi di programmazione diversi o tecnologie completamente differenti. Anche all'interno di un'organizzazione che adotti una singola tecnologia per tutte le sue applicazioni, possono sorgere problemi dovuti a interpretazioni varie di concetti comuni. Ad esempio, mentre una divisione universitaria potrebbe definire gli studenti come coloro attualmente iscritti a corsi triennali o magistrali, un'altra divisione potrebbe considerare studenti anche coloro che si sono laureati. Inoltre, la complessità intrinseca della logica aziendale rende la progettazione dell'applicazione un'attività complessa e soggetta a sfide.
+
+### Tipi di applicazioni enterprise
+
