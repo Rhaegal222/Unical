@@ -841,3 +841,7 @@ Per creare uno stream parallelo, è possibile utilizzare il metodo `parallelStre
 ```java
 products.parallelStream().filter(p -> p.getName().length() < 10).collect(Collectors.toList());
 ```
+
+Parallel Stream utilizza un algoritmo chiama fork/join per dividere la collezione in piú parti e assegna ogni parte a un thread diverso. Una volta che ogni thread ha finito di processare la sua parte, i risultati vengono combinati. Il vantaggio è che vari thread possono svolgere il lavoro in parallelo, riducendo il tempo di esecuzione. L'esecuzione parallela ha il costo di dover suddividere la collezione e combinarla alla fine, per questo motivo non sempre è producente parallelizzare.
+
+Quando si utilizza uno stream parallelo, è importante considerare il fenomeno del non determinismo. Questo significa che il risultato può variare ad ogni esecuzione a causa dell'ordine di esecuzione dei thread. Ad esempio, se si cerca in parallelo un elemento in uno stream con più occorrenze, il risultato potrebbe essere diverso in esecuzioni diverse.
