@@ -271,48 +271,250 @@ Il package `com.example.backend.config` contiene le classi di configurazione del
 
 In questo caso specifico, il package `com.example.backend.config` deve contenere le seguenti classi e package:
 
-- il package `audit` che contiene le classi per l'audit delle entità.
+- il package `auditor` che contiene le classi per l'audit delle entità.
 - il package `i18n` che contiene le classi per la localizzazione delle risorse.
 - il package `security` che contiene le classi per la sicurezza dell'applicazione.
 - la classe `ModelMapperConfig` che configura ModelMapper per mappare le entità ai DTO.
 - la classe `CacheConfig` che configura la cache di Spring.
 
-### Configurazione di `security`
+### Auditor
 
-Il package `com.example.backend.config.security` contiene le classi per la sicurezza dell'applicazione. Queste classi possono includere la configurazione di Spring Security, la configurazione di JWT e la configurazione di OAuth2.
+L'audit delle entità è un meccanismo che registra le modifiche alle entità nel database. Ad esempio, quando un'entità viene creata, aggiornata o rimossa, l'audit delle entità registra chi ha effettuato l'operazione e quando è stata effettuata. Questo meccanismo è utile per tenere traccia delle modifiche alle entità e per garantire la conformità alle normative di sicurezza.
 
-Nell'esempio seguente, la classe `SecurityConfig` configura Spring Security per richiedere l'autenticazione per tutte le richieste e per consentire l'accesso a determinati endpoint solo agli utenti autenticati con un ruolo specifico.
-
-
-
-
-### Configurazione di `audit`
-
-Il package `com.example.backend.config.audit` contiene le classi per l'audit delle entità. Queste classi possono includere un listener per le entità e un interceptor per le richieste HTTP.
-
-Nell'esempio seguente, la classe `UserAuditorAware` implementa l'interfaccia `AuditorAware` per restituire il nome dell'utente correntemente autenticato. Questo nome può essere utilizzato per registrare le modifiche alle entità nel database.
+Il package `com.example.backend.config.auditor` contiene le classi per l'audit delle entità. Prima di tutto, creiamo la classe `AuditorConfig` che configura l'audit delle entità:
 
 ```java
 package com.example.backend.config.auditor;
 
-import org.springframework.data.domain.AuditorAware;
+import org.springframework.context.annotation.Bean; // Importa Bean da Spring Framework che permette di definire un bean
+import org.springframework.context.annotation.Configuration; // Importa Configuration da Spring Framework che indica che la classe è una classe di configurazione
+import org.springframework.data.domain.AuditorAware; // Importa AuditorAware da Spring Data che permette di definire un auditor
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing; // Importa EnableJpaAuditing da Spring Data JPA che abilita l'audit delle entità
 
-import java.util.Optional;
+import java.util.Optional; // Importa Optional di Java che permette di gestire i valori nulli
 
-public class UserAuditorAware implements AuditorAware<String> {
-    @Override
-    public Optional<Long> getCurrentAuditor() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null || !authentication.isAuthenticated()) {
-            return Optional.empty();
-        }
-
-        if (authentication.getPrincipal() instanceof UserDetailsImpl) {
-            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-            return Optional.of(userDetails.getUsername());
-        }
-
-        return Optional.empty();
+@Configuration
+@EnableJpaAuditing(auditorAwareRef = "auditorProvider")
+public class AuditorConfig {
+    @Bean
+    public AuditorAware<Long> auditorProvider() {
+        return new UserAuditorAware();
     }
 }
 ```
+
+Successivamente creiamo la classe `UserAuditorAware()` che implementa l'interfaccia `AuditorAware` e restituisce l'ID dell'utente corrente:
+
+```java
+package com.example.backend.config.auditor;
+
+import org.springframework.data.domain.AuditorAware; // Importa AuditorAware da Spring Data che permette di definire un auditor
+
+import java.util.Optional; // Importa Optional di Java che permette di gestire i valori nulli
+
+public class UserAuditorAware implements AuditorAware<Long> {
+
+    private static final Long AUTH_CODE = 1_000_001L; // ID dell'utente corrente
+
+    @Override
+    public Optional<Long> getCurrentAuditor() {
+        return Optional.of(AUTH_CODE); // Restituisce l'ID dell'utente corrente
+    }
+}
+```
+
+### I18n
+
+La localizzazione delle risorse è un meccanismo che consente di adattare l'applicazione a diverse lingue e culture. Ad esempio, è possibile creare file di proprietà per le diverse lingue e culture e utilizzare questi file per localizzare le risorse dell'applicazione. Questo meccanismo è utile per rendere l'applicazione più accessibile e per raggiungere un pubblico più ampio.
+
+Il package `com.example.backend.config.i18n` contiene le classi per la localizzazione delle risorse. 
+
+#### MessageLang
+
+Prima di tutto, creiamo la classe `MassageLang` che configura il `MessageSource` per la localizzazione delle risorse:
+
+```java
+package com.example.backend.config.i18n;
+
+import lombok.RequiredArgsConstructor; // Importa RequiredArgsConstructor da Lombok che genera un costruttore con i parametri richiesti
+import org.springframework.context.i18n.LocaleContextHolder; // Importa LocaleContextHolder da Spring Framework che permette di ottenere il locale corrente
+import org.springframework.context.support.ResourceBundleMessageSource; // Importa ResourceBundleMessageSource da Spring Framework che permette di caricare le risorse da un file di proprietà
+import org.springframework.stereotype.Component; // Importa Component da Spring Framework che indica che la classe è un componente
+
+@Component // Indica che la classe è un componente
+@RequiredArgsConstructor // Genera un costruttore con i parametri richiesti
+public class MessageLang {
+
+    private final ResourceBundleMessageSource messageSource; // Carica le risorse da un file di proprietà
+
+    public String getMessage(String code) {
+        return messageSource.getMessage(code, null, LocaleContextHolder.getLocale()); // Restituisce il messaggio localizzato
+    }
+
+    public String getMessage(String code, Object... args) {
+        return messageSource.getMessage(code, args, LocaleContextHolder.getLocale()); // Restituisce il messaggio localizzato con gli argomenti
+    }
+}
+```
+
+#### LanguageResolver
+
+Successivamente, creiamo la classe `LanguageResolver` che risolve il locale corrente:
+
+```java
+package com.example.backend.config.i18n;
+
+import jakarta.servlet.http.HttpServletRequest; // Importa HttpServletRequest di Java che rappresenta una richiesta HTTP
+import org.springframework.util.StringUtils; // Importa StringUtils da Apache Commons Lang che fornisce metodi per la manipolazione delle stringhe
+import org.springframework.stereotype.Component; // Importa Component da Spring Framework che indica che la classe è un componente
+import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver; // Importa AcceptHeaderLocaleResolver da Spring Framework che risolve il locale corrente
+
+import java.util.List; // Importa List di Java che rappresenta una lista
+import java.util.Locale; // Importa Locale di Java che rappresenta un locale
+
+@Component
+public class LanguageResolver extends AcceptHeaderLocaleResolver {
+
+    private static final List<Locale> LOCALES = List.of(new Locale("en"), new Locale("it"));
+
+    @Override
+    public Locale resolveLocale(HttpServletRequest request) {
+        String language = request.getHeader("Accept-Language");
+        List<Locale> supportedLocales = getSupportedLocales();
+        Locale defaultLocale = getDefaultLocale();
+
+        if (StringUtils.isEmpty(language)) {
+            return defaultLocale;
+        }
+        Locale requestLocale = Locale.forLanguageTag(language);
+        if (supportedLocales.contains(requestLocale)) {
+            return requestLocale;
+        } else {
+            return defaultLocale;
+        }
+    }
+}
+```
+
+#### Internationalization
+
+Infine, creiamo la classe `Internationalization` che configura la localizzazione delle risorse:
+
+```java
+package com.example.backend.config.i18n;
+
+import org.springframework.context.annotation.Bean; // Importa Bean da Spring Framework che permette di definire un bean
+import org.springframework.context.annotation.Configuration; // Importa Configuration da Spring Framework che indica che la classe è una classe di configurazione
+import org.springframework.context.support.ResourceBundleMessageSource; // Importa ResourceBundleMessageSource da Spring Framework che permette di caricare le risorse da un file di proprietà
+import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver; // Importa AcceptHeaderLocaleResolver da Spring Framework che risolve il locale corrente
+
+import java.util.Arrays; // Importa Arrays di Java che fornisce metodi per manipolare gli array
+import java.util.Locale; // Importa Locale di Java che rappresenta un locale
+
+@Configuration
+public class Internationalization /*extends WebMvcConfigurerAdapter*/ {
+
+    @Bean
+    public AcceptHeaderLocaleResolver localeResolver() {
+        final LanguageResolver resolver = new LanguageResolver();
+        resolver.setSupportedLocales(Arrays.asList(Locale.ITALY, Locale.US,Locale.UK));
+        resolver.setDefaultLocale(Locale.ITALY);
+        return resolver;
+    }
+
+    @Bean
+    public ResourceBundleMessageSource messageSource() {
+        final ResourceBundleMessageSource source = new ResourceBundleMessageSource();
+        source.setBasename("language/messages");
+        source.setDefaultEncoding("UTF-8");
+        return source;
+    }
+}
+```
+
+### CacheConfig
+
+La cache di Spring è un meccanismo che memorizza temporaneamente i dati in memoria per ridurre il tempo di risposta delle richieste. Ad esempio, è possibile memorizzare in cache i risultati delle query per evitare di eseguire la stessa query più volte. Questo meccanismo è utile per migliorare le prestazioni dell'applicazione e per ridurre il carico sul database.
+
+Il package `com.example.backend.config` contiene la classe `CacheConfig` che configura la cache di Spring:
+
+```java
+package com.example.backend.config;
+
+import org.slf4j.Logger; // Importa Logger da SLF4J che permette di registrare i messaggi di log
+import org.slf4j.LoggerFactory; // Importa LoggerFactory da SLF4J che permette di creare un logger
+import org.springframework.cache.CacheManager; // Importa CacheManager da Spring Framework che permette di gestire la cache
+import org.springframework.cache.annotation.CacheEvict; // Importa CacheEvict da Spring Framework che permette di rimuovere i dati dalla cache
+import org.springframework.cache.annotation.EnableCaching; // Importa EnableCaching da Spring Framework che abilita la cache
+import org.springframework.cache.concurrent.ConcurrentMapCacheManager; // Importa ConcurrentMapCacheManager da Spring Framework che gestisce la cache in memoria
+import org.springframework.context.annotation.Bean; // Importa Bean da Spring Framework che permette di definire un bean
+import org.springframework.context.annotation.Configuration; // Importa Configuration da Spring Framework che indica che la classe è una classe di configurazione
+import org.springframework.scheduling.annotation.EnableScheduling; // Importa EnableScheduling da Spring Framework che abilita la pianificazione delle attività
+import org.springframework.scheduling.annotation.Scheduled; // Importa Scheduled da Spring Framework che permette di pianificare l'esecuzione di un metodo
+
+import java.time.LocalDateTime; // Importa LocalDateTime di Java che rappresenta una data e un'ora
+import java.time.format.DateTimeFormatter; // Importa DateTimeFormatter di Java che permette di formattare le date e le ore
+
+@Configuration // Indica che la classe è una classe di configurazione
+@EnableCaching // Abilita la cache
+@EnableScheduling // Abilita la pianificazione delle attività
+public class CacheConfig {
+    private static final Logger logger = LoggerFactory.getLogger(CacheConfig.class); // Crea un logger per la classe
+
+    public static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"); // Formatta la data e l'ora
+
+    public static final String CACHE_FOR_USERS = "USER"; // Nome della cache per gli utenti
+
+    @Bean("cacheManager")
+    public CacheManager cacheManager() {
+        return new ConcurrentMapCacheManager(CACHE_FOR_USERS); // Crea un gestore della cache per gli utenti
+    }
+
+    @CacheEvict(allEntries = true, value = {CACHE_FOR_USERS}) // Rimuove tutti i dati dalla cache per gli utenti
+    @Scheduled(fixedDelay = 10 * 60 * 1000, initialDelay = 500) // Pianifica l'esecuzione del metodo ogni 10 minuti
+    public void userCacheEvict() {
+        logger.info(String.format("Flush Cache[%s] at [%s]", CACHE_FOR_USERS, formatter.format(LocalDateTime.now()))); // Registra un messaggio di log
+    }
+}
+```
+
+### ModelMapperConfig
+
+ModelMapper è una libreria che consente di mappare le entità ai DTO in modo automatico. Ad esempio, è possibile creare un oggetto `ModelMapper` e utilizzarlo per mappare le entità ai DTO e viceversa. Questo meccanismo è utile per ridurre il codice ripetitivo e per migliorare la manutenibilità dell'applicazione.
+
+Il package `com.example.backend.config` contiene la classe `ModelMapperConfig` che configura ModelMapper:
+
+```java
+package com.example.backend.config;
+
+import it.unical.backend.data.entity.User; // Importa User che rappresenta un'entità User
+import it.unical.backend.dto.UserDto; // Importa UserDto che rappresenta un DTO User
+import org.modelmapper.ModelMapper; // Importa ModelMapper che permette di mappare le entità ai DTO
+import org.modelmapper.PropertyMap; // Importa PropertyMap da ModelMapper che permette di definire le proprietà di mappatura
+import org.springframework.context.annotation.Bean; // Importa Bean da Spring Framework che permette di definire un bean
+import org.springframework.context.annotation.Configuration; // Importa Configuration da Spring Framework che indica che la classe è una classe di configurazione
+
+@Configuration // Indica che la classe è una classe di configurazione
+public class ModelMapperConfig {
+
+    @Bean // Definisce un bean di ModelMapper
+    public ModelMapper modelMapper() {
+        ModelMapper modelMapper = new ModelMapper(); // Crea un oggetto ModelMapper
+        modelMapper.getConfiguration().setFieldMatchingEnabled(true).setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE); // Abilita il matching dei campi e imposta il livello di accesso ai campi
+
+
+        // Mappa l'entità User al DTO UserDto
+        modelMapper.createTypeMap(User.class, UserDto.class).addMappings(new PropertyMap<User, UserDto>() {
+            @Override
+            protected void configure() {
+                using(ctx -> generateFullName(((User) ctx.getSource()).getFirstName(), ((User) ctx.getSource()).getLastName()));
+            }
+        }); // Mappa il nome completo dell'utente
+        return modelMapper; // Restituisce l'oggetto ModelMapper
+    }
+
+    // Genera il nome completo dell'utente
+    private String generateFullName(String firstName, String lastName) {
+        return firstName + " " + lastName; // Restituisce il nome completo dell'utente
+    }
+}
