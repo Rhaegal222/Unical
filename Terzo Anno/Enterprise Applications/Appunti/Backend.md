@@ -1,5 +1,21 @@
 # Guida per la creazione di un backend
 
+## Indice
+
+- [Introduzione](#introduzione)
+- [Creazione di un progetto Spring Boot](#creazione-di-un-progetto-spring-boot)
+- [Configurazione di un database](#configurazione-di-un-database)
+- [Creazione di un'entità, un repository, un servizio e un controller](#creazione-di-unentità-un-repository-un-servizio-e-un-controller)
+  - [Creazione di un'entità](#creazione-di-unentità)
+  - [Creazione di un listener per le entità (opzionale)](#creazione-di-un-listener-per-le-entità-opzionale)
+  - [Creazione di un DTO (Data Transfer Object)](#creazione-di-un-dto-data-transfer-object)
+  - [Creazione di un repository](#creazione-di-un-repository)
+  - [Creazione di un servizio](#creazione-di-un-servizio)
+    - [Creazione di un'interfaccia per il servizio](#creazione-di-uninterfaccia-per-il-servizio)
+    - [Creazione dell'implementazione del servizio](#creazione-dellimplementazione-del-servizio)
+  - [Creazione di un controller](#creazione-di-un-controller)
+- [Configurazione dell'applicazione Spring Boot](#configurazione-dellapplicazione-spring-boot)
+
 ## Introduzione
 
 Un backend è la parte di un'applicazione che si occupa di elaborare i dati e di fornire le risposte alle richieste provenienti dal frontend. Questa guida illustra i passaggi necessari per creare un backend utilizzando Java, Sping Boot, Spring Data JPA e Postgres.
@@ -49,11 +65,17 @@ import com.example.backend.core.entityAuditTrailListener.UserListener; // Import
 @Data // Genera i getter e i setter
 public class User {
     @Id // Indica che il campo è la chiave primaria
-    // Genera un valore univoco per la chiave primaria
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Genera un valore univoco per la chiave primaria
     private Long id;
+
+    @Basic (optional = false) // Indica che il campo è obbligatorio
+    @Column (name = "username", nullable = false) // Indica che il campo è una colonna con il nome "username" e non può essere nullo
     private String username;
+
+    @Basic (optional = false) // Indica che il campo è obbligatorio
+    @Column (name = "password", nullable = false) // Indica che il campo è una colonna con il nome "password" e non può essere nullo
     private String password;
+
 }
 ```
 
@@ -294,5 +316,3 @@ public class UserAuditorAware implements AuditorAware<String> {
     }
 }
 ```
-
-
