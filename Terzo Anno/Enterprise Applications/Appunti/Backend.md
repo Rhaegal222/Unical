@@ -16,6 +16,8 @@
   - [Creazione di un controller](#creazione-di-un-controller)
 - [Configurazione dell'applicazione Spring Boot](#configurazione-dellapplicazione-spring-boot)
 
+<div class="page"/>
+
 ## Introduzione
 
 Un backend è la parte di un'applicazione che si occupa di elaborare i dati e di fornire le risposte alle richieste provenienti dal frontend. Questa guida illustra i passaggi necessari per creare un backend utilizzando Java, Sping Boot, Spring Data JPA e Postgres.
@@ -516,5 +518,59 @@ public class ModelMapperConfig {
     // Genera il nome completo dell'utente
     private String generateFullName(String firstName, String lastName) {
         return firstName + " " + lastName; // Restituisce il nome completo dell'utente
+    }
+}
+```
+
+### DbGenerator
+
+Dentro al package `com.example.backend` allo stesso livello del Main creiamo la classe `DbGenerator` che permette di popolare il database con 
+
+```java
+package com.example.backend;
+
+import com.example.backend.data.entity.User; // Importa User che rappresenta un'entità User
+import com.example.backend.service.UserService; // Importa UserService che rappresenta un servizio per gestire le operazioni sulle entità
+import org.springframework.beans.factory.annotation.Autowired; // Importa Autowired da Spring Framework che permette di iniettare le dipendenze
+import org.springframework.beans.factory.annotation.Value; // Importa Value da Spring Framework che permette di ottenere i valori dalle proprietà
+import org.springframework.boot.ApplicationArguments; // Importa ApplicationArguments da Spring Boot che rappresenta gli argomenti dell'applicazione
+import org.springframework.boot.ApplicationRunner; // Importa ApplicationRunner da Spring Boot che permette di eseguire il codice all'avvio dell'applicazione
+import org.springframework.core.io.Resource; // Importa Resource da Spring Framework che rappresenta una risorsa
+import org.springframework.stereotype.Component; // Importa Component da Spring Framework che indica che la classe è un componente
+import org.apache.commons.csv.CSVFormat; // Importa CSVFormat da Apache Commons CSV che permette di leggere e scrivere file CSV
+import org.apache.commons.csv.CSVParser; // Importa CSVParser da Apache Commons CSV che permette di analizzare un file CSV
+import org.apache.commons.csv.CSVRecord; // Importa CSVRecord da Apache Commons CSV che rappresenta un record CSV
+
+import java.io.IOException; // Importa IOException di Java che rappresenta un'eccezione di I/O
+import java.io.InputStreamReader; // Importa InputStreamReader di Java che legge i caratteri da un flusso di input
+
+@Component
+public class DbGenerator implements ApplicationRunner {
+    @Value("classpath:data/users.csv") // Legge il file users.csv dalla cartella data
+    private Resource usersCsv; // Rappresenta il file users.csv
+
+    @Autowired
+    private UserService userService; // Inietta il servizio UserService
+
+    public void createDb() {
+        try (CSVParser parser = CSVFormat.DEFAULT.withDelimiter().parse(new InputStreamReader(usersCsv.getInputStream()))) {
+            for (CSVRecord record : parser) {
+               insertUser(record.get(0), record.get(1)); // Inserisce un utente nel database con username e password
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void insertUser(String username, String password) {
+        User user = new User(); // Crea un nuovo utente
+        user.setUsername(username); // Imposta l'username dell'utente
+        user.setPassword(password); // Imposta la password dell'utente
+        userService.save(user); // Salva l'utente nel database
+    }
+
+    @Override
+    public void run(ApplicationArguments args) {
+        createDb(); // Crea il database
     }
 }
