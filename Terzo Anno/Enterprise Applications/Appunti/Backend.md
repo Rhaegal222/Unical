@@ -24,26 +24,33 @@ Un backend è la parte di un'applicazione che si occupa di elaborare i dati e di
 
 ## Creazione di un progetto Spring Boot
 
-Per creare un progetto Spring Boot, è possibile utilizzare [Spring Initializr](https://start.spring.io/). In questo caso, è necessario selezionare le dipendenze `Spring Boot DevTools`, `Lombok`, `Spring Web`, `Spring Security`, `JDBC API`, `Spring Data JPA`, `PostgreSQL Driver` e `Validation`.
+Per creare un progetto Spring Boot, è possibile utilizzare [Spring Initializr](https://start.spring.io/). In questo caso, è necessario selezionare le dipendenze `Spring Boot DevTools`, `Lombok`, `Spring Web`, `Spring Security`, `JDBC API`, `Spring Data JPA`, `HyperSQL Database` e `Validation`.
 
 ## Configurazione di un database
 
-Per configurare un database Postgres, è necessario aggiungere le seguenti proprietà al file `application.properties`:
+Un database è un'entità che memorizza i dati in modo strutturato. Ad esempio, un database può contenere tabelle, colonne e righe. In questo caso, è possibile utilizzare un database HSQLDB per memorizzare i dati.
+
+Per configurare un database HSQLDB, è necessario aggiungere le seguenti proprietà al file `application.properties`:
 
 ```properties
-spring.application.name=backend
+server.port = 8080
 
-# application.properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
-spring.datasource.username=postgres
-spring.datasource.password=postgres
+# swagger-ui custom path
+# springdoc.swagger-ui.path = /swagger-ui.html
 
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
+# Percorso del file di configurazione di HSQLDB
+spring.datasource.url=jdbc:hsqldb:file:./hsql-db/db;hsqldb.write_delay=false
+spring.datasource.username = SA
+spring.datasource.password =
+spring.jpa.hibernate.ddl-auto = create
+spring.datasource.show-sql = true
 
-# Se usi un dialetto specifico di PostgreSQL
-spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.messages.basename = messages, i18n.list
+spring.messages.fallback-to-system-locale = false
+
+# Enable actuator endpoints
+management.info.env.enabled = true
+management.endpoints.web.exposure.include = health,info,metrics
 ```
 
 ## Creazione di un'entità, un repository, un servizio e un controller
@@ -504,14 +511,6 @@ public class ModelMapperConfig {
         ModelMapper modelMapper = new ModelMapper(); // Crea un oggetto ModelMapper
         modelMapper.getConfiguration().setFieldMatchingEnabled(true).setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE); // Abilita il matching dei campi e imposta il livello di accesso ai campi
 
-
-        // Mappa l'entità User al DTO UserDto
-        modelMapper.createTypeMap(User.class, UserDto.class).addMappings(new PropertyMap<User, UserDto>() {
-            @Override
-            protected void configure() {
-                using(ctx -> generateFullName(((User) ctx.getSource()).getFirstName(), ((User) ctx.getSource()).getLastName()));
-            }
-        }); // Mappa il nome completo dell'utente
         return modelMapper; // Restituisce l'oggetto ModelMapper
     }
 
