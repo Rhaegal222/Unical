@@ -15,6 +15,15 @@
     - [Creazione dell'implementazione del servizio](#creazione-dellimplementazione-del-servizio)
   - [Creazione di un controller](#creazione-di-un-controller)
 - [Configurazione dell'applicazione Spring Boot](#configurazione-dellapplicazione-spring-boot)
+    - [Auditor](#auditor)
+    - [I18n](#i18n)
+        - [MessageLang](#messagelang)
+        - [LanguageResolver](#languageresolver)
+        - [Internationalization](#internationalization)
+- [CacheConfig](#cacheconfig)
+- [ModelMapperConfig](#modelmapperconfig)
+- [DbGenerator](#dbgenerator)
+
 
 <div class="page"/>
 
