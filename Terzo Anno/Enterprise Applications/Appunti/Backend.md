@@ -39,6 +39,8 @@ Per creare un progetto Spring Boot, è possibile utilizzare [Spring Initializr](
 
 Un database è un'entità che memorizza i dati in modo strutturato. Ad esempio, un database può contenere tabelle, colonne e righe. In questo caso, è possibile utilizzare un database HSQLDB per memorizzare i dati.
 
+### Configurazione di un database HSQLDB
+
 Per configurare un database HSQLDB, è necessario aggiungere le seguenti proprietà al file `application.properties`:
 
 ```properties
@@ -60,6 +62,47 @@ spring.messages.fallback-to-system-locale = false
 # Enable actuator endpoints
 management.info.env.enabled = true
 management.endpoints.web.exposure.include = health,info,metrics
+```
+
+### Configurazione di un database Postgres
+
+Per configurare un database Postgres, è necessario aggiungere le seguenti proprietà al file `application.properties`:
+
+```properties
+# URL di connessione al database
+spring.datasource.url=jdbc:postgresql://localhost:5432/dbname
+
+# Nome utente del database
+spring.datasource.username=username
+
+# Password del database
+# La password può essere impostata come variabile d'ambiente o come parametro di avvio dell'applicazione.
+spring.datasource.password=${DB_PASSWORD}
+
+# Driver JDBC
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# Dialect specifico per Postgres
+# Il dialect serve per definire il tipo di database che si sta utilizzando e permette di generare le query SQL corrette per quel database.
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect 
+
+# Mostra SQL per debugging, disattivalo in produzione per la sicurezza e performance
+spring.jpa.show-sql=false
+
+# Strategia di gestione dello schema del database
+spring.jpa.hibernate.ddl-auto=validate
+
+# Formatta l'output SQL nel log, utile per il debugging
+spring.jpa.properties.hibernate.format_sql=true
+
+# Impostazioni di HikariCP
+# HikariCP è un pool di connessioni JDBC ad alte prestazioni per Java che offre prestazioni migliori rispetto ai pool di connessioni JDBC tradizionali.
+spring.datasource.hikari.connection-timeout=20000
+spring.datasource.hikari.maximum-pool-size=10
+spring.datasource.hikari.minimum-idle=5
+spring.datasource.hikari.idle-timeout=300000
+spring.datasource.hikari.max-lifetime=1800000
+spring.datasource.hikari.auto-commit=false  # Disabilita l'autocommit per prevenire operazioni non intenzionali sul db
 ```
 
 ## Creazione di un'entità, un repository, un servizio e un controller
