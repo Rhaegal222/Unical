@@ -76,6 +76,8 @@ management.info.env.enabled = true
 management.endpoints.web.exposure.include = health,info,metrics
 ```
 
+<div class="page"/>
+
 ### Configurazione di un database Postgres
 
 Per configurare un database Postgres, è necessario aggiungere le seguenti proprietà al file `application.properties`:
@@ -117,6 +119,8 @@ spring.datasource.hikari.max-lifetime=1800000
 spring.datasource.hikari.auto-commit=false  # Disabilita l'autocommit per prevenire operazioni non intenzionali sul db
 ```
 
+<div class="page"/>
+
 ## Creazione di un'entità, un repository, un servizio e un controller
 
 ### Creazione di un'entità
@@ -150,6 +154,8 @@ public class User {
 
 }
 ```
+
+<div class="page"/>
 
 ### Creazione di un listener per le entità (opzionale)
 
@@ -198,6 +204,8 @@ public class UserListener {
 }
 ```
 
+<div class="page"/>
+
 ### Creazione di un DTO (Data Transfer Object)
 
 Un DTO (Data Transfer Object) è un oggetto che trasporta i dati tra il frontend e il backend. Un DTO può contenere solo i campi necessari per la visualizzazione dei dati e non deve contenere i campi sensibili come la password. Ad esempio, la seguente classe rappresenta un DTO `UserDto` nel package `com.example.backend.data.dto`:
@@ -224,11 +232,11 @@ public class UserDto {
 }
 ```
 
+<div class="page"/>
+
 ### Creazione di un repository (DAO)
 
-Una volta creata l'entità, è necessario creare un repository per interagire con il database.
-
-Con Spring Data JPA, è possibile creare un repository estendendo l'interfaccia `JpaRepository`. I metodi di base come `save`, `findById`, `findAll`, `delete` e `count` sono già implementati in `JpaRepository`. Inoltre, è possibile definire query personalizzate utilizzando l'annotazione `@Query`.
+Una volta creata l'entità, è necessario creare un repository per interagire con il database. Con Spring Data JPA, è possibile creare un repository estendendo l'interfaccia `JpaRepository`. I metodi di base come `save`, `findById`, `findAll`, `delete` e `count` sono già implementati in `JpaRepository`. Inoltre, è possibile definire query personalizzate utilizzando l'annotazione `@Query`.
 
 Quindi ci spostiamo nel package `com.example.backend.data.dao` e creiamo un'interfaccia `UserDao`:
 
@@ -269,6 +277,8 @@ public interface UserService {
 }
 ```
 
+<div class="page"/>
+
 #### Implementazione del servizio
 
 Poi dentro al package `com.example.backend.service.impl` creiamo una classe `UserServiceImpl` che implementa l'interfaccia `UserService`:
@@ -300,6 +310,8 @@ public class UserServiceImpl implements UserService {
     }
 }
 ```
+
+<div class="page"/>
 
 ### Creazione di un controller
 
@@ -339,9 +351,11 @@ public class UserController {
 
 ## Configurazione dell'applicazione Spring Boot
 
-Il package `com.example.backend.config` contiene le classi di configurazione dell'applicazione. Queste classi possono includere la configurazione di Spring Security, la configurazione di Spring Data JPA, la configurazione di ModelMapper e la configurazione della cache di Spring.
+Il package `com.example.backend.config` contiene le classi di configurazione dell'applicazione. Queste classi sono utilizzate per configurare l'applicazione, ad esempio per configurare l'audit delle entità, la localizzazione delle risorse, la sicurezza dell'applicazione e la cache di Spring.
 
-In questo caso specifico, il package `com.example.backend.config` deve contenere le seguenti classi e package:
+<div class="page"/>
+
+In questo caso specifico, il package `com.example.backend.config` contiene le seguenti classi e package:
 
 - il package `auditor` che contiene le classi per l'audit delle entità.
 - il package `i18n` che contiene le classi per la localizzazione delle risorse.
@@ -377,6 +391,8 @@ public class AuditorConfig {
 }
 ```
 
+<div class="page"/>
+
 #### UserAuditorAware
 
 Successivamente creiamo la classe `UserAuditorAware()` che implementa l'interfaccia `AuditorAware` e restituisce l'ID dell'utente corrente:
@@ -405,6 +421,8 @@ La localizzazione delle risorse è un meccanismo che consente di adattare l'appl
 
 Il package `com.example.backend.config.i18n` contiene le classi per la localizzazione delle risorse.
 
+<div class="page"/>
+
 #### MessageLang
 
 Prima di tutto, creiamo la classe `MassageLang` che configura il `MessageSource` per la localizzazione delle risorse:
@@ -432,6 +450,8 @@ public class MessageLang {
     }
 }
 ```
+
+<div class="page"/>
 
 #### LanguageResolver
 
@@ -472,6 +492,8 @@ public class LanguageResolver extends AcceptHeaderLocaleResolver {
 }
 ```
 
+<div class="page"/>
+
 #### Internationalization
 
 Infine, creiamo la classe `Internationalization` che configura la localizzazione delle risorse:
@@ -511,6 +533,8 @@ public class Internationalization /*extends WebMvcConfigurerAdapter*/ {
 ### Filter
 
 Il package `com.example.backend.config.filter` contiene le classi per i filtri HTTP personalizzati. I filtri HTTP sono utilizzati per eseguire operazioni prima o dopo l'invio di una richiesta al controller. Ad esempio, è possibile utilizzare un filtro per autenticare le richieste, per registrare le richieste e le risposte, o per gestire le eccezioni.
+
+<div class="page"/>
 
 #### AuthDummyFilter
 
