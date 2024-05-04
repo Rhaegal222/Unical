@@ -24,7 +24,6 @@
 - [ModelMapperConfig](#modelmapperconfig)
 - [DbGenerator](#dbgenerator)
 
-
 <div class="page"/>
 
 ## Introduzione
@@ -114,8 +113,7 @@ Il passo successivo consiste nella creazione delle entità. Un'entità rappresen
 ```java
 package com.example.backend.data.entity;
 
-import lombok.Data;
-
+import lombok.Data; // Importa Data da Lombok che genera i getter e i setter
 import jakarta.persistence.*; // Importa le annotazioni di JPA
 import lombok.Data; // Importa Data da Lombok che genera i getter e i setter
 import lombok.NoArgsConstructor; // Importa NoArgsConstructor da Lombok che genera un costruttore vuoto
@@ -354,10 +352,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing; // Impo
 
 import java.util.Optional; // Importa Optional di Java che permette di gestire i valori nulli
 
-@Configuration
-@EnableJpaAuditing(auditorAwareRef = "auditorProvider")
+@Configuration // Indica che la classe è una classe di configurazione
+@EnableJpaAuditing(auditorAwareRef = "auditorProvider") // Abilita l'audit delle entità che utilizza l'auditorProvider come riferimento
 public class AuditorConfig {
-    @Bean
+    @Bean // Definisce un bean di AuditorAware
     public AuditorAware<Long> auditorProvider() {
         return new UserAuditorAware();
     }
@@ -388,7 +386,9 @@ public class UserAuditorAware implements AuditorAware<Long> {
 
 La localizzazione delle risorse è un meccanismo che consente di adattare l'applicazione a diverse lingue e culture. Ad esempio, è possibile creare file di proprietà per le diverse lingue e culture e utilizzare questi file per localizzare le risorse dell'applicazione. Questo meccanismo è utile per rendere l'applicazione più accessibile e per raggiungere un pubblico più ampio.
 
-Il package `com.example.backend.config.i18n` contiene le classi per la localizzazione delle risorse. 
+Il package `com.example.backend.config.i18n` contiene le classi per la localizzazione delle risorse.
+
+#### Filter
 
 #### MessageLang
 
@@ -625,3 +625,14 @@ public class DbGenerator implements ApplicationRunner {
         createDb(); // Crea il database
     }
 }
+```
+
+## Riepilogo dei passaggi
+
+Questa guida illustra i passaggi necessari per creare un backend utilizzando Java, Sping Boot, Spring Data JPA e Postgres. I passaggi includono:
+
+1. Creazione del progetto Spring Boot con le dipendenze necessarie con Spring Initializr.
+2. Configurazione di un database HSQLDB o Postgres nel file `application.properties`.
+3. Creazione di un'entità, un repository, un servizio e un controller per gestire le operazioni sulle entità.
+4. Configurazione dell'applicazione Spring Boot con le classi di configurazione per l'audit delle entità, la localizzazione delle risorse, la sicurezza dell'applicazione, ModelMapper e la cache di Spring.
+5. Creazione di una classe `DbGenerator` per popolare il database con i dati di esempio.
