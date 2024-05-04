@@ -1,28 +1,41 @@
 # Guida per la creazione di un backend
 
-## Indice
+# Indice
 
-- [Introduzione](#introduzione)
-- [Creazione di un progetto Spring Boot](#creazione-di-un-progetto-spring-boot)
-- [Configurazione di un database](#configurazione-di-un-database)
-- [Creazione di un'entità, un repository, un servizio e un controller](#creazione-di-unentità-un-repository-un-servizio-e-un-controller)
-  - [Creazione di un'entità](#creazione-di-unentità)
-  - [Creazione di un listener per le entità (opzionale)](#creazione-di-un-listener-per-le-entità-opzionale)
-  - [Creazione di un DTO (Data Transfer Object)](#creazione-di-un-dto-data-transfer-object)
-  - [Creazione di un repository](#creazione-di-un-repository)
-  - [Creazione di un servizio](#creazione-di-un-servizio)
-    - [Creazione di un'interfaccia per il servizio](#creazione-di-uninterfaccia-per-il-servizio)
-    - [Creazione dell'implementazione del servizio](#creazione-dellimplementazione-del-servizio)
-  - [Creazione di un controller](#creazione-di-un-controller)
-- [Configurazione dell'applicazione Spring Boot](#configurazione-dellapplicazione-spring-boot)
+1. [Introduzione](#introduzione)
+2. [Creazione di un progetto Spring Boot](#creazione-di-un-progetto-spring-boot)
+3. [Configurazione di un database](#configurazione-di-un-database)
+    - [Configurazione di un database HSQLDB](#configurazione-di-un-database-hsqldb)
+    - [Configurazione di un database Postgres](#configurazione-di-un-database-postgres)
+4. [Creazione di un'entità, un repository, un servizio e un controller](#creazione-di-unentità-un-repository-un-servizio-e-un-controller)
+    - [Creazione di un'entità](#creazione-di-unentità)
+    - [Creazione di un listener per le entità (opzionale)](#creazione-di-un-listener-per-le-entità-opzionale)
+    - [Creazione di un DTO (Data Transfer Object)](#creazione-di-un-dto-data-transfer-object)
+    - [Creazione di un repository (DAO)](#creazione-di-un-repository-dao)
+    - [Creazione di un servizio](#creazione-di-un-servizio)
+        - [Creazione di un'interfaccia per il servizio](#creazione-di-uninterfaccia-per-il-servizio)
+        - [Creazione dell'implementazione del servizio](#creazione-dellimplementazione-del-servizio)
+    - [Creazione di un controller](#creazione-di-un-controller)
+5. [Configurazione dell'applicazione Spring Boot](#configurazione-dellapplicazione-spring-boot)
     - [Auditor](#auditor)
+        - [AuditorConfig](#auditorconfig)
+        - [UserAuditorAware](#userauditoraware)
     - [I18n](#i18n)
         - [MessageLang](#messagelang)
         - [LanguageResolver](#languageresolver)
         - [Internationalization](#internationalization)
-- [CacheConfig](#cacheconfig)
-- [ModelMapperConfig](#modelmapperconfig)
-- [DbGenerator](#dbgenerator)
+    - [Filter](#filter)
+        - [AuthDummyFilter](#authdummyfilter)
+        - [GenericServletInterceptor](#genericservletinterceptor)
+        - [LogginFilter](#logginfilter)
+    - [handler](#handler)
+        - [GlobalExceptionHandler](#globalexceptionhandler)
+    - [CacheConfig](#cacheconfig)
+    - [ModelMapperConfig](#modelmapperconfig)
+    - [Security](#security)
+6. [Exception](#exception)
+7. [DbGenerator](#dbgenerator)
+
 
 <div class="page"/>
 
@@ -140,10 +153,10 @@ public class User {
 
 ### Creazione di un listener per le entità (opzionale)
 
-Per registrare le modifiche alle entità nel database, è possibile creare un listener. Ad esempio, la seguente classe rappresenta un listener `UserListener` nel package `com.example.backend.core.entityAuditTrailListener`:
+Per registrare le modifiche alle entità nel database, è possibile creare un listener. Ad esempio, la seguente classe rappresenta un listener `UserListener` nel package `com.example.backend.config.entityAuditTrailListener`:
 
 ```java
-package com.example.backend.core.entityAuditTrailListener;
+package com.example.backend.config.entityAuditTrailListener;
 
 import com.example.backend.data.entity.User; // Importa l'entità User
 import jakarta.persistence.*; // Importa le annotazioni di JPA
@@ -211,7 +224,7 @@ public class UserDto {
 }
 ```
 
-### Creazione di un repository
+### Creazione di un repository (DAO)
 
 Una volta creata l'entità, è necessario creare un repository per interagire con il database.
 
@@ -256,7 +269,7 @@ public interface UserService {
 }
 ```
 
-#### Creazione dell'implementazione del servizio
+#### Implementazione del servizio
 
 Poi dentro al package `com.example.backend.service.impl` creiamo una classe `UserServiceImpl` che implementa l'interfaccia `UserService`:
 
@@ -340,6 +353,8 @@ In questo caso specifico, il package `com.example.backend.config` deve contenere
 
 L'audit delle entità è un meccanismo che registra le modifiche alle entità nel database. Ad esempio, quando un'entità viene creata, aggiornata o rimossa, l'audit delle entità registra chi ha effettuato l'operazione e quando è stata effettuata. Questo meccanismo è utile per tenere traccia delle modifiche alle entità e per garantire la conformità alle normative di sicurezza.
 
+#### AuditorConfig
+
 Il package `com.example.backend.config.auditor` contiene le classi per l'audit delle entità. Prima di tutto, creiamo la classe `AuditorConfig` che configura l'audit delle entità:
 
 ```java
@@ -361,6 +376,8 @@ public class AuditorConfig {
     }
 }
 ```
+
+#### UserAuditorAware
 
 Successivamente creiamo la classe `UserAuditorAware()` che implementa l'interfaccia `AuditorAware` e restituisce l'ID dell'utente corrente:
 
@@ -387,8 +404,6 @@ public class UserAuditorAware implements AuditorAware<Long> {
 La localizzazione delle risorse è un meccanismo che consente di adattare l'applicazione a diverse lingue e culture. Ad esempio, è possibile creare file di proprietà per le diverse lingue e culture e utilizzare questi file per localizzare le risorse dell'applicazione. Questo meccanismo è utile per rendere l'applicazione più accessibile e per raggiungere un pubblico più ampio.
 
 Il package `com.example.backend.config.i18n` contiene le classi per la localizzazione delle risorse.
-
-#### Filter
 
 #### MessageLang
 
@@ -493,6 +508,220 @@ public class Internationalization /*extends WebMvcConfigurerAdapter*/ {
 }
 ```
 
+### Filter
+
+Il package `com.example.backend.config.filter` contiene le classi per i filtri HTTP personalizzati. I filtri HTTP sono utilizzati per eseguire operazioni prima o dopo l'invio di una richiesta al controller. Ad esempio, è possibile utilizzare un filtro per autenticare le richieste, per registrare le richieste e le risposte, o per gestire le eccezioni.
+
+#### AuthDummyFilter
+
+La classe `AuthDummyFilter` è un filtro HTTP personalizzato che viene utilizzato per l'autenticazione in un'applicazione web Java. È annotata con `@WebFilter`, il che significa che viene applicata a tutte le richieste `HTTP` che corrispondono al pattern URL specificato, in questo caso "/*" (tutte le richieste).
+
+```java
+package com.example.backend.config.filter;
+
+import jakarta.security.auth.message.AuthException; // Importa AuthException di Java che rappresenta un'eccezione di autenticazione
+import jakarta.servlet.FilterChain; // Importa FilterChain di Java che rappresenta una catena di filtri
+import jakarta.servlet.ServletException; // Importa ServletException di Java che rappresenta un'eccezione di servlet
+import jakarta.servlet.annotation.WebFilter; // Importa WebFilter di Java che indica che la classe è un filtro HTTP
+import jakarta.servlet.http.HttpServletRequest; // Importa HttpServletRequest di Java che rappresenta una richiesta HTTP
+import jakarta.servlet.http.HttpServletResponse; // Importa HttpServletResponse di Java che rappresenta una risposta HTTP
+import lombok.RequiredArgsConstructor; // Importa RequiredArgsConstructor da Lombok che genera un costruttore con i parametri richiesti
+import lombok.extern.slf4j.Slf4j; // Importa log4j da Lombok che permette di registrare i messaggi di log
+import org.springframework.core.Ordered; // Importa Ordered da Spring Framework che permette di ordinare i filtri
+import org.springframework.core.annotation.Order; // Importa Order da Spring Framework che permette di ordinare i filtri
+import org.springframework.data.domain.AuditorAware; // Importa AuditorAware da Spring Data che permette di definire un auditor
+import org.springframework.http.HttpHeaders; // Importa HttpHeaders da Spring Framework che rappresenta gli header HTTP
+import org.springframework.http.HttpStatus; // Importa HttpStatus da Spring Framework che rappresenta lo stato HTTP
+import org.springframework.http.HttpStatusCode; // Importa HttpStatusCode da Spring Framework che rappresenta lo stato HTTP
+import org.springframework.stereotype.Component; // Importa Component da Spring Framework che indica che la classe è un componente
+import org.springframework.web.filter.AbstractRequestLoggingFilter; // Importa AbstractRequestLoggingFilter da Spring Framework che permette di registrare le richieste HTTP
+import org.springframework.web.filter.OncePerRequestFilter; // Importa OncePerRequestFilter da Spring Framework che permette di eseguire il filtro una volta per ogni richiesta
+
+import java.io.IOException;
+
+@WebFilter(urlPatterns = "/*")
+@Order(1)
+@RequiredArgsConstructor
+public class AuthDummyFilter extends OncePerRequestFilter {
+
+  private final AuditorAware<Long> currentUser;
+
+  @Override
+  protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws IOException {
+    try {
+      if (request.getHeader(HttpHeaders.AUTHORIZATION) != null && currentUser.getCurrentAuditor().isPresent()) {
+        long auth = Long.valueOf(request.getHeader(HttpHeaders.AUTHORIZATION));
+        if (currentUser.getCurrentAuditor().get() == auth) {
+          filterChain.doFilter(request, response);
+        } else {
+          throw new AuthException("Wrong credential [" + auth + "]");
+        }
+      } else {
+        throw new AuthException("Authorization Header not found");
+      }
+    } catch (Exception ex) {
+      response.sendError(HttpStatus.FORBIDDEN.value(), ex.getMessage());
+    }
+  }
+}
+```
+
+#### GenericServletInterceptor
+
+La classe `GenericServletInterceptor` è un interceptor di Spring MVC. Gli interceptor sono utilizzati per eseguire operazioni prima o dopo l'invio di una richiesta al controller.
+
+In particolare, questa classe implementa tre metodi:
+
+- `preHandle`: viene chiamato prima che la richiesta venga inviata al controller. In questo caso, il metodo registra il messaggio "preHandle" e restituisce `true`, permettendo alla richiesta di procedere al controller.
+
+- `postHandle`: viene chiamato dopo che il controller ha elaborato la richiesta, ma prima che la vista venga renderizzata. In questo caso, il metodo registra il messaggio "postHandle".
+
+- `afterCompletion`: viene chiamato dopo che la vista è stata renderizzata e che la richiesta è stata completamente elaborata. In questo caso, il metodo registra il messaggio "afterCompletion".
+
+```java
+package com.example.backend.config.filter;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+
+@Component
+@Slf4j
+public class GenericServletInterceptor implements HandlerInterceptor {
+
+  @Override
+  public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+
+    log.info("preHandle");
+    return true; // mandiamo la richiesta al controller
+  }
+
+  @Override
+  public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+    HandlerInterceptor.super.postHandle(request, response, handler, modelAndView);
+    log.info("postHandle");
+  }
+
+  @Override
+  public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+    HandlerInterceptor.super.afterCompletion(request, response, handler, ex);
+    log.info("afterCompletion");
+  }
+}
+```
+
+#### LogginFilter
+
+La classe `LoggingFilter` è un filtro di logging che registra le richieste HTTP. Estende `AbstractRequestLoggingFilter` e sovrascrive i metodi `beforeRequest` e `afterRequest` per registrare i messaggi di log prima e dopo l'invio della richiesta al controller.
+
+```java
+package com.example.backend.config.filter;
+
+package it.unical.backend.config.filter;
+
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+import org.springframework.web.filter.AbstractRequestLoggingFilter;
+
+@Component
+@Order(Ordered.HIGHEST_PRECEDENCE)
+@Slf4j
+public class LoggingFilter extends AbstractRequestLoggingFilter {
+
+  public LoggingFilter() {
+    setIncludePayload(true);
+    setIncludeHeaders(true);
+    setIncludeQueryString(true);
+  }
+
+  @Override
+  protected void beforeRequest(HttpServletRequest request, String message) {
+    log.info(message);
+  }
+
+  @Override
+  protected void afterRequest(HttpServletRequest request, String message) {
+    log.info(message);
+  }
+}
+```
+
+### Handler
+
+Il package `com.example.backend.config.handler` contiene le classi per la gestione delle eccezioni. Le classi di gestione delle eccezioni sono utilizzate per gestire le eccezioni che si verificano durante l'esecuzione dell'applicazione. Ad esempio, è possibile utilizzare una classe di gestione delle eccezioni per gestire le eccezioni di autenticazione, le eccezioni di autorizzazione e le eccezioni di validazione.
+
+#### GlobalExceptionHandler
+
+La classe `GlobalExceptionHandler` è una classe di gestione delle eccezioni globale che gestisce le eccezioni che si verificano durante l'esecuzione dell'applicazione. È annotata con `@RestControllerAdvice`, il che significa che viene applicata a tutti i controller dell'applicazione. La classe contiene metodi annotati con `@ExceptionHandler` per gestire le diverse eccezioni che possono verificarsi.
+
+```java
+package it.unical.backend.config.handler;
+
+import it.unical.backend.dto.ServiceError;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.context.request.WebRequest;
+
+import java.util.Date;
+import java.util.stream.Collectors;
+
+@RestControllerAdvice
+@Slf4j
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(EntityNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ServiceError onResourceNotFoundException(WebRequest req, EntityNotFoundException ex){
+        return errorResponse(req, ex.getMessage());
+    }
+
+    @ExceptionHandler(NullPointerException.class)
+    @ResponseStatus(HttpStatus.BAD_GATEWAY)
+    public String onResourceNotFoundException(WebRequest req, NullPointerException ex){
+        log.error("Exception handler :::: {}", ex);
+        return "NULLLLLLLLLLLLLLLLLLLLLLLLLLLLL POINTER!!!";
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ServiceError onMethodArgumentNotValid(WebRequest req, MethodArgumentNotValidException ex){
+
+        String message = ex.getBindingResult().getFieldErrors().stream()
+                                            .map(viol -> viol.getField().concat(" : ")
+                                                .concat(viol.getDefaultMessage()))
+                                            .collect(Collectors.joining(" , "));
+        return errorResponse(req, message);
+    }
+
+    @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ServiceError defaultErrorHandler(WebRequest req ,Exception ex){
+        return errorResponse(req, ex.getMessage());
+    }
+
+
+    private ServiceError errorResponse (WebRequest req, String message) {
+        HttpServletRequest httpreq = (HttpServletRequest) req.resolveReference("request");
+        final ServiceError output = new ServiceError(new Date(), httpreq.getRequestURI(), message);
+        log.error("Exception handler :::: {}", output.toString());
+        return output;
+
+    }
+}
+```
+
 ### CacheConfig
 
 La cache di Spring è un meccanismo che memorizza temporaneamente i dati in memoria per ridurre il tempo di risposta delle richieste. Ad esempio, è possibile memorizzare in cache i risultati delle query per evitare di eseguire la stessa query più volte. Questo meccanismo è utile per migliorare le prestazioni dell'applicazione e per ridurre il carico sul database.
@@ -539,6 +768,32 @@ public class CacheConfig {
 }
 ```
 
+### InterceptorConfig
+
+Un interceptor di Spring MVC è un oggetto che può essere utilizzato per eseguire operazioni prima o dopo l'invio di una richiesta al controller. Gli interceptor sono utilizzati per eseguire operazioni come l'autenticazione, l'autorizzazione, il logging e la gestione delle eccezioni.
+
+```java
+package com.example.backend.config;
+
+package it.unical.backend.config;
+
+import it.unical.backend.config.filter.GenericServletInterceptor;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class InterceptorConfig implements WebMvcConfigurer {
+
+  @Override
+  public void addInterceptors(InterceptorRegistry registry) {
+    registry.addInterceptor(new GenericServletInterceptor()).order(Ordered.LOWEST_PRECEDENCE);
+    //    WebMvcConfigurer.super.addInterceptors(registry);
+  }
+}
+```
+
 ### ModelMapperConfig
 
 ModelMapper è una libreria che consente di mappare le entità ai DTO in modo automatico. Ad esempio, è possibile creare un oggetto `ModelMapper` e utilizzarlo per mappare le entità ai DTO e viceversa. Questo meccanismo è utile per ridurre il codice ripetitivo e per migliorare la manutenibilità dell'applicazione.
@@ -573,7 +828,11 @@ public class ModelMapperConfig {
 }
 ```
 
-### DbGenerator
+### Security
+
+## Exception
+
+## DbGenerator
 
 Dentro al package `com.example.backend` allo stesso livello del Main creiamo la classe `DbGenerator` che permette di popolare il database con 
 
