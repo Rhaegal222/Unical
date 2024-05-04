@@ -232,8 +232,6 @@ public class UserDto {
 }
 ```
 
-<div class="page"/>
-
 ### Creazione di un repository (DAO)
 
 Una volta creata l'entità, è necessario creare un repository per interagire con il database. Con Spring Data JPA, è possibile creare un repository estendendo l'interfaccia `JpaRepository`. I metodi di base come `save`, `findById`, `findAll`, `delete` e `count` sono già implementati in `JpaRepository`. Inoltre, è possibile definire query personalizzate utilizzando l'annotazione `@Query`.
@@ -258,6 +256,8 @@ public interface UserDao extends JpaRepository<User, Long> {
 }
 ```
 
+<div class="page"/>
+
 ### Creazione di un servizio
 
 Successivamente, è necessario creare un servizio per gestire le operazioni sulle entità. Le operazioni possono includere la ricerca, l'aggiornamento e la rimozione delle entità.
@@ -276,8 +276,6 @@ public interface UserService {
     User findByUsername(String username);
 }
 ```
-
-<div class="page"/>
 
 #### Implementazione del servizio
 
@@ -534,11 +532,11 @@ public class Internationalization /*extends WebMvcConfigurerAdapter*/ {
 
 Il package `com.example.backend.config.filter` contiene le classi per i filtri HTTP personalizzati. I filtri HTTP sono utilizzati per eseguire operazioni prima o dopo l'invio di una richiesta al controller. Ad esempio, è possibile utilizzare un filtro per autenticare le richieste, per registrare le richieste e le risposte, o per gestire le eccezioni.
 
-<div class="page"/>
-
 #### AuthDummyFilter
 
 La classe `AuthDummyFilter` è un filtro HTTP personalizzato che viene utilizzato per l'autenticazione in un'applicazione web Java. È annotata con `@WebFilter`, il che significa che viene applicata a tutte le richieste `HTTP` che corrispondono al pattern URL specificato, in questo caso "/*" (tutte le richieste).
+
+<div class="page"/>
 
 ```java
 package com.example.backend.config.filter;
@@ -590,11 +588,11 @@ public class AuthDummyFilter extends OncePerRequestFilter {
 }
 ```
 
+<div class="page"/>
+
 #### GenericServletInterceptor
 
-La classe `GenericServletInterceptor` è un interceptor di Spring MVC. Gli interceptor sono utilizzati per eseguire operazioni prima o dopo l'invio di una richiesta al controller.
-
-In particolare, questa classe implementa tre metodi:
+La classe `GenericServletInterceptor` è un interceptor di Spring MVC. Gli interceptor sono utilizzati per eseguire operazioni prima o dopo l'invio di una richiesta al controller. In particolare, questa classe implementa tre metodi:
 
 - `preHandle`: viene chiamato prima che la richiesta venga inviata al controller. In questo caso, il metodo registra il messaggio "preHandle" e restituisce `true`, permettendo alla richiesta di procedere al controller.
 
@@ -636,6 +634,8 @@ public class GenericServletInterceptor implements HandlerInterceptor {
   }
 }
 ```
+
+<div class="page"/>
 
 #### LogginFilter
 
@@ -683,6 +683,8 @@ Il package `com.example.backend.config.handler` contiene le classi per la gestio
 #### GlobalExceptionHandler
 
 La classe `GlobalExceptionHandler` è una classe di gestione delle eccezioni globale che gestisce le eccezioni che si verificano durante l'esecuzione dell'applicazione. È annotata con `@RestControllerAdvice`, il che significa che viene applicata a tutti i controller dell'applicazione. La classe contiene metodi annotati con `@ExceptionHandler` per gestire le diverse eccezioni che possono verificarsi.
+
+<div class="page"/>
 
 ```java
 package it.unical.backend.config.handler;
@@ -745,6 +747,8 @@ public class GlobalExceptionHandler {
     }
 }
 ```
+
+<div class="page"/>
 
 ### CacheConfig
 
@@ -818,6 +822,8 @@ public class InterceptorConfig implements WebMvcConfigurer {
 }
 ```
 
+<div class="page"/>
+
 ### ModelMapperConfig
 
 ModelMapper è una libreria che consente di mappare le entità ai DTO in modo automatico. Ad esempio, è possibile creare un oggetto `ModelMapper` e utilizzarlo per mappare le entità ai DTO e viceversa. Questo meccanismo è utile per ridurre il codice ripetitivo e per migliorare la manutenibilità dell'applicazione.
@@ -856,9 +862,11 @@ public class ModelMapperConfig {
 
 ## Exception
 
+<div class="page"/>
+
 ## DbGenerator
 
-Dentro al package `com.example.backend` allo stesso livello del Main creiamo la classe `DbGenerator` che permette di popolare il database con 
+Dentro al package `com.example.backend` allo stesso livello del Main creiamo la classe `DbGenerator` che permette di popolare il database con i dati di esempio. La classe `DbGenerator` implementa l'interfaccia `ApplicationRunner` di Spring Boot, che permette di eseguire il codice all'avvio dell'applicazione.
 
 ```java
 package com.example.backend;
@@ -909,6 +917,8 @@ public class DbGenerator implements ApplicationRunner {
     }
 }
 ```
+
+<div class="page"/>
 
 ## Riepilogo dei passaggi
 
