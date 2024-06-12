@@ -21,6 +21,8 @@ Il Goal 1 dell'Agenda 2030 mira a porre fine ad ogni forma di povertà nel mondo
 - La pandemia del 2020 ha causato un peggioramento significativo con la povertà assoluta che ha raggiunto il 94%, il valore peggiore degli anni analizzati.
 - Nell'ultimo biennio si sono registrati lievi segnali di ripresa grazie alla riduzione della grave deprivazione materiale e sociale.
 
+<div class="page"/>
+
 ### **1.4. Mobilitazione delle Risorse**
 
 1. Garantire una significativa mobilitazione di risorse da una varietà di fonti, inclusa la cooperazione allo sviluppo, per fornire mezzi adeguati e prevedibili ai paesi in via di sviluppo, in particolare ai meno sviluppati, per attuare programmi e politiche per porre fine alla povertà in tutte le sue dimensioni.
@@ -48,6 +50,8 @@ Le organizzazioni no profit giocano un ruolo cruciale nel rispondere ai bisogni 
 
 ---
 
+<div class="page"/>
+
 ## **2. GOAL 2 - SCONFIGGERE LA FAME**
 
 ### **2.1. Obiettivo del Goal 2**
@@ -61,6 +65,8 @@ Il Goal 2 dell'Agenda 2030 mira a porre fine alla fame, raggiungere la sicurezza
 3. **Raddoppiare la produttività agricola e il reddito dei produttori di alimenti su piccola scala** entro il 2030, in particolare donne, popolazioni indigene, famiglie di agricoltori, pastori e pescatori, anche attraverso l'accesso sicuro e giusto alla terra, alle risorse e agli stimoli produttivi, alla conoscenza, ai servizi finanziari, ai mercati e alle opportunità che creano valore aggiunto e occupazione non agricola.
 4. **Garantire sistemi di produzione alimentare sostenibili** e applicare pratiche agricole resilienti entro il 2030, che aumentino la produttività e la produzione, aiutino a conservare gli ecosistemi, rafforzino la capacità di adattamento ai cambiamenti climatici e migliorino progressivamente il terreno e la qualità del suolo.
 5. **Assicurare la diversità genetica di semi, piante coltivate e animali da allevamento** e domestici entro il 2020, anche attraverso banche del seme e delle piante gestite a livello nazionale, regionale e internazionale, e promuovere l'accesso e la giusta ed equa condivisione dei benefici derivanti dall'utilizzo delle risorse genetiche e delle conoscenze tradizionali collegate.
+
+<div class="page"/>
 
 ### **2.3. Fatti e Cifre**
 
@@ -85,6 +91,8 @@ Il Goal 2 dell'Agenda 2030 mira a porre fine alla fame, raggiungere la sicurezza
 
 La fame non è solo una questione di carenza di cibo, ma anche di accesso a una dieta nutriente e sicura. La sicurezza alimentare implica che tutte le persone abbiano accesso fisico, sociale ed economico a cibo sufficiente, sicuro e nutriente per soddisfare le loro esigenze e preferenze. Una buona alimentazione include non solo il consumo di calorie sufficienti, ma anche l'assunzione di nutrienti essenziali per una vita sana e attiva.
 
+<div class="page"/>
+
 #### **2.5.2. Agroecologia e Sovranità Alimentare**
 
 L'agroecologia è una disciplina scientifica, un movimento sociale e un insieme di pratiche che promuovono sistemi agricoli diversificati, produttivi, resilienti ed efficienti, riducendo la dipendenza da input esterni e migliorando l'efficienza delle produzioni attraverso processi naturali. La sovranità alimentare, proposta da Via Campesina nel 1996, è il diritto dei popoli a cibo sano e culturalmente appropriato, prodotto in modo sostenibile ed ecologico, e il diritto di decidere i propri sistemi alimentari e produttivi.
@@ -107,6 +115,8 @@ Le organizzazioni no profit svolgono un ruolo cruciale nel rispondere ai bisogni
 
 Il Goal 3 dell'Agenda 2030 mira ad assicurare la salute e il benessere per tutti e per tutte le età. L'esperienza degli Obiettivi di Sviluppo del Millennio (OSM) ha dimostrato che le questioni sanitarie non vanno considerate isolatamente, ma in una visione integrata. L'istruzione e la sicurezza alimentare, ad esempio, influenzano significativamente il successo dei programmi sanitari. L'obiettivo 3 amplia gli sforzi per ridurre la mortalità infantile e materna, combattere le malattie trasmissibili come AIDS, malaria e tubercolosi, e include anche la lotta contro le malattie non trasmissibili come il diabete, la prevenzione degli incidenti stradali e l'abuso di sostanze. Entro il 2030, tutti dovrebbero avere accesso a servizi sanitari di qualità, farmaci e vaccini sicuri e a prezzi accessibili, e essere protetti da rischi finanziari legati alla salute.
 
+<div class="page"/>
+
 ### **3.2. Target Specifici**
 
 1. **Ridurre la mortalità materna globale** a meno di 70 per ogni 100.000 nati vivi entro il 2030.
@@ -126,6 +136,8 @@ Il Goal 3 dell'Agenda 2030 mira ad assicurare la salute e il benessere per tutti
 - L'andamento degli anni successivi ha mostrato solo un lieve miglioramento, non sufficiente a recuperare i livelli pre-pandemia.
 - La quota di persone che dichiarano di fumare è aumentata di 15,1 punti percentuali dal 2019 al 2022, mentre quella delle persone sedentarie è cresciuta di 0,8 punti percentuali.
 - Le disuguaglianze regionali sono aumentate: le regioni migliori migliorano a una velocità maggiore rispetto alle peggiori, aumentando il divario.
+
+<div class="page"/>
 
 ### **3.4. Mobilitazione delle Risorse**
 
@@ -156,6 +168,8 @@ Le organizzazioni no profit giocano un ruolo cruciale nel fornire assistenza san
 
 ---
 
+<div class="page"/>
+
 ## **4. GOAL 4 - ISTRUZIONE DI QUALITÀ**
 
 ### **4.1. Obiettivo del Goal 4**
@@ -172,13 +186,15 @@ Fornire un’educazione di qualità equa ed inclusiva e opportunità di apprendi
 6. **Assicurarsi che tutti i giovani e una parte sostanziale di adulti raggiungano l’alfabetizzazione e l’abilità di calcolo** entro il 2030.
 7. **Assicurarsi che tutti gli studenti acquisiscano le conoscenze e le competenze necessarie per promuovere lo sviluppo sostenibile**, attraverso l’educazione per lo sviluppo sostenibile e stili di vita sostenibili, diritti umani, uguaglianza di genere, promozione di una cultura di pace e non violenza, cittadinanza globale e valorizzazione della diversità culturale e del contributo della cultura allo sviluppo sostenibile entro il 2030.
 
+<div class="page"/>
+
 ### **4.3. Fatti e Cifre**
 
-- L’indice composito segnala un andamento positivo tra il 2010 e il 2019 grazie all’aumento della quota di laureati (+78 punti percentuali) e alla riduzione dell’uscita precoce dal sistema di istruzione e formazione (-50 punti percentuali). 
-- Dopo l’adozione dell’Agenda 2030, dal 2015 in poi, non si registrano variazioni significative. 
-- Il peggioramento del 2020, legato alla pandemia, è dovuto a una netta riduzione delle competenze in matematica e in italiano. 
+- L’indice composito segnala un andamento positivo tra il 2010 e il 2019 grazie all’aumento della quota di laureati (+78 punti percentuali) e alla riduzione dell’uscita precoce dal sistema di istruzione e formazione (-50 punti percentuali).
+- Dopo l’adozione dell’Agenda 2030, dal 2015 in poi, non si registrano variazioni significative.
+- Il peggioramento del 2020, legato alla pandemia, è dovuto a una netta riduzione delle competenze in matematica e in italiano.
 - Nel biennio 2021-2022, l’indice riprende a crescere tornando al livello del 2019, grazie alla forte crescita della quota di popolazione che beneficia di formazione continua (dal 71% nel 2020 al 96% nel 2022) e alla netta riduzione dell’uscita precoce (dal 14.2% nel 2020 all’11.5% nel 2022).
-- Le distanze tra le regioni italiane aumentano tra il 2010 e il 2018: in termini di performance, le prime cinque migliorano con un’intensità superiore rispetto alle ultime cinque. 
+- Le distanze tra le regioni italiane aumentano tra il 2010 e il 2018: in termini di performance, le prime cinque migliorano con un’intensità superiore rispetto alle ultime cinque.
 - Tra il 2019 e il 2021, le disuguaglianze rimangono stabili mentre nel 2022 si osserva una leggera riduzione dovuta al miglioramento delle ultime cinque regioni. Questo risultato non è comunque sufficiente a ridurre le disuguaglianze in modo significativo, tanto che il valore minimo della serie storica resta quello del 2010.
 
 ### **4.4. Mobilitazione delle Risorse**
@@ -193,9 +209,12 @@ Fornire un’educazione di qualità equa ed inclusiva e opportunità di apprendi
 
 L'inclusione significa offrire a tutte le persone, con o senza disabilità, l'opportunità di essere cittadini a tutti gli effetti, garantendo parità di trattamento e accessibilità ai luoghi e alle informazioni senza distinzione culturale, di etnia, di abilità, di disabilità o di genere. L’accessibilità non riguarda solo l'eliminazione delle barriere fisiche, ma anche la progettazione di contesti e materiali didattici che siano utilizzabili in modo efficace, efficiente e soddisfacente da persone con diverse abilità e disabilità.
 
+<div class="page"/>
+
 #### **4.5.2. Universal Design for Learning (UDL)**
 
 L'UDL è un approccio alla progettazione didattica volto ad aumentare l’accesso all’apprendimento riducendo le barriere fisiche, cognitive e organizzative. Si basa su tre principi:
+
 1. **Molteplici mezzi di rappresentazione**: rendere accessibili le informazioni utilizzando molteplici canali e mezzi espressivi.
 2. **Molteplici mezzi di espressione**: dare la possibilità di scelta del mezzo espressivo preferibile per lo studente e fornire diverse possibilità per la ricezione di feedback.
 3. **Molteplici mezzi di coinvolgimento**: stimolare l’interesse, la motivazione e il coinvolgimento degli studenti, chiedendo loro di trovare applicazioni pratiche delle conoscenze.
@@ -217,6 +236,8 @@ Questi paragrafi riassumono i contenuti principali delle slide riguardanti il Go
 
 ---
 
+<div class="page"/>
+
 ## **5. GOAL 5 - PARITÀ DI GENERE**
 
 ### **5.1. Obiettivo del Goal 5**
@@ -234,6 +255,8 @@ Raggiungere l’uguaglianza di genere ed emancipare tutte le donne e le ragazze.
 7. **Avviare riforme per dare alle donne pari diritti di accesso alle risorse economiche**, come l'accesso alla proprietà e al controllo della terra e altre forme di proprietà, servizi finanziari, eredità e risorse naturali in accordo con le leggi nazionali.
 8. **Migliorare l'uso della tecnologia che può aiutare il lavoro delle donne**, in particolare la tecnologia dell'informazione e della comunicazione, per promuovere l’empowerment, ossia la forza, l'autostima e la consapevolezza delle donne.
 9. **Adottare e rafforzare politiche concrete e leggi applicabili per la promozione dell'eguaglianza di genere** e l’empowerment, ossia la forza, l'autostima e la consapevolezza di tutte le donne, bambine e ragazze a tutti i livelli.
+
+<div class="page"/>
 
 ### **5.3. Fatti e Cifre**
 
@@ -257,6 +280,8 @@ Il genere è un concetto dinamico e culturalmente specifico, che varia tra le cu
 
 Le azioni positive e il gender mainstreaming sono strategie cruciali per promuovere l'uguaglianza di genere. Le azioni positive mirano a riequilibrare le posizioni di potere, mentre il gender mainstreaming si focalizza sulla (ri)organizzazione delle procedure per assumere una prospettiva di uguaglianza di genere.
 
+<div class="page"/>
+
 ### **5.6. Azioni e Interventi**
 
 #### **5.6.1. Eliminazione della Violenza di Genere**
@@ -268,6 +293,8 @@ Le azioni positive e il gender mainstreaming sono strategie cruciali per promuov
 Riconoscere e valorizzare il lavoro di cura e il lavoro domestico non retribuiti tramite la fornitura di servizi pubblici, infrastrutture e politiche di protezione sociale, promuovendo la responsabilità condivisa all'interno del nucleo familiare.
 
 ---
+
+<div class="page"/>
 
 ## **6. GOAL 6 - ACQUA PULITA E SERVIZI IGIENICO-SANITARI**
 
@@ -285,6 +312,8 @@ Garantire a tutti la disponibilità e la gestione sostenibile dell'acqua e delle
 6. **Proteggere e ripristinare gli ecosistemi legati all'acqua** entro il 2020, inclusi montagne, foreste, zone umide, fiumi, falde acquifere e laghi.
 7. **Ampliare la cooperazione internazionale e la creazione di capacità di supporto ai paesi in via di sviluppo** entro il 2030, in materia di acqua e servizi igienico-sanitari, includendo i sistemi di raccolta dell'acqua, la desalinizzazione, l'efficienza idrica, il trattamento delle acque reflue e le tecnologie per il riciclo e il riutilizzo.
 8. **Sostenere e rafforzare la partecipazione delle comunità locali** nel miglioramento della gestione idrica e fognaria.
+
+<div class="page"/>
 
 ### **6.3. Fatti e Cifre**
 
@@ -313,6 +342,8 @@ L’acqua è distribuita in modo non uniforme sulla Terra, con alcune regioni ch
 
 Il cambiamento climatico rappresenta una minaccia significativa per le risorse idriche globali. Temperature più alte aumentano l'evaporazione, riducendo la disponibilità di acqua e aumentando la frequenza e l'intensità di eventi estremi come siccità e alluvioni, che possono devastare le risorse idriche e le infrastrutture.
 
+<div class="page"/>
+
 ### **6.6. Azioni e Interventi**
 
 #### **6.6.1. Migliorare la Qualità dell'Acqua**
@@ -324,6 +355,8 @@ Il cambiamento climatico rappresenta una minaccia significativa per le risorse i
 Promuovere tecniche e pratiche che aumentino l'efficienza nell'uso dell'acqua in tutti i settori, compresa l'agricoltura, l'industria e l'uso domestico, è fondamentale per affrontare la scarsità d'acqua e garantire la disponibilità di risorse idriche per le future generazioni.
 
 ---
+
+<div class="page"/>
 
 ## **7. GOAL 7 - ENERGIA PULITA E ACCESSIBILE**
 
@@ -375,6 +408,8 @@ L'uso di tecnologie abilitanti, come smart grids, cloud computing e piattaforme 
 
 ---
 
+<div class="page"/>
+
 ## **8. GOAL 8 - LAVORO DIGNITOSO E CRESCITA ECONOMICA**
 
 ### **8.1. Obiettivo del Goal 8**
@@ -395,6 +430,8 @@ Incentivare una crescita economica duratura, inclusiva e sostenibile, un’occup
 10. **Rafforzare la capacità delle istituzioni finanziarie nazionali** per incoraggiare e ampliare l’accesso ai servizi bancari, assicurativi e finanziari per tutti.
 11. **Aumentare il supporto dell’aiuto per il commercio per i paesi in via di sviluppo**, in particolare i meno sviluppati.
 12. **Sviluppare e rendere operativa una strategia globale per l’occupazione giovanile** entro il 2020 e implementare il Patto Globale per l’Occupazione dell’Organizzazione Internazionale del Lavoro.
+
+<div class="page"/>
 
 ### **8.3. Fatti e Cifre**
 
@@ -432,6 +469,8 @@ Politiche per il turismo sostenibile devono promuovere la cultura locale e crear
 
 ---
 
+<div class="page"/>
+
 ## **9. GOAL 9 - IMPRESE, INNOVAZIONE E INFRASTRUTTURE**
 
 ### **9.1. Obiettivo del Goal 9**
@@ -448,6 +487,8 @@ Costruire un’infrastruttura resiliente e promuovere un’industrializzazione e
 6. **Facilitare lo sviluppo sostenibile e resiliente delle infrastrutture nei paesi in via di sviluppo** attraverso un maggiore sostegno finanziario, tecnologico e tecnico ai paesi africani, ai paesi meno sviluppati, ai paesi in via di sviluppo senza sbocco sul mare e ai piccoli Stati insulari in via di sviluppo.
 7. **Sostenere lo sviluppo della tecnologia domestica** la ricerca e l’innovazione nei paesi in via di sviluppo, assicurando un ambiente politico favorevole alla diversificazione industriale e alla creazione di valore aggiunto dalle materie prime.
 8. **Aumentare significativamente l'accesso alle tecnologie dell'informazione e della comunicazione** e sforzarsi di fornire un accesso universale e a basso costo a Internet nei paesi meno sviluppati entro il 2020.
+
+<div class="page"/>
 
 ### **9.3. Fatti e Cifre**
 
@@ -490,6 +531,8 @@ Facilitare l'accesso ai servizi finanziari per le piccole e medie imprese, offre
 
 ---
 
+<div class="page"/>
+
 ## **10. GOAL 10 - RIDURRE LE DISEGUAGLIANZE**
 
 ### **10.1. Obiettivo del Goal 10**
@@ -509,11 +552,13 @@ Ridurre l’ineguaglianza all’interno di e fra le Nazioni. Nonostante alcuni p
 9. **Promuovere l’aiuto pubblico allo sviluppo e i relativi flussi finanziari** verso gli Stati dove il bisogno è maggiore, in particolare i paesi meno sviluppati, i paesi africani, i piccoli Stati insulari in via di sviluppo e i paesi senza sbocco sul mare in via di sviluppo, in accordo con i loro piani e programmi nazionali.
 10. **Entro il 2030, ridurre a meno del 3% i costi di transazione delle rimesse dei migranti** ed eliminare i corridoi di rimesse con costi superiori al 5%.
 
+<div class="page"/>
+
 ### **10.3. Fatti e Cifre**
 
 - **Prodotto Interno Lordo (PIL) per abitante nel 2022**: Nord-ovest 409 mila euro, Nord-est 393 mila euro, Centro 351 mila euro, Mezzogiorno 217 mila euro【68†source】.
-- **Disuguaglianza di reddito**: Tra il 2010 e il 2014, l’indice di disuguaglianza del reddito è peggiorato, passando da 49 a 52%. Dal 2014 al 2019, si sono registrati lievi miglioramenti per la quota di reddito percepito dal 40% più povero della popolazione e per il rapporto tra il tasso di occupazione giovanile e quello totale. Nel 2020, la situazione è peggiorata a causa della pandemia, con un leggero miglioramento nel 2021【70†source】.
-- **Disuguaglianze tra Paesi**: Durante il periodo considerato, incluso il biennio condizionato dalla pandemia, le disuguaglianze tra i Paesi sono aumentate, con i cinque migliori Paesi che hanno mantenuto un andamento costante mentre gli ultimi cinque Stati hanno ridotto la propria performance【70†source】.
+- **Disuguaglianza di reddito**: Tra il 2010 e il 2014, l’indice di disuguaglianza del reddito è peggiorato, passando da 49 a 52%. Dal 2014 al 2019, si sono registrati lievi miglioramenti per la quota di reddito percepito dal 40% più povero della popolazione e per il rapporto tra il tasso di occupazione giovanile e quello totale. Nel 2020, la situazione è peggiorata a causa della pandemia, con un leggero miglioramento nel 2021.
+- **Disuguaglianze tra Paesi**: Durante il periodo considerato, incluso il biennio condizionato dalla pandemia, le disuguaglianze tra i Paesi sono aumentate, con i cinque migliori Paesi che hanno mantenuto un andamento costante mentre gli ultimi cinque Stati hanno ridotto la propria performance.
 
 ### **10.4. Mobilitazione delle Risorse**
 
@@ -533,6 +578,8 @@ La giustizia ambientale si occupa di garantire che tutte le persone, indipendent
 
 Mi scuso per l'omissione. Aggiungo di seguito il paragrafo "Azioni e Interventi" per il Goal 9 e il Goal 10.
 
+<div class="page"/>
+
 ### **10.6. Azioni e Interventi**
 
 #### **10.6.1. Politiche di Inclusione Sociale**
@@ -548,6 +595,8 @@ Adottare politiche fiscali e salariali che riducano le disuguaglianze di reddito
 Facilitare la migrazione sicura, ordinata e regolare attraverso la cooperazione internazionale e politiche migratorie ben gestite. Garantire diritti e protezioni ai migranti, riducendo i costi di transazione delle rimesse.
 
 ---
+
+<div class="page"/>
 
 ## **11. GOAL 11 - CITTÀ E COMUNITÀ SOSTENIBILI**
 
@@ -573,6 +622,8 @@ Rendere le città e gli insediamenti umani inclusivi, sicuri, duraturi e sosteni
 - Le città occupano solo il 3% della superficie terrestre, ma sono responsabili del 60-80% del consumo energetico e del 75% delle emissioni di carbonio.
 - La rapida urbanizzazione esercita pressione sulle forniture di acqua dolce, fognature, ambiente e salute pubblica.
 - Dal 2016, il 90% degli abitanti delle città ha respirato aria insalubre, con 4,2 milioni di morti a causa dell’inquinamento dell’aria.
+
+<div class="page"/>
 
 ### **11.4. Mobilitazione delle Risorse**
 
@@ -604,6 +655,8 @@ Garantire che tutti i cittadini, indipendentemente dal loro background socioecon
 
 Implementare sistemi di gestione dei rifiuti efficienti e sostenibili, riducendo la quantità di rifiuti prodotti e aumentando il riciclo. Migliorare la qualità dell'aria attraverso politiche che riducano le emissioni di inquinanti, promuovendo l'uso di trasporti pubblici e privati meno inquinanti.
 
+<div class="page"/>
+
 #### **11.6.4. Preparazione e Risposta ai Disastri**
 
 Rafforzare le capacità di risposta alle emergenze urbane e migliorare la preparazione delle città a disastri naturali e cambiamenti climatici. Questo include lo sviluppo di piani di emergenza, sistemi di allerta precoce e infrastrutture resilienti.
@@ -613,3 +666,461 @@ Rafforzare le capacità di risposta alle emergenze urbane e migliorare la prepar
 Promuovere la partecipazione attiva dei cittadini nella pianificazione e gestione urbana. Coinvolgere le comunità locali nelle decisioni riguardanti lo sviluppo urbano per garantire che le politiche e gli interventi rispondano alle reali esigenze della popolazione.
 
 ---
+
+## **12. GOAL 12 - CONSUMO E PRODUZIONE RESPONSABILI**
+
+### **12.1. Obiettivo del Goal 12**
+
+Garantire modelli sostenibili di produzione e di consumo. Ad oggi, le risorse consumate dalla popolazione mondiale sono più di quelle che gli ecosistemi sono in grado di fornire. Affinché lo sviluppo sociale ed economico possa avvenire in un quadro di sostenibilità, la nostra società dovrà modificare radicalmente il proprio modo di produrre e consumare beni.
+
+### **12.2. Target Specifici**
+
+1. **Attuare il Quadro Decennale di Programmi per il Consumo e la Produzione Sostenibili**, rendendo partecipi tutti i paesi con i paesi sviluppati alla guida, ma tenendo presenti anche lo sviluppo e le capacità dei paesi in via di sviluppo.
+2. **Entro il 2030, raggiungere la gestione sostenibile e l’utilizzo efficiente delle risorse naturali**.
+3. **Entro il 2030, dimezzare lo spreco alimentare globale pro-capite** a livello di vendita al dettaglio e dei consumatori e ridurre le perdite di cibo durante le catene di produzione e di fornitura, comprese le perdite del post-raccolto.
+4. **Entro il 2020, raggiungere la gestione eco-compatibile di sostanze chimiche e di tutti i rifiuti** durante il loro intero ciclo di vita, in conformità ai quadri internazionali concordati, e ridurre sensibilmente il loro rilascio in aria, acqua e suolo per minimizzare l’impatto negativo sulla salute umana e sull’ambiente.
+5. **Entro il 2030, ridurre in modo sostanziale la produzione di rifiuti** attraverso la prevenzione, la riduzione, il riciclo e il riutilizzo.
+6. **Incoraggiare le imprese, in particolare le grandi aziende multinazionali, ad adottare pratiche sostenibili** e ad integrare le informazioni sulla sostenibilità nei loro resoconti annuali.
+7. **Promuovere pratiche sostenibili in materia di appalti pubblici** in conformità alle politiche e priorità nazionali.
+8. **Entro il 2030, assicurarsi che tutte le persone in ogni parte del mondo abbiano le informazioni rilevanti e la giusta consapevolezza dello sviluppo sostenibile e di uno stile di vita in armonia con la natura**.
+
+### **12.3. Fatti e Cifre**
+
+- **Impronta ecologica**: A partire dalla metà degli anni '80, l'umanità sta vivendo in overshoot, ovvero al di sopra dei propri mezzi in termini ambientali. Molti paesi sono in deficit ecologico, con impronte più grandi della propria capacità biologica.
+- **Progressi dell'Italia**: Dalla firma dell'Agenda 2030 nel 2015, l'Italia ha compiuto importanti progressi sull’Obiettivo 12. L'indice composito elaborato dall'ASviS mostra un andamento positivo dal 2010 al 2020, con un aumento della raccolta differenziata (+277%) e una diminuzione del consumo materiale pro capite (-33%). Tuttavia, dal 2021 si assiste a un'inversione di tendenza: risale il consumo materiale pro capite (+117%) e diminuisce la circolarità della materia (-22%).
+
+### **12.4. Mobilitazione delle Risorse**
+
+1. **Supportare le pratiche di consumo sostenibili** con politiche di sostegno da parte dei Paesi sviluppati nei confronti di quelli in via di sviluppo e interventi sul lato della domanda per sostenere i mercati dei beni di consumo prodotti in modo ambientalmente e socialmente sostenibile.
+2. **Promuovere il mercato delle materie prime seconde e dei materiali da fonte rinnovabile**, riducendo gli sprechi e utilizzando materiali con crescente percentuale di riciclato.
+3. **Investire nella sicurezza e nella qualità alimentare**, nella bioeconomia circolare e nella ricerca per la sostenibilità.
+4. **Sviluppare un piano di progressivo riutilizzo circolare dei rifiuti**, attraverso la loro separazione e valorizzazione in un’ottica di tutela ambientale.
+
+### **12.5. Approcci e Interpretazioni del Consumo e della Produzione Sostenibili**
+
+#### **12.5.1. Produzione Responsabile**
+
+La produzione responsabile consiste nella realizzazione di prodotti e servizi in modo socialmente vantaggioso, economicamente sostenibile e ambientalmente compatibile durante tutto il ciclo di vita.
+
+#### **12.5.2. Consumo Responsabile**
+
+Il consumo responsabile è un'azione di consumo e risparmio in cui il cittadino-consumatore informato e consapevole valuta non solo la qualità e il prezzo dei prodotti e dei servizi, ma anche il valore sociale in essi contenuto e l’impatto ambientale dell’impresa che li produce, tutelando il proprio interesse e quello della collettività nel medio e lungo periodo.
+
+### **12.6. Azioni e Interventi**
+
+#### **12.6.1. Sostegno alle Pratiche di Consumo Sostenibili**
+
+Realizzare politiche di sostegno per promuovere il consumo di prodotti e servizi sostenibili, incoraggiando comportamenti virtuosi tra produttori e consumatori. Promuovere campagne di sensibilizzazione per aumentare la consapevolezza ambientale e incoraggiare il consumo responsabile.
+
+#### **12.6.2. Sostegno alle Pratiche di Produzione Sostenibili**
+
+Promuovere l'adozione di pratiche di produzione sostenibili tra le imprese, incentivando l'uso di materiali riciclati e di fonti rinnovabili. Implementare politiche per ridurre gli sprechi e aumentare l'efficienza delle risorse nei processi produttivi.
+
+#### **12.6.3. Contrasto allo Spreco Alimentare**
+
+Implementare politiche per ridurre lo spreco alimentare lungo tutta la filiera, dalla produzione alla distribuzione, fino al consumo. Promuovere campagne di educazione al consumo responsabile e alla comprensione del valore degli alimenti.
+
+#### **12.6.4. Gestione Ecocompatibile dei Rifiuti**
+
+Sviluppare piani per il riutilizzo e il riciclo dei rifiuti, promuovendo la separazione e la valorizzazione dei materiali in un'ottica di economia circolare. Sostenere politiche a favore del riutilizzo e del riciclaggio dei rifiuti attraverso incentivi fiscali e normativi.
+
+#### **12.6.5. Trasparenza per la Sostenibilità nelle Imprese**
+
+Incoraggiare le imprese a integrare la sostenibilità nei loro processi e a comunicare in modo trasparente i loro sforzi e risultati in materia di sostenibilità. Promuovere l'adozione di standard di rendicontazione della sostenibilità e l'inclusione di informazioni ambientali nei bilanci aziendali.
+
+#### **12.6.6. Appalti Pubblici Verdi**
+
+Promuovere pratiche di appalti pubblici sostenibili, integrando criteri ambientali e sociali nei processi di acquisto delle amministrazioni pubbliche. Implementare strumenti di programmazione e rendicontazione degli acquisti pubblici in ottica di sostenibilità.
+
+---
+
+<div class="page"/>
+
+## **13. GOAL 13 - LOTTA CONTRO IL CAMBIAMENTO CLIMATICO**
+
+### **13.1. Obiettivo del Goal 13**
+
+Adottare misure urgenti per combattere il cambiamento climatico e le sue conseguenze. Il cambiamento climatico rappresenta una delle maggiori sfide del nostro tempo e le sue ripercussioni sono globali, estendendosi a tutti i continenti e colpendo le persone di ogni ceto sociale. L'Accordo di Parigi, firmato nel 2015, mira a mantenere l'aumento della temperatura media globale ben al di sotto dei 2°C rispetto ai livelli preindustriali e a limitare l'aumento a 1,5°C, per ridurre significativamente i rischi e gli impatti del cambiamento climatico.
+
+### **13.2. Target Specifici**
+
+1. **Rafforzare la resilienza e la capacità di adattamento ai rischi legati al clima e ai disastri naturali in tutti i paesi**.
+2. **Integrare le misure di cambiamento climatico nelle politiche, strategie e pianificazioni nazionali**.
+3. **Migliorare l'educazione, la consapevolezza e le capacità umane e istituzionali sulla mitigazione, l'adattamento, la riduzione dell'impatto e l'allerta precoce dei cambiamenti climatici**.
+4. **Implementare l'impegno assunto dai paesi sviluppati che fanno parte della Convenzione quadro delle Nazioni Unite sui cambiamenti climatici per mobilitare congiuntamente 100 miliardi di dollari all'anno entro il 2020 per rispondere alle necessità dei paesi in via di sviluppo**.
+
+### **13.3. Fatti e Cifre**
+
+- **Emissioni di CO2**: Le emissioni globali di CO2 legate all'energia hanno raggiunto un nuovo record di 37 miliardi di tonnellate nel 2022, superando del 1% i livelli pre-pandemia.
+- **Accordo di Parigi**: Firmato da 195 membri dell'UNFCCC, l'Accordo di Parigi mira a contenere l'aumento della temperatura media globale ben al di sotto di 2°C e a limitare l'incremento a 1,5°C per ridurre i rischi del cambiamento climatico【95†source】.
+- **Effetti climatici estremi**: Il 2023 è stato l'anno più caldo mai registrato, con eventi estremi come incendi, siccità, alluvioni e tempeste che hanno evidenziato l'urgenza della crisi climatica【96†source】.
+
+### **13.4. Mobilitazione delle Risorse**
+
+1. **Aumentare gli investimenti in tecnologie pulite e rinnovabili** per ridurre le emissioni di gas serra e promuovere l'energia sostenibile.
+2. **Sostenere finanziariamente i paesi in via di sviluppo** per implementare misure di mitigazione e adattamento al cambiamento climatico, tramite fondi come il Green Climate Fund.
+3. **Promuovere la cooperazione internazionale** per sviluppare e condividere tecnologie e pratiche innovative volte a ridurre l'impatto ambientale.
+
+<div class="page"/>
+
+### **13.5. Approcci e Interpretazioni della Lotta contro il Cambiamento Climatico**
+
+#### **13.5.1. Adattamento**
+
+L'adattamento implica l'adozione di misure per anticipare gli effetti avversi dei cambiamenti climatici, riducendo al minimo i danni o sfruttando le opportunità che possono presentarsi. Questo include il miglioramento delle infrastrutture, l'adozione di pratiche agricole resilienti e la protezione delle risorse idriche.
+
+#### **13.5.2. Mitigazione**
+
+La mitigazione si concentra sulla riduzione delle emissioni di gas a effetto serra per limitare l'entità del cambiamento climatico. Misure di mitigazione includono l'adozione di energie rinnovabili, l'efficienza energetica, la riforestazione e l'implementazione di tecnologie di cattura e stoccaggio del carbonio.
+
+### **13.6. Azioni e Interventi**
+
+#### **13.6.1. Promozione delle Energie Rinnovabili**
+
+Incrementare la produzione e l'uso di energie rinnovabili come solare, eolico e idroelettrico per ridurre la dipendenza dai combustibili fossili e abbattere le emissioni di gas serra.
+
+#### **13.6.2. Efficienza Energetica**
+
+Adottare misure per migliorare l'efficienza energetica negli edifici, nei trasporti e nell'industria. Questo include l'uso di tecnologie più efficienti e la promozione di pratiche sostenibili.
+
+#### **13.6.3. Educazione e Consapevolezza**
+
+Migliorare l'educazione e la consapevolezza riguardo ai cambiamenti climatici, promuovendo campagne di sensibilizzazione e programmi educativi per informare il pubblico sui rischi e sulle azioni da intraprendere.
+
+#### **13.6.4. Resilienza e Adattamento**
+
+Sviluppare e implementare piani di adattamento per aumentare la resilienza delle comunità e delle infrastrutture ai disastri naturali e agli impatti dei cambiamenti climatici. Questo include la costruzione di infrastrutture resilienti e la protezione delle risorse naturali.
+
+#### **13.6.5. Politiche e Regolamentazioni**
+
+Implementare politiche e regolamentazioni che incentivino le pratiche sostenibili e penalizzino le attività dannose per l'ambiente. Promuovere la transizione verso un'economia a basse emissioni di carbonio attraverso strumenti legislativi e finanziari.
+
+---
+
+## **14. GOAL 14 - VITA SOTT’ACQUA**
+
+### **14.1. Obiettivo del Goal 14**
+
+Conservare e utilizzare in modo durevole gli oceani, i mari e le risorse marine per uno sviluppo sostenibile. Gli oceani coprono i tre quarti della superficie terrestre, contengono il 97% dell’acqua presente sulla Terra e rappresentano il 99% dello spazio in cui vivono gli organismi. Più di 3 miliardi di persone dipendono dalla biodiversità marina per il loro sostentamento. Tuttavia, il 40% degli oceani è pesantemente influenzato dalle attività umane, causando inquinamento, esaurimento delle riserve ittiche e perdita di habitat naturali.
+
+### **14.2. Target Specifici**
+
+1. **Entro il 2025, prevenire e ridurre in modo significativo l'inquinamento marino**, in particolare quello derivante da attività esercitate sulla terraferma, compreso l’inquinamento dei detriti marini e delle sostanze nutritive.
+2. **Entro il 2020, gestire in modo sostenibile e proteggere l’ecosistema marino e costiero** per evitare impatti negativi, rafforzandone la resilienza e agendo per il loro ripristino.
+3. **Ridurre al minimo e affrontare gli effetti dell’acidificazione degli oceani**, aumentando la collaborazione scientifica a tutti i livelli.
+4. **Entro il 2020, regolare efficacemente la pesca e porre fine alla pesca eccessiva, illegale, non dichiarata e non regolamentata** e ai metodi di pesca distruttivi, implementando piani di gestione su base scientifica per ripristinare le riserve ittiche.
+5. **Entro il 2020, preservare almeno il 10% delle aree costiere e marine**, in conformità al diritto nazionale e internazionale, basandosi sulle migliori informazioni scientifiche disponibili.
+6. **Entro il 2020, vietare le forme di sussidi alla pesca che contribuiscono alla pesca eccessiva** e alla pesca illegale, non dichiarata e non regolamentata, riconoscendo il trattamento speciale e differenziato per i paesi in via di sviluppo.
+7. **Entro il 2030, aumentare i benefici economici dei piccoli Stati insulari in via di sviluppo e dei paesi meno sviluppati** attraverso l'uso sostenibile delle risorse marine, compresa la gestione sostenibile della pesca, dell'acquacoltura e del turismo.
+8. **Aumentare la conoscenza scientifica, sviluppare la capacità di ricerca e trasmissione della tecnologia marina** per migliorare la salute degli oceani e aumentare il contributo della biodiversità marina allo sviluppo.
+9. **Fornire l'accesso ai piccoli pescatori artigianali alle risorse e ai mercati marini**.
+10. **Potenziare la conservazione e l’utilizzo sostenibile degli oceani e delle loro risorse applicando il diritto internazionale**, come riportato nella Convenzione delle Nazioni Unite sul Diritto del Mare.
+
+<div class="page"/>
+
+### **14.3. Fatti e Cifre**
+
+- **Oceani e superficie terrestre**: Gli oceani coprono il 75% della superficie terrestre e contengono il 97% dell'acqua presente sulla Terra.
+- **Sostentamento**: Più di 3 miliardi di persone dipendono dalla biodiversità marina per il loro sostentamento.
+- **Specie marine**: Gli oceani contengono approssimativamente 200.000 specie identificate, ma il numero reale potrebbe aggirarsi nell’ordine dei milioni.
+- **Assorbimento di CO2**: Gli oceani assorbono circa il 30% dell’anidride carbonica prodotta dagli esseri umani, mitigando l’impatto del riscaldamento globale.
+- **Impatto umano**: Il 40% degli oceani del mondo è pesantemente influenzato dalle attività umane, causando inquinamento, esaurimento delle riserve ittiche e perdita di habitat naturali lungo le coste.
+
+### **14.4. Mobilitazione delle Risorse**
+
+1. **Investire nella gestione sostenibile delle risorse marine** attraverso fondi pubblici e privati, sostenendo progetti che promuovano la sostenibilità degli ecosistemi marini e costieri.
+2. **Supportare la ricerca scientifica e lo sviluppo tecnologico** per migliorare la comprensione degli ecosistemi marini e sviluppare soluzioni innovative per la loro conservazione.
+3. **Promuovere la cooperazione internazionale** per garantire la conservazione e l'uso sostenibile delle risorse marine, sostenendo i paesi in via di sviluppo nell'implementazione di misure di gestione marina sostenibile.
+
+### **14.5. Approcci e Interpretazioni della Conservazione Marina**
+
+#### **14.5.1. Gestione Sostenibile delle Risorse Marine**
+
+Promuovere pratiche di pesca sostenibile e regolamentare l'uso delle risorse marine per garantire che le riserve ittiche siano mantenute a livelli che consentano il massimo rendimento sostenibile. Questo include l'adozione di piani di gestione su base scientifica e la riduzione delle pratiche di pesca distruttive.
+
+#### **14.5.2. Protezione degli Ecosistemi Marini**
+
+Proteggere e ripristinare gli ecosistemi marini e costieri attraverso l'istituzione di aree marine protette e la promozione della resilienza degli ecosistemi. Questo include la gestione delle aree costiere per minimizzare l'impatto delle attività umane e la promozione della biodiversità.
+
+### **14.6. Azioni e Interventi**
+
+#### **14.6.1. Riduzione dell'Inquinamento Marino**
+
+Implementare misure per prevenire e ridurre l'inquinamento marino, inclusi i rifiuti plastici e le sostanze chimiche nocive. Promuovere la gestione sostenibile dei rifiuti terrestri per evitare che finiscano negli oceani.
+
+#### **14.6.2. Gestione Sostenibile della Pesca**
+
+Regolare e monitorare la pesca per prevenire la pesca eccessiva e promuovere pratiche di pesca sostenibile. Implementare piani di gestione basati su dati scientifici per garantire il ripristino delle riserve ittiche.
+
+#### **14.6.3. Protezione delle Aree Marine**
+
+Istituire e gestire aree marine protette per conservare gli habitat marini e costieri. Promuovere la creazione di riserve marine che coprano almeno il 10% delle aree marine entro il 2020.
+
+#### **14.6.4. Educazione e Sensibilizzazione**
+
+Aumentare la consapevolezza sull'importanza della conservazione degli oceani attraverso campagne educative e di sensibilizzazione. Promuovere l'educazione ambientale per incoraggiare comportamenti sostenibili tra le comunità costiere e i pescatori.
+
+#### **14.6.5. Cooperazione Internazionale**
+
+Promuovere la cooperazione internazionale per la conservazione e l'uso sostenibile degli oceani. Collaborare con organizzazioni internazionali, governi e comunità locali per implementare politiche e pratiche sostenibili a livello globale.
+
+---
+
+<div class="page"/>
+
+## **15. GOAL 15 - VITA SULLA TERRA**
+
+### **15.1. Obiettivo del Goal 15**
+
+Proteggere, ripristinare e promuovere l'uso sostenibile degli ecosistemi terrestri, gestire in modo sostenibile le foreste, combattere la desertificazione, arrestare e invertire il degrado del suolo e fermare la perdita di biodiversità. La gestione sostenibile del suolo e degli ecosistemi è essenziale per la vita sulla Terra, poiché il suolo regola il ciclo naturale dell'acqua, dell'aria e delle sostanze organiche e minerali.
+
+### **15.2. Target Specifici**
+
+1. **Garantire la conservazione, il ripristino e l’utilizzo sostenibile degli ecosistemi di acqua dolce terrestri** e dell’entroterra entro il 2020, in particolare delle foreste, delle paludi, delle montagne e delle zone aride, in linea con gli obblighi internazionali.
+2. **Promuovere la gestione sostenibile di tutti i tipi di foreste**, arrestare la deforestazione, ripristinare le foreste degradate e aumentare significativamente la riforestazione e il rimboschimento entro il 2020.
+3. **Combattere la desertificazione, ripristinare le terre degradate** e colpite da desertificazione, siccità e inondazioni, e battersi per ottenere un mondo privo di degrado del suolo entro il 2030.
+4. **Garantire la conservazione degli ecosistemi montuosi** entro il 2030, incluse le loro biodiversità, per migliorarne la capacità di produrre benefici essenziali per uno sviluppo sostenibile.
+5. **Ridurre il degrado degli ambienti naturali**, arrestare la distruzione della biodiversità e proteggere le specie a rischio di estinzione entro il 2020.
+6. **Promuovere una distribuzione equa e giusta dei benefici derivanti dall’utilizzo delle risorse genetiche** e promuovere un equo accesso a tali risorse come concordato a livello internazionale.
+7. **Porre fine al bracconaggio e al traffico delle specie protette di flora e fauna** e combattere il commercio illegale di specie selvatiche.
+8. **Prevenire l’introduzione di specie invasive** e ridurre il loro impatto sugli ecosistemi terrestri e acquatici entro il 2020, controllando o debellando le specie prioritarie.
+9. **Integrare i principi di ecosistema e biodiversità nei progetti nazionali e locali** entro il 2020, nei processi di sviluppo e nelle strategie per la riduzione della povertà.
+10. **Mobilitare e incrementare le risorse economiche** per preservare e usare in maniera sostenibile la biodiversità e gli ecosistemi.
+11. **Finanziare la gestione sostenibile delle foreste** e fornire incentivi ai paesi in via di sviluppo per migliorare la gestione delle foreste e per la conservazione e la riforestazione.
+12. **Rafforzare il sostegno globale per combattere il bracconaggio e il traffico illegale delle specie protette** anche incrementando la capacità delle comunità locali ad utilizzare mezzi di sussistenza sostenibili.
+
+<div class="page"/>
+
+### **15.3. Fatti e Cifre**
+
+- **Ecosistemi Terrestri**: Il degrado del suolo e la desertificazione minacciano la sicurezza alimentare e i mezzi di sussistenza di oltre 1,5 miliardi di persone.
+- **Deforestazione**: Circa 13 milioni di ettari di foreste vengono distrutti ogni anno, e questa distruzione rappresenta il 12-20% delle emissioni di gas serra globali.
+- **Biodiversità**: Le specie di vertebrati terrestri sono diminuite del 40% dal 1970, e la perdita di biodiversità si stima costerà al mondo il 7% del PIL globale entro il 2050.
+- **Italia**: La situazione italiana relativa agli ecosistemi terrestri dal 2010 al 2022 mostra un andamento costantemente negativo. Peggiorano l’impermeabilizzazione del suolo da copertura artificiale e la quota di territorio a elevata frammentazione. Il consumo annuo di suolo è in aumento e la superficie terrestre sottoposta a salvaguardia non mostra ampliamento.
+
+### **15.4. Mobilitazione delle Risorse**
+
+1. **Investire in progetti di riforestazione e gestione sostenibile delle foreste** per ripristinare gli ecosistemi degradati.
+2. **Supportare finanziariamente i paesi in via di sviluppo** per implementare misure di conservazione e uso sostenibile della biodiversità.
+3. **Promuovere la ricerca scientifica** e lo sviluppo di tecnologie per la gestione sostenibile degli ecosistemi terrestri e la lotta contro la desertificazione.
+
+### **15.5. Approcci e Interpretazioni della Conservazione Terrestre**
+
+#### **15.5.1. Gestione Sostenibile del Suolo**
+
+Il suolo è un sistema complesso in equilibrio, che svolge funzioni fondamentali per la vita sulla Terra. Una gestione sostenibile del suolo implica la protezione delle sue proprietà fisiche e chimiche, prevenendo il degrado e promuovendo la sua fertilità.
+
+#### **15.5.2. Conservazione della Biodiversità**
+
+La conservazione della biodiversità è essenziale per mantenere la resilienza degli ecosistemi e garantire i servizi ecosistemici vitali. Misure di conservazione includono la protezione delle specie a rischio, la prevenzione della perdita di habitat e la promozione della diversità genetica.
+
+### **15.6. Azioni e Interventi**
+
+#### **15.6.1. Protezione degli Ecosistemi**
+
+Implementare politiche e programmi per proteggere e ripristinare gli ecosistemi terrestri, con particolare attenzione alle foreste, alle zone umide e alle aree montane. Promuovere la gestione sostenibile delle risorse naturali per mantenere la biodiversità e i servizi ecosistemici.
+
+<div class="page"/>
+
+#### **15.6.2. Lotta alla Desertificazione**
+
+Adottare misure per combattere la desertificazione, come la riforestazione e la gestione sostenibile delle terre aride. Implementare pratiche agricole sostenibili per prevenire il degrado del suolo e promuovere la sua fertilità.
+
+#### **15.6.3. Prevenzione del Bracconaggio**
+
+Rafforzare le leggi e le misure di controllo per prevenire il bracconaggio e il traffico illegale di specie selvatiche. Promuovere campagne di sensibilizzazione per educare le comunità locali sull'importanza della conservazione della fauna e della flora.
+
+#### **15.6.4. Gestione delle Specie Invasive**
+
+Implementare misure per prevenire l'introduzione e la diffusione di specie invasive che minacciano gli ecosistemi locali. Promuovere la ricerca e il monitoraggio delle specie invasive per controllarne l'impatto e adottare interventi mirati.
+
+#### **15.6.5. Educazione e Sensibilizzazione**
+
+Promuovere l'educazione ambientale e la consapevolezza sulla conservazione degli ecosistemi terrestri. Coinvolgere le comunità locali nella gestione sostenibile delle risorse naturali e nelle iniziative di conservazione.
+
+#### **15.6.6. Cooperazione Internazionale**
+
+Fornire supporto tecnico e finanziario ai paesi in via di sviluppo per la conservazione della biodiversità e la gestione sostenibile delle foreste. Promuovere la cooperazione internazionale per affrontare le sfide globali legate alla conservazione degli ecosistemi e alla lotta contro la desertificazione.
+
+---
+
+<div class="page"/>
+
+## **16. GOAL 16 - PACE, GIUSTIZIA E ISTITUZIONI SOLIDE**
+
+### **16.1. Obiettivo del Goal 16**
+
+Promuovere società pacifiche e inclusive per uno sviluppo sostenibile, offrire l'accesso alla giustizia per tutti e creare istituzioni efficienti, responsabili e inclusive a tutti i livelli. La pace, la giustizia e le istituzioni solide sono fondamentali per garantire la stabilità e la prosperità delle società. Gli Stati colpiti da conflitti sono i più lontani dal raggiungimento degli Obiettivi di Sviluppo Sostenibile (OSS), mentre quelli che hanno ristabilito la pace e creato istituzioni efficaci hanno fatto significativi progressi.
+
+### **16.2. Target Specifici**
+
+1. **Ridurre significativamente in ogni dove tutte le forme di violenza e i tassi di mortalità connessi**.
+2. **Eliminare l'abuso, lo sfruttamento, il traffico e tutte le forme di violenza e tortura contro i bambini**.
+3. **Promuovere lo stato di diritto a livello nazionale e internazionale** e garantire parità di accesso alla giustizia per tutti.
+4. **Entro il 2030, ridurre in modo significativo i flussi finanziari e di armi illeciti**, rafforzare il recupero e la restituzione dei beni rubati e combattere tutte le forme di criminalità organizzata.
+5. **Ridurre sostanzialmente la corruzione e la concussione in tutte le loro forme**.
+6. **Sviluppare istituzioni efficaci, responsabili e trasparenti a tutti i livelli**.
+7. **Assicurare un processo decisionale reattivo, inclusivo, partecipativo e rappresentativo a tutti i livelli**.
+8. **Allargare e rafforzare la partecipazione dei paesi in via di sviluppo nelle istituzioni della governance globale**.
+9. **Entro il 2030, fornire l'identità giuridica per tutti**, compresa la registrazione delle nascite.
+10. **Garantire l'accesso del pubblico alle informazioni** e proteggere le libertà fondamentali in conformità con la legislazione nazionale e con gli accordi internazionali.
+11. **Rafforzare le istituzioni nazionali, anche attraverso la cooperazione internazionale**, per costruire maggiore capacità a tutti i livelli, in particolare nei paesi in via di sviluppo, per prevenire la violenza e combattere il terrorismo e la criminalità.
+12. **Promuovere e far rispettare le leggi e le politiche non discriminatorie per lo sviluppo sostenibile**.
+
+<div class="page"/>
+
+### **16.3. Fatti e Cifre**
+
+- Tra il 2010 e il 2013, il tasso di reati predatori è aumentato da 165 a 242 reati per mille abitanti. Successivamente, l'indice ha migliorato grazie alla riduzione del sovraffollamento delle carceri, all'aumento della fiducia dei cittadini nelle istituzioni e alla diminuzione del tasso di reati predatori.
+- Nel 2021 si è registrato un peggioramento dell'indice composito a causa del calo della partecipazione sociale (-95 punti percentuali), mentre nel 2022 si è osservata una ripresa della partecipazione compensata dall'aumento delle truffe e delle frodi informatiche.
+- Le disuguaglianze territoriali si sono ridotte tra il 2010 e il 2019, con un miglioramento delle cinque peggiori regioni e la stabilità delle cinque migliori. Tuttavia, nel 2020 le disuguaglianze sono aumentate a causa del peggioramento delle ultime cinque regioni.
+
+### **16.4. Mobilitazione delle Risorse**
+
+1. **Investire in istituzioni trasparenti e responsabili** per migliorare la governance e ridurre la corruzione.
+2. **Supportare finanziariamente e tecnicamente i paesi in via di sviluppo** per rafforzare la loro capacità istituzionale e promuovere la pace e la giustizia.
+3. **Promuovere la cooperazione internazionale** per combattere la criminalità organizzata, il traffico di armi e la corruzione.
+
+### **16.5. Approcci e Interpretazioni della Giustizia e della Pace**
+
+#### **16.5.1. Buongoverno**
+
+Il buongoverno implica trasparenza, responsabilità e partecipazione attiva dei cittadini nei processi decisionali. È essenziale per promuovere la giustizia sociale, ridurre la corruzione e garantire l'efficacia delle istituzioni.
+
+#### **16.5.2. Accesso alla Giustizia**
+
+Garantire parità di accesso alla giustizia per tutti è fondamentale per tutelare i diritti umani e promuovere la stabilità sociale. Questo include l'assistenza legale gratuita, la protezione dei diritti fondamentali e la promozione di un sistema giudiziario equo e trasparente.
+
+### **16.6. Azioni e Interventi**
+
+#### **16.6.1. Riduzione della Violenza**
+
+Implementare politiche e programmi per ridurre tutte le forme di violenza, compresa la violenza domestica, la violenza armata e la violenza contro i bambini. Promuovere la risoluzione pacifica dei conflitti attraverso il dialogo e la mediazione.
+
+<div class="page"/>
+
+#### **16.6.2. Lotta alla Corruzione**
+
+Rafforzare le leggi e le misure di controllo per prevenire e combattere la corruzione in tutte le sue forme. Promuovere la trasparenza e la responsabilità delle istituzioni pubbliche e private.
+
+#### **16.6.3. Promozione della Partecipazione Civica**
+
+Incoraggiare la partecipazione attiva dei cittadini nei processi decisionali a tutti i livelli, promuovendo la rappresentatività e l'inclusività. Supportare le organizzazioni della società civile e i movimenti sociali che lavorano per la giustizia e i diritti umani.
+
+#### **16.6.4. Rafforzamento delle Istituzioni**
+
+Investire nel rafforzamento delle istituzioni pubbliche per migliorarne l'efficacia, la trasparenza e la responsabilità. Promuovere la formazione e lo sviluppo delle capacità del personale delle istituzioni pubbliche.
+
+#### **16.6.5. Accesso all'Informazione**
+
+Garantire l'accesso del pubblico alle informazioni e proteggere le libertà fondamentali, come la libertà di espressione e la libertà di stampa. Promuovere la trasparenza nei processi decisionali e la divulgazione delle informazioni di interesse pubblico.
+
+#### **16.6.6. Cooperazione Internazionale**
+
+Promuovere la cooperazione internazionale per affrontare le sfide globali legate alla pace, alla giustizia e alle istituzioni solide. Collaborare con organizzazioni internazionali, governi e organizzazioni della società civile per promuovere la pace e la giustizia a livello globale.
+
+---
+
+<div class="page"/>
+
+## **17. GOAL 17 - PARTNERSHIP PER GLI OBIETTIVI**
+
+### **17.1. Obiettivo del Goal 17**
+
+Rafforzare i mezzi di attuazione e rinnovare il partenariato mondiale per lo sviluppo sostenibile. L’attuazione dell’Agenda 2030 richiede un forte coinvolgimento di tutte le componenti della società, dalle imprese al settore pubblico, dalla società civile alle istituzioni filantropiche, dalle università e centri di ricerca agli operatori dell’informazione e della cultura.
+
+### **17.2. Target Specifici**
+
+1. **Finanza**
+   - Rafforzare la mobilitazione delle risorse interne anche attraverso il sostegno internazionale ai Paesi in via di sviluppo per migliorare la capacità interna di riscossione di imposte e altre forme di entrate.
+   - I Paesi sviluppati adempiano pienamente ai loro obblighi di aiuto pubblico allo sviluppo, incluso l’obiettivo dello 0,7% del reddito nazionale lordo (RNL) per i Paesi in via di sviluppo e dallo 0,15 al 0,20% per i Paesi meno sviluppati.
+   - Mobilitare ulteriori risorse finanziarie per i Paesi in via di sviluppo da più fonti.
+   - Aiutare i Paesi in via di sviluppo a raggiungere la sostenibilità del debito a lungo termine attraverso politiche coordinate volte a favorire il finanziamento del debito, la riduzione del debito e la ristrutturazione del debito.
+   - Adottare e applicare regimi di promozione degli investimenti per i Paesi meno sviluppati.
+
+2. **Tecnologia**
+   - Migliorare la cooperazione Nord-Sud, Sud-Sud e quella triangolare, e l’accesso alla scienza, alla tecnologia e all’innovazione.
+   - Promuovere lo sviluppo, il trasferimento, la diffusione e la diffusione di tecnologie ecocompatibili ai Paesi in via di sviluppo.
+   - Rendere operativa la Banca della Tecnologia e i meccanismi di sviluppo delle capacità scientifiche, tecnologiche e di innovazione per i Paesi meno sviluppati entro il 2017.
+
+3. **Costruzione di competenze e capacità**
+   - Rafforzare il sostegno internazionale per implementare uno sviluppo delle capacità efficace nei Paesi in via di sviluppo per sostenere i piani nazionali per la realizzazione di tutti gli Obiettivi di sviluppo sostenibile.
+
+   <div class="page"/>
+
+4. **Commercio**
+   - Promuovere un sistema commerciale multilaterale universale, basato su regole, aperto, non discriminatorio ed equo.
+   - Aumentare significativamente le esportazioni dei Paesi in via di sviluppo, in particolare raddoppiando la quota delle esportazioni mondiali dei Paesi meno sviluppati entro il 2020.
+   - Realizzare tempestivamente un accesso al mercato libero da dazi e quote per tutti i Paesi meno sviluppati, in linea con le decisioni dell'Organizzazione Mondiale del Commercio.
+
+5. **Coerenza politica e istituzionale**
+   - Migliorare la stabilità macroeconomica globale attraverso il coordinamento e la coerenza delle politiche.
+   - Migliorare la coerenza delle politiche per lo sviluppo sostenibile.
+   - Rispettare lo spazio politico e la leadership di ciascun paese per stabilire e implementare politiche per l'eliminazione della povertà e per lo sviluppo sostenibile.
+
+6. **Partenariati multilaterali**
+   - Migliorare il partenariato globale per lo sviluppo sostenibile integrato da partenariati multilaterali che mobilitino e condividano le conoscenze, le competenze, le tecnologie e le risorse finanziarie.
+   - Incoraggiare e promuovere efficaci partenariati tra soggetti pubblici, pubblico-privati e nella società civile.
+
+7. **Dati, monitoraggio e responsabilità**
+   - Rafforzare il meccanismo di supporto delle capacità per i Paesi in via di sviluppo per aumentare la disponibilità di dati di alta qualità, tempestivi e affidabili, disaggregati in base al reddito, sesso, età, razza, etnia, status migratorio, disabilità, posizione geografica e altre caratteristiche rilevanti.
+   - Entro il 2030, costruire sistemi di misurazione dell’avanzamento verso lo sviluppo sostenibile che siano complementari alla misurazione del PIL.
+
+<div class="page"/>
+
+### **17.3. Fatti e Cifre**
+
+- **Andamento degli indicatori**: Dopo un peggioramento dell’indicatore composito tra il 2010 e il 2015, si è osservata una stabilità dal 2015 al 2019. Nel 2020, a causa della pandemia, il rapporto tra debito pubblico e PIL è aumentato dal 134,1% al 154,9%.
+- **Ripresa**: Tra il 2020 e il 2022, si è assistito a una ripresa dell’indice, grazie all'aumento delle importazioni dai Paesi in via di sviluppo e alla riduzione del rapporto tra debito pubblico e PIL.
+
+### **17.4. Mobilitazione delle Risorse**
+
+1. **Finanza**: Consolidare la mobilitazione delle risorse interne e rispettare gli impegni di aiuto pubblico allo sviluppo.
+2. **Tecnologia**: Promuovere lo sviluppo e il trasferimento di tecnologie ecocompatibili.
+3. **Capacità**: Rafforzare il sostegno internazionale per lo sviluppo delle capacità nei Paesi in via di sviluppo.
+
+### **17.5. Approcci e Interpretazioni della Partnership**
+
+#### **17.5.1. Cooperazione Internazionale**
+
+La cooperazione internazionale è essenziale per il raggiungimento degli obiettivi di sviluppo sostenibile. Promuovere partenariati efficaci tra governi, settore privato, società civile e altre parti interessate è fondamentale per mobilitare le risorse necessarie.
+
+#### **17.5.2. Sostenibilità Finanziaria**
+
+La sostenibilità finanziaria implica la gestione responsabile delle risorse e l’adozione di politiche fiscali che promuovano la crescita economica inclusiva e sostenibile. Questo include la gestione del debito e la promozione di investimenti sostenibili.
+
+<div class="page"/>
+
+### **17.6. Azioni e Interventi**
+
+#### **17.6.1. Rafforzamento della Capacità Fiscale**
+
+Promuovere politiche e programmi per migliorare la capacità fiscale interna dei Paesi in via di sviluppo, aumentando la riscossione delle entrate e riducendo l’evasione fiscale.
+
+#### **17.6.2. Promozione della Tecnologia Ecocompatibile**
+
+Incoraggiare il trasferimento e l’adozione di tecnologie ecocompatibili nei Paesi in via di sviluppo attraverso partenariati internazionali e accordi favorevoli.
+
+#### **17.6.3. Supporto alla Cooperazione Sud-Sud**
+
+Promuovere la cooperazione Sud-Sud e triangolare per condividere le migliori pratiche e le conoscenze tra i Paesi in via di sviluppo.
+
+#### **17.6.4. Creazione di Partenariati Efficaci**
+
+Incoraggiare partenariati tra soggetti pubblici, privati e della società civile per mobilitare risorse e competenze necessarie per raggiungere gli obiettivi di sviluppo sostenibile.
+
+#### **17.6.5. Monitoraggio e Valutazione**
+
+Rafforzare i sistemi di monitoraggio e valutazione per garantire la trasparenza e la responsabilità nell’attuazione dei programmi di sviluppo sostenibile. Implementare meccanismi di raccolta dati per migliorare la qualità e la disponibilità delle informazioni necessarie per la valutazione dei progressi.
+
+---
+
+<div class="page"/>
+
+## **CONCLUSIONE**
+
+Gli Obiettivi di Sviluppo Sostenibile (OSS) rappresentano un impegno globale per affrontare le sfide più urgenti del nostro tempo e costruire un futuro sostenibile per tutti. L'Agenda 2030 per lo Sviluppo Sostenibile si basa su un approccio integrato che riconosce l'interconnessione tra i diversi aspetti dello sviluppo economico, sociale e ambientale.
+
+Per raggiungere gli OSS, è necessario un forte impegno da parte di tutti i settori della società, compresi i governi, il settore privato, la società civile e le organizzazioni internazionali. La cooperazione e il partenariato sono fondamentali per mobilitare le risorse e le competenze necessarie per affrontare le sfide globali e promuovere lo sviluppo sostenibile.
+
+L'attuazione degli OSS richiede azioni concrete e misurabili, che vanno dalla protezione dell'ambiente alla promozione della pace e della giustizia. Ogni individuo e ogni organizzazione ha un ruolo da svolgere nel contribuire al raggiungimento degli OSS e nel costruire un mondo più equo, sostenibile e inclusivo per le generazioni future.
