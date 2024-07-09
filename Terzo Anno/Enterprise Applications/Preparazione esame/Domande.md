@@ -1,10 +1,10 @@
-### Java e Hibernate/JPA\
+### Java e Hibernate/JPA
 
-1. Come mappare l’eredità usando l’url? Quali sono le diverse strategie? vantaggi e svantaggi
-2. Quali sono le annotazioni corrispondenti in Hiberate/jpa? I modi per mappare
-3. Problemi del mismatch tra paradigma relazione e a oggetti (problema dell’identità (equals), ereditarietà, associazioni)
-4. Cosa si usa per non rendere una colonna persistente sul db? Transient
-5. Qual è il comportamento predefinito di JPA per la proprietà hibernate.hbm2ddl.auto? È create o update?
+1. Come mappare l’ereditarietà nelle entità JPA? Quali sono le diverse strategie disponibili e quali sono i vantaggi e gli svantaggi di ciascuna?
+2. Quali sono le annotazioni corrispondenti in Hibernate/JPA per mappare l’ereditarietà? Quali sono i diversi modi per mappare?
+3. Quali sono i problemi del mismatch tra paradigma relazionale e a oggetti, in particolare per quanto riguarda l'identità (equals), l'ereditarietà e le associazioni?
+4. Quale annotazione si usa per non rendere una colonna persistente nel database? Come si usa l'annotazione `@Transient`?
+5. Qual è il comportamento predefinito di JPA? Come si può modificare il comportamento predefinito?
 6. Quali sono le proprietà del file di configurazione di Hibernate che permettono di gestire la creazione e l'aggiornamento dello schema del database?
 7. Qual è la differenza tra Entity, POJO, DTO e DAO?
 8. Come funziona l'ereditarietà nelle entità JPA? Spiega le differenze tra Single Table Inheritance e Class Table Inheritance, e descrivi il ruolo della parte in comune.
@@ -39,44 +39,44 @@
 
 ### REST API e Sicurezza
 
-1. Le caratteristiche REST? stateless, struttura standard, nomi ecc.
-2. Cosa è rate limiting?
-3. Cosa è Oauth2? Perché è stato introdotto? Cosa risolve?
-4. Cosa sono i Token?
-5. Cosa sono i JWT? Come fanno ad essere self-contained? Ovvero come garantiscono la sicurezza?
-6. Come si gestisce il logout nel caso dei JWT?
-7. Flusso del token OAuth2, Client Credential Grant?
-8. Differenza tra authentication e authorization?
-9. Cos'è il Cross-site Scripting?
-10. Differenza tra crittografia simmetrica e asimmetrica?
-11. Cosa sono i Macaroons?
+1. Quali sono le caratteristiche principali delle API REST? Spiega il concetto di statelessness, la struttura standard degli URL, la convenzione dei nomi e altri principi fondamentali.
+2. Cos'è il rate limiting e come viene utilizzato per controllare l'accesso alle API?
+3. Cos'è OAuth2? Perché è stato introdotto e quali problemi risolve?
+4. Cosa sono i token e come vengono utilizzati nelle operazioni di autenticazione e autorizzazione?
+5. Cosa sono i JWT (JSON Web Tokens)? Come fanno ad essere self-contained e come garantiscono la sicurezza?
+6. Come si gestisce il logout quando si utilizzano i JWT per l'autenticazione?
+7. Spiega il flusso del Client Credential Grant in OAuth2.
+8. Qual è la differenza tra autenticazione e autorizzazione?
+9. Cos'è il Cross-site Scripting (XSS) e come può essere prevenuto?
+10. Qual è la differenza tra crittografia simmetrica e asimmetrica?
+11. Cosa sono i Macaroons e come vengono utilizzati per l'autenticazione?
 
 ### Microservizi e Architettura
 
-1. Microservizi in Spring? Vantaggi e svantaggi?
-2. Come comunicano i microservizi tra di loro (sincrona e asincrona)?
-3. Vantaggi e svantaggi dei microservizi e lato database?
-4. Problemi sul database per unire i dati da più microservizi? Data mart ecc.
-5. Vantaggi e svantaggi dei microservizi? E lato database? Nel caso in cui volessimo lavorare in ambito dati per raggrupparli assieme?
-6. Cos'è il pattern API Gateway?
-7. Quanti modi per scalare un'applicazione (verticale, orizzontale ecc.)?
-8. Ruolo del message broker nei microservizi? I message broker più popolari
+1. Quali sono i vantaggi e gli svantaggi dell'uso dei microservizi in Spring?
+2. Come comunicano i microservizi tra di loro? Descrivi le differenze tra comunicazione sincrona e asincrona.
+3. Quali sono i vantaggi e gli svantaggi dei microservizi, soprattutto per quanto riguarda la gestione del database?
+4. Quali problemi possono sorgere nell'unire i dati provenienti da più microservizi in un database? Come possono essere utilizzati strumenti come i data mart?
+5. Quali sono i vantaggi e gli svantaggi dei microservizi in generale e nella gestione dei database? Come affrontare le sfide di raggruppare dati da vari microservizi?
+6. Cos'è il pattern API Gateway e quale ruolo svolge nei microservizi?
+7. Quali sono i diversi modi per scalare un'applicazione? Spiega la scalabilità verticale e orizzontale.
+8. Qual è il ruolo di un message broker nei microservizi? Quali sono i message broker più popolari e utilizzati?
 
 ### Android e Kotlin
 
-1. Come implementare i metodi del lazy load? Quali sono le 3 tecniche?
-2. Componenti grafici di Jetpack Compose
-3. Layout di base
-4. LazyColumn e LazyRow
-5. LazyVerticalGrid e LazyHorizontalGrid
+1. Come si implementano i metodi del lazy loading? Quali sono le tre tecniche principali utilizzate?
+2. Quali sono i componenti grafici disponibili in Jetpack Compose?
+3. Quali sono i layout di base in Jetpack Compose e come vengono utilizzati?
+4. Cosa sono LazyColumn e LazyRow in Jetpack Compose e come funzionano?
+5. Cosa sono LazyVerticalGrid e LazyHorizontalGrid in Jetpack Compose e come funzionano?
 
 ### Altri Argomenti
 
-1. Cosa sono le Capabilities? E come si possono implementare?
-2. Organizzazione logica di business?
-3. Come gestire la concorrenza?
-4. Come viene implementato l’optimistic lock?
-5. Quali sono le proprietà AGID?
-6. Altri modi di interrogazione in Spring Data
-7. Problemi di granularità?
-8. Cos'è l'Attacco ReDDos?
+1. Cosa sono le Capabilities e come si possono implementare?
+2. Come si organizza logicamente la business logic in un'applicazione enterprise?
+3. Come si gestisce la concorrenza nelle applicazioni software?
+4. Come viene implementato l'optimistic locking in un sistema di gestione dei dati?
+5. Quali sono le proprietà AGID e come vengono utilizzate?
+6. Quali sono gli altri modi di eseguire interrogazioni in Spring Data oltre ai metodi di repository standard?
+7. Quali sono i problemi di granularità nei sistemi software e come possono essere risolti?
+8. Cos'è un attacco ReDDos e come può essere mitigato?
