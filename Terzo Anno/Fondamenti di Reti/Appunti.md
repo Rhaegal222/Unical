@@ -13,11 +13,13 @@ Un'HTTP GET è una richiesta inviata da un client (spesso un browser web) a un s
 ### 4. Socket
 
 Un socket è un endpoint di comunicazione bidirezionale tra due macchine in una rete. È una combinazione di un indirizzo IP e un numero di porta che permette ai processi di comunicare tra loro attraverso una rete. In Python, i socket possono essere creati utilizzando la libreria `socket`. Ad esempio:
+
 ```python
 import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect(("www.example.com", 80))
 ```
+
 Questo codice crea un socket TCP/IP, si connette al server `www.example.com` sulla porta 80 e permette la trasmissione di dati tra il client e il server.
 
 ### 5. Catture WireShark
@@ -105,11 +107,13 @@ CSMA/CD (Carrier Sense Multiple Access with Collision Detection) è un protocoll
 ### 25. ASCII Art per segnali
 
 L'ASCII Art può essere utilizzata per rappresentare graficamente i segnali e i dati in modo semplice e leggibile. Ad esempio, un segnale digitale potrebbe essere rappresentato come una sequenza di simboli ASCII che mostrano gli stati alto e basso:
-```
+
+```plaintext
   __      __      __
  |  |    |  |    |  |
  |  |____|  |____|  |
 ```
+
 Questa rappresentazione può essere utile per visualizzare e comprendere rapidamente i pattern dei segnali, specialmente in contesti educativi o di debug.
 
 ### 26. IP Checksum
@@ -141,18 +145,22 @@ Il throughput è la velocità effettiva di trasmissione dati attraverso una rete
 ### 32. Permettere traffico DNS su F2
 
 Per permettere il traffico DNS in ingresso e in uscita su una macchina Linux (denominata F2), si configurano le regole del firewall utilizzando `iptables`. Ad esempio:
+
 ```bash
 sudo iptables -A INPUT -p udp --dport 53 -j ACCEPT
 sudo iptables -A OUTPUT -p udp --sport 53 -j ACCEPT
 ```
+
 Questi comandi permettono il traffico DNS in ingresso sulla porta UDP 53 e il traffico DNS in uscita sulla stessa porta, consentendo al server di ricevere e inviare richieste DNS.
 
 ### 33. Port Forwarding per 8080
 
 Per configurare il port forwarding per inoltrare il traffico in ingresso sulla porta 8080 a un dispositivo specifico su una rete interna, si utilizza `iptables`. Ad esempio, per inoltrare il traffico alla macchina `10.0.10.3` sulla porta 8080, si usa:
+
 ```bash
 sudo iptables -t nat -A PREROUTING -p tcp --dport 8080 -j DNAT --to-destination 10.0.10.3:8080
 ```
+
 Questo comando reindirizza il traffico destinato alla porta 8080 dell'interfaccia esterna alla porta 8080 della macchina interna `10.0.10.3`.
 
 ### 34. Wireshark e Ping
@@ -166,18 +174,22 @@ Gli interlocutori a livello trasporto del modello OSI sono le applicazioni o pro
 ### 36. Comando per traffico di rete
 
 Per consentire il traffico di rete da un'interfaccia specifica su Linux, si può usare `iptables`. Ad esempio, per consentire tutto il traffico in ingresso sull'interfaccia `eth0`, si usa:
+
 ```bash
 sudo iptables -A INPUT -i eth0 -j ACCEPT
 ```
+
 Questo comando permette il traffico in ingresso sull'interfaccia `eth0`, bypassando le regole di filtraggio predefinite.
 
 ### 37. Output di ping
 
 Il comando `ping` verifica la connettività di rete inviando pacchetti ICMP Echo Request e aspettando risposte Echo Reply. L'output tipico include:
+
 ```bash
 PING www.example.com (93.184.216.34): 56 data bytes
 64 bytes from 93.184.216.34: icmp_seq=0 ttl=54 time=10.1 ms
 ```
+
 Mostra l'indirizzo IP di destinazione, la sequenza di pacchetti, il Time-To-Live (TTL), e il round trip time (RTT).
 
 ### 38. CSMA/CA
@@ -191,16 +203,19 @@ Quando si cattura il traffico HTTPS con Wireshark, i dati effettivi del contenut
 ### 40. Output `netstat`
 
 Il comando `netstat` mostra le connessioni di rete attive, le tabelle di routing e altre statistiche di rete. Un esempio di output:
+
 ```bash
 Active Internet connections (w/o servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State
 tcp        0      0 192.168.1.2:22          192.168.1.100:53754     ESTABLISHED
 ```
+
 Indica una connessione TCP stabilita sulla porta 22.
 
 ### 41. Catene di Netfilter
 
 Netfilter utilizza catene di regole per filtrare i pacchetti. Le catene principali sono:
+
 - **INPUT**: Gestisce i pacchetti in ingresso.
 - **OUTPUT**: Gestisce i pacchetti in uscita.
 - **FORWARD**: Gestisce i pacchetti inoltrati attraverso il dispositivo.
@@ -211,10 +226,12 @@ Le regole possono essere visualizzate con `iptables -L`.
 ### 42. Routing table
 
 La routing table su Linux può essere visualizzata con `ip route show`. Mostra le rotte configurate e le interfacce di rete utilizzate per raggiungere diverse reti. Un esempio di output:
+
 ```bash
 default via 192.168.1.1 dev eth0
 192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.100
 ```
+
 Indica che il traffico per la rete `192.168.1.0/24` utilizza l'interfaccia `eth0`.
 
 ### 43. Trasmissione simbolica vs fisica a bit
@@ -224,11 +241,13 @@ La trasmissione simbolica utilizza simboli per rappresentare gruppi di bit, aume
 ### 44. Header HTTP GET Response
 
 L'header di una risposta HTTP GET contiene vari campi che descrivono lo stato della risposta e i meta-dati del contenuto. Un esempio di header:
+
 ```http
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1234
 ```
+
 Indica che la richiesta è stata completata con successo (200 OK), il tipo di contenuto (`text/html`) e la lunghezza del contenuto (1234 byte).
 
 ### 45. Verifica MAC Address
@@ -244,18 +263,22 @@ Il bitrate è la velocità di trasmissione dei dati, misurata in bit
 ### 47. Abilitare SSH e firewall
 
 Per abilitare SSH e configurare il firewall su un host Linux, installa il server SSH (`sudo apt-get install openssh-server`), abilita e avvia il servizio (`sudo systemctl enable ssh && sudo systemctl start ssh`). Configura il firewall per consentire il traffico SSH:
+
 ```bash
 sudo ufw allow ssh
 sudo ufw enable
 ```
+
 Questo permette le connessioni SSH in entrata, garantendo accesso remoto sicuro.
 
 ### 48. Visualizzazione regole firewall
 
 Per visualizzare le regole del firewall in tempo reale, utilizza `iptables`:
+
 ```bash
 sudo iptables -L -v --line-numbers
 ```
+
 Questo comando mostra le regole con dettagli sui pacchetti e byte corrispondenti, permettendo una gestione e un monitoraggio efficace delle regole di filtraggio.
 
 ### 49. Porta sorgente vs destinazione
