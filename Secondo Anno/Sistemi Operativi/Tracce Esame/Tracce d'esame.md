@@ -1,17 +1,53 @@
 # [Archivio Tracce](https://sites.google.com/unical.it/inf-sistemioperativi/archivio-tracce)
+
+## 2024
+
+* Luglio 2024 (Programmazione concorrente: "GridGame", linguaggi di scripting: "merge_dirs.pl")
+  * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SO-LUGLIO-2024-Thread-Perl-TRACCIA.pdf)
+  * Sorgente Python di partenza - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/GridGame-ORIG.py)
+  * Soluzione esercizio di scripting - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/Perl/merge_dirs.pl)
+* Giugno 2024 (Programmazione concorrente: "Burraco", linguaggi di scripting: "copiato.pl")
+  * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SO-GIUGNO-2024-Thread-Perl-TRACCIA.pdf)
+  * Sorgente Python di partenza - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/Burraco-ORIG.py)
+  * Soluzione esercizio di scripting - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/Perl/copiato.pl)
+* Marzo 2024 (Programmazione concorrente: "Campionato Gioco Sedie", linguaggi di scripting: "groups")
+  * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SO-MARZO-2024-Thread-Perl-TRACCIA.pdf)
+  * Sorgente Python di partenza - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/lock/sedie/GiocoSedie.py)
+* Febbraio 2024 (Programmazione concorrente: "Logger", linguaggi di scripting: "log_filter")
+  * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SO-FEBBRAIO-2024-Thread-Perl-TRACCIA.pdf)
+  * Sorgente Python di partenza - [BlockingQueueSimple](https://www.mat.unical.it/ianni/SOR-Web/codice/blocking_queue/BlockingQueueSimple.py)
+  * Soluzione esercizio prog. concorrente - [LoggingBlockingQueueSimple](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/LoggerBlockingQueue-FEB24.py)
+* Gennaio 2024 (Programmazione concorrente: "InteriCombinati 2.0", linguaggi di scripting: "user_stats")
+  * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SO-GENNAIO-2024-Thread-Perl-TRACCIA.pdf)
+  * Sorgente Python di partenza - [InteriCombinati](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/InteriCombinati-NOV23.py)
+
 ## 2023
-* Giugno 2023 (Programmazione concorrente: "Bancone Bar", linguaggi di scripting: "ps")
+
+* Novembre 2023 (Programmazione concorrente: "InteriCombinati", linguaggi di scripting: "runner")
+  * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SO-NOVEMBRE-2023-Thread-Perl-TRACCIA.pdf)
+  * Sorgenti Python di partenza - [ReadWriteLock](https://www.mat.unical.it/ianni/SOR-Web/codice/readwritelock/readwritelock.py) - [BlockingQueue](https://www.mat.unical.it/ianni/SOR-Web/codice/blocking_queue/blocking_queue.py)
+  * Soluzione programmazione concorrente - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/InteriCombinati-NOV23.py)
+  * Soluzione scripting - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/Perl/runner.pl)
+* Settembre 2023 (Programmazione concorrente: "Ristorante", linguaggi di scripting: "cerca_e_copia")
+  * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SO-SETTEMBRE-2023-Thread-Perl-TRACCIA.pdf)
+  * Soluzione Scripting - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/Perl/cerca_e_copia.pl)
+  * Sorgente Python di partenza - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/Pizzeria2023.py)
+* Luglio 2023 (Programmazione concorrente: "Bancone Bar - 2", linguaggi di scripting: "ps")
+  * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SO-LUGLIO-2023-Thread-Perl-TRACCIA.pdf)
+  * Materiale Preliminare - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SOR-Traccia-Perl-e-Thread-LUGLIO2023-MaterialePreliminare.pdf)
+  * Sorgente Python di partenza - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/BanconeBar-Risolto.py)
+* Giugno 2023 (Programmazione concorrente: "Bancone Bar - 1", linguaggi di scripting: "ps")
   * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SO-GIUGNO-2023-Thread-Perl.pdf)
+  * Soluzione programmazione concorrente - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/BanconeBar-Risolto.py)
   * Sorgente Python di partenza - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/BanconeBar.py)
 * Marzo 2023 (Programmazione concorrente: "Gioco Sedie", linguaggi di scripting: "folder_stats")
   * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SO-MARZO-2023-Thread-Perl-TRACCIA.pdf)
   * Sorgente Python di partenza - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/GiocoSedieMatrice-ORIG.py)
+  * Soluzione programmazione concorrente - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/GiocoSedieMatrice-ORIG.py)
   * Soluzione Prova Perl - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/Perl/folder_stats.pl)
-  
 * Febbraio 2023 (Programmazione concorrente: "Orsetti", linguaggi di scripting: "history")
   * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SO-FEBBRAIO-2023-Thread-Perl.pdf)
   * Sorgente Python di partenza - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/Orsetti-BASE-FEB2023.py)
-  
 * Gennaio 2023 (Programmazione concorrente: "Extended Barrier", linguaggi di scripting: "Ricettario")
   * Traccia - [Download](https://www.mat.unical.it/ianni/SOR-Web/tracce/SOR-GENNAIO-2023-Thread-Perl.pdf) (Last update: 03 Feb)
   * Archivio per la traccia Perl - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/altro/materiale_per_tracce/Ricette.zip) (Last update: 03 Feb)
@@ -19,6 +55,7 @@
   * Soluzione Prova Perl - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/Perl/soluzione_ricettario.pl) (Last update: 10 Feb)
   
 ## 2022
+
 * Dicembre 2022 (Programmazione concorrente: "Blocking Stack", linguaggi di scripting: "Estrazione commenti")
   * Traccia - [Download](https://www.mat.unical.it/ianni/storage/SOR-DICEMBRE-2022-Thread-Perl-Prova1.pdf) (Last update: Jan 2023)
   * Materiale preliminare - [Download](https://www.mat.unical.it/ianni/storage/SOR-DICEMBRE2022-MaterialePreliminare.pdf) (Last update: Jan 2023)
@@ -56,6 +93,7 @@
   * Sorgente con soluzione - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/altro/sharedInteger_feb2018/SharedInteger-GEN2022.py) (Last update: Jun 2022)
 
 ## 2021
+
 * Novembre 2021 (Programmazione concorrente: "Squid Game - Green Red Light", Linguaggi di scripting: "Process Killer")
   * Traccia - [Download](https://www.mat.unical.it/ianni/storage/SOR-NOVEMBRE-2021-Thread-Perl.pdf)
   * Sorgente Python di partenza - [Download](https://www.mat.unical.it/ianni/SOR-Web/codice/appelliRisolti/SquidGame-NOV2021-Sorgente.py) (Last update: Jun 2022)
