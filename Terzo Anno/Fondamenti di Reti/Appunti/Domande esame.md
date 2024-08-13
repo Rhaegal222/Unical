@@ -52,3 +52,38 @@
 - Problemi di sicurezza SMTP
 - Output netstat, ping, iptaables, routing table, icmp, traffico rete (analisi) interfaccia + uso larghezza di banda
 - throughput ritardo elaborazione body risposta HTTP GET
+
+### Prova Fondamenti di Reti 24 Luglio 2024
+
+- Un utente lamenta che la rete domestica è lenta. Quali prove deve fare per capire se il problema è interno o esterno alla rete domestica?
+- Quando esegui il comando nslookup qual è l'indirizzo IP di www.example.com?
+- Un'interfaccia di rete riceve un frame per poi passarlo al livello di rete ma quest'ultimo lo scarta. Cosa potrebbe essere andato storto?
+- Una conversazione confidenziale deve essere tale per cui:
+  - Nessuno deve poter leggere il contenuto
+  - Nessuno deve poter sapere chi sta parlando
+  - Nessuno deve poter sapere che si sta parlando
+- Comando per visualizzare lo stato delle comunicazioni instaurate sul PC locale nello specifico visualizzare:
+  - TCP e UDP
+  - Nome del programma
+  - PID
+  - Mostrare tutte le connessioni in ascolto e in connessione
+  - Mostare indirizzo IP e porta
+- Comando per visualizzare in tempo reale le regole del firewall con le informazioni:
+  - Elenco delle regole in formato numerico
+  - Numero di pacchetti e connessioni che hanno rispettato la regola
+- Il valore TTL di un pacchetto è 4 in uscita dal quarto hop. Quale sarà il valore TTL in uscita dal quinto hop?
+- Handshake a tre vie tra A e B.
+- Cosa si intende con ritardo di elaborazione di 1ms tra due host?
+- Comando per connettere un client a un server
+- Cosa cattura Wireshark se si naviga su un sito HTTPS?
+- Cambiare l'indirizzo IP sorgente in 10.0.5.3 con porta 1233
+- Comando per abilitare le risposte ICMP sulla catena RedDMZ
+- Porta di destinazione e sorgente nel firewalling
+- Comando per interrogare un DNS e ottenere l'indirizzo IP
+- Quali tra le seguenti modalitá di trasmissione consente il maggior bitrate?
+  - Trasmissione seriale
+  - Trasmissione parallela
+  - Trasmissione a divisione di frequenza
+  - Trasmissione a divisione di tempo
+- In una rete wireless un frame F da 1500 Byte va in collisione durante la trasmissione del Byte 8500. Cosa succede?
+- Durante una conversazione TCP, uno tra due interlocutori valorizza il campo RWIN=200 all'interno dell'intestazione di un pacchetto. L'altro interlocutore cosa fa?
