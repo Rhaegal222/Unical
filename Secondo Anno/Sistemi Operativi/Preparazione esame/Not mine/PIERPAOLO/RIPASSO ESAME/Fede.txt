@@ -1,0 +1,12 @@
+Il metodo join() è un metodo di threading in Python che blocca il flusso di esecuzione del thread chiamante fino a quando il thread su cui
+è stato chiamato non ha terminato la sua esecuzione.
+
+Se hai un thread t e chiami t.join(), il thread corrente (che ha chiamato t.join()) si fermerà e aspetterà che il thread t termini prima di continuare.
+
+Questo è particolarmente utile quando un programma principale lancia vari thread e deve aspettare che tutti i thread terminino prima di procedere.
+Ad esempio, potresti avere un programma che lancia vari thread per scaricare dati da Internet e vuoi aspettare che tutti i download siano completati
+prima di procedere con l’elaborazione dei dati scaricati.
+
+Inoltre, join() può anche accettare un argomento opzionale di timeout, che specifica un numero massimo di secondi che il thread chiamante aspetterà.
+Se il timeout è raggiunto, il thread chiamante riprenderà la sua esecuzione indipendentemente dal fatto che il thread su cui è stato chiamato join()
+abbia terminato o meno. Ad esempio, t.join(1.0) aspetterà al massimo 1 secondo. Se t non ha ancora terminato, join() ritorna comunque.
