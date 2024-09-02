@@ -22,7 +22,6 @@ Soluzione B:
 
 Soluzione C:
     - Fatta usando un array di PostoSafe e usando come thread PartecipanteSafe
-
 '''
 
 class PostoUnsafe:                   #soluzione A
