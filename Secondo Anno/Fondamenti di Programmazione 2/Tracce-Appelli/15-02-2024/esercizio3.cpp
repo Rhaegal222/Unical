@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// Legge un albero da input da sinistra verso destra
 void raccogliFoglie(const AlberoB<char>& tree, vector<char>& vector) {
 
     if (tree.nullo()) return;
@@ -18,6 +19,7 @@ void raccogliFoglie(const AlberoB<char>& tree, vector<char>& vector) {
     return;
 }
 
+// Verifica se le foglie dell'albero sono ordinate in ordine crescente
 bool esercizio3(const AlberoB<char>& tree) {
     vector<char> vector;
 
